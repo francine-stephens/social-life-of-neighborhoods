@@ -3,41 +3,79 @@
 
 In this chapter we will cover how to use the Social Explorer data tool to access demographic and social data for your neighborhood and the city that encompasses it. The tool is quite intuitive to use and allows you to quickly acquire current and historical census and demographic data. Although Social Explorer allows users to create maps, we will not use the mapping functionality. We will use a different mapping software - ArcGIS Online (AGO) - that is easier to incorporate into the final ArcGIS Story Map that you will create. AGO and Story Maps software will be introduced in the subsequent tutorials. 
 
-Social Explorer will be particularly helpful for you as you complete Neighborhood Assignment #1 (especially question #5). This tool may also be useful to you when you complete Neighborhood Assignment #5 in week 5. 
+Social Explorer will be particularly helpful for you as you complete Neighborhood Assignment #1 (especially question #5). This tool may also be useful to you when you complete Neighborhood Assignment #5 in Week 5. 
 
 A basic outline of the steps you will need to take to complete the assignment are as follows: 
 
 1. Log-in to Social Explorer via Stanford Libraries & Stanford credentials 
-2. Navigate to data tables
+2. Navigate to tables
 3. Select a dataset
 4. Select a geography
 5. Select variables
 6. Export data
 
-This tutorial will walk through each of the steps using an example city and census tracts.
+This tutorial will walk through each of the steps using San Francisco as an example city. 
 
-## Accessing Social Explorer
+## Accessing Social Explorer Data
 
-Stanford provides students and staff with access to Social Explorer via an institutional license. All that is required to use Social Explorer is your Stanford key and password. Go to the [Stanford Libraries homepage](https://library.stanford.edu/) and type Social Explorer into the search bar. [Try this](https://library.stanford.edu/all/?q=social+explorer&op=Search). The first hit under the Catalog panel is the Social Explorer data tool. Click on the external Social Explorer link at the bottom of the top entry, which is outlined in red in the image below. 
+Stanford provides students and staff with access to Social Explorer via an institutional license. All that is required to use Social Explorer is your Stanford key and password. Go to the [Stanford Libraries homepage](https://library.stanford.edu/) and type Social Explorer into the [search bar](https://library.stanford.edu/all/?q=social+explorer&op=Search). The first hit under the Catalog panel is the Social Explorer data tool. Click on the external Social Explorer link at the bottom of the top entry, which is outlined in red in the image below. 
 
-![Stanford library login for Social Explorer](loggingin.png)
+![Stanford library login for Social Explorer](images\loggingin.png)
 
 
 You will then be prompted to provide your Stanford credentials. After logging in you should see the Social Explorer home page. Navigate over to the Tables tab in the left-hand sidebar. This is outlined in red in the image below. 
 
-![Social Explorer Home Page](social_explorer_home_page.png)
+![Social Explorer Home Page](images\social_explorer_home_page.png)
 
 
-## Navigate to Data Tables
+## Select a dataset
 
-## Select your dataset
+On the Tables page you will find a list of datasets. As you can see, Social Explorer has _a lot_ of datasets available. For the purposes of assignment #1, you will only need to focus on the **American Community Survey (ACS) 5-Year Estimates.** Select the down arrow on the right-hand side of the ACS 5-year estimates tab to reveal the years of available data. You will want to use the most recent year of available data, which is listed at the top as the 2015-2019 (5 year Estimate). Click on Begin Report for the 2015-2019 5 year Estimates - this is highlighted in yellow in the image below.  
+
+![Access the 2019 ACS from the Data Tables page](images\select_dataset.png)
+
+**Background on ACS Data:**
+The [American Community Survey](https://www.census.gov/programs-surveys/acs) is a demographic survey program conducted by the U.S. Census Bureau that runs all year, every year. It is the yearly counterpart to the decennial census. ACS data, despite its various limitations, is some of the best data researchers and practitioners typically have to understand who is in our urban areas, and how they’re doing in their year-to-year lives. Understanding how to work with this data is critical, and this tutorial will just scratch the surface of learning about ACS/Census data. 
+
 
 ## Select your geography 
 
+Now you can filter down the data to your area of interest. In the case of Assignment #1, question #5, you will want to **filter to the city in which your neighborhood is located.** ^[In future assignments, you may want to filter to the census tracts that comprise your neighborhood. Instead, of selecting the place geography, you would select census tracts and select the census tract identifiers that belong to your neighborhood.] The steps and image below walk you through how to fill out the geographic options for filtering the data. 
+
+1. To do this, first select **Place** (160 geographic code) in the first drop down menu. 
+2. Then, in the second drop-down menu, select the state in which your city is located. 
+3. Finally, select the city in the list of places. Use the key-command Ctrl-F (Command-F on Mac) and type the city name in the search bar to more quickly find and highlight the city in the list of places. **Be sure to click on the city after it has been highlighted in the list.** After you have clicked on the city, select the **Add** button below the list. 
+4. The city should now be in the list of selected geographies. Once you see it in the selected geographies, then click on **Proceed to Tables**
+
+![Filter to your geographic area of interest](images\select_geography.png)
+
+
 ## Select your variables
 
-## Export data
+Now, we are at one of the more exciting parts of the data extraction process - picking variables! For assignment #1, you will want to pick variables that are comparable to the ones in the FFIEC Geocoding System's report for the census tracts in your neighborhoods (e.g., total population, median family income, racial demographics, housing characteristics - number of housing units, housing tenure, vacant units, etc.). This will allow you to compare and contrast the characteristics of your neighborhood and the city at large. 
+
+1. Leave the first drop-down menu for datasets as-is (i.e., Social Explorer Tables: ACS 2019 5 Year Estimates). 
+2. The **second drop-down menu** is where you select the variables (or Tables, in Social Explorer terminology). Like before, **click on the variable(s) in the list that you want** and then select the **Add button** below. Make sure all of the variables that you want are in the selected variables list. 
+3. Once the variables are in the list, select the **Show results** button. 
+
+The image below gives you an example of what you should see on this screen. 
+
+![Select variables of interest](images\select_variables.png)
 
 
+## View & Export data
 
-Census data, despite its various limitations, is some of the best data researchers and practitioners typically have to understand who’s in our urban areas, and how they’re doing in their year-to-year lives. Understanding how to work with this data is critical and deserves a whole chapter in this curriculum.
+All of the important data and variable selections have been made, so you are now ready to view your data and use it in your analysis and write-up. Social Explorer gives you multiple export options. When you clicked Show results, you were taken to the report page, which shows in tabular format the breakdown for each of the variables you had selected. This format should be sufficient for comparing the population and housing statistics for the city to your neighborhood. 
+
+I would recommend saving the report to Social Explorer in case you want to come back to it at a later time. Click on the **Save As** button in the top right corner of the page (pictured below), and give your report a title. 
+
+![Save your data as a Social Explorer Report](images\save_report.png)
+
+Once you have saved the report, one other nice feature is that you can share it with others via a web-link. If you would like to share, click on the icon next to the Save As button and copy the link. 
+
+If you would prefer to download the data to save it to a local folder on your computer, you will want to select the Excel tab (outlined in red below). Then, you should select both radio boxes under the **General options** header, which will give you the data in both percent and counts. Finally, you can select which Excel file format version you would prefer to have the data in (.xlsx or .xls). The file will appear in your downloads file for you to view and use as you see fit. 
+
+![Export data as an Excel file](images\export_excel.png)
+
+
+**Final Note:** That rounds out the steps for downloading data in Social Explorer. In the future, you can follow the same set of steps to get census tract data for other types of geographies like census tracts. The same set of steps also apply to working with any of the other datasets should you choose to explore other datasets in the future. If you have questions about any of the steps laid out here or about how to download other types of data in Social Explorer email Francine Stephens at [fis@stanford.edu](mailto:fis@stanford.edu).

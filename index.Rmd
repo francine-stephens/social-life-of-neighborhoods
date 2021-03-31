@@ -1,7 +1,7 @@
 --- 
 title: "The Social Life of Neighborhoods Tutorials: Data Processing & Mapping Tutorials"
-author: "Francine Stephens"
-Last updated: "`r Sys.Date()`"
+author: "Professor Forrest Stuart, TA: Francine Stephens"
+date: "Last updated: `r format(Sys.time(), '%B %d, %Y')`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -18,7 +18,7 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-# Introduction
+# About
 
 The following is a series of tutorials specifically designed for **The Social Life of Neighborhoods (SOC 176/SOC 276/AFRICAAM 76B/CSRE 176B/URBANST 179)** course. The course assignments and final story map require collecting and analyzing information about neighborhoods and
 other urban spaces. In the tutorials, you will be introduced to tools that will allow you to gather, process, and visualize data so that you can complete the assignments and create your own story map. No prior experience or familiarity with quantitative data or GIS/spatial software is assumed in the tutorials. If you have some prior experience, you will likely be able to skim over anything that looks familiar and focus on new techniques.

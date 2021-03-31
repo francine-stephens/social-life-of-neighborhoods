@@ -1,11 +1,10 @@
-introduction
+about
 socialexplorer
-accessing-social-explorer
-navigate-to-data-tables
-select-your-dataset
+accessing-social-explorer-data
+select-a-dataset
 select-your-geography
 select-your-variables
-export-data
+view-export-data
 geocoding
 mapping-crime-data
 calculating-and-mapping-segregation

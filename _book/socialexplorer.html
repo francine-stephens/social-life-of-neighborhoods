@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Using Social Explorer | The Social Life of Neighborhoods Tutorials: Data Processing &amp; Mapping Tutorials</title>
+  <meta name="description" content="This is a website with tutorials for the Social Life of Neighborhoods offered in SOC 176/276. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Using Social Explorer | The Social Life of Neighborhoods Tutorials: Data Processing &amp; Mapping Tutorials" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a website with tutorials for the Social Life of Neighborhoods offered in SOC 176/276. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Using Social Explorer | The Social Life of Neighborhoods Tutorials: Data Processing &amp; Mapping Tutorials" />
+  
+  <meta name="twitter:description" content="This is a website with tutorials for the Social Life of Neighborhoods offered in SOC 176/276. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Francine Stephens" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="geocoding.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Tutorials</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="socialexplorer.html"><a href="socialexplorer.html"><i class="fa fa-check"></i><b>2</b> Using Social Explorer</a><ul>
+<li class="chapter" data-level="2.1" data-path="socialexplorer.html"><a href="socialexplorer.html#accessing-social-explorer"><i class="fa fa-check"></i><b>2.1</b> Accessing Social Explorer</a></li>
+<li class="chapter" data-level="2.2" data-path="socialexplorer.html"><a href="socialexplorer.html#navigate-to-data-tables"><i class="fa fa-check"></i><b>2.2</b> Navigate to Data Tables</a></li>
+<li class="chapter" data-level="2.3" data-path="socialexplorer.html"><a href="socialexplorer.html#select-your-dataset"><i class="fa fa-check"></i><b>2.3</b> Select your dataset</a></li>
+<li class="chapter" data-level="2.4" data-path="socialexplorer.html"><a href="socialexplorer.html#select-your-geography"><i class="fa fa-check"></i><b>2.4</b> Select your geography</a></li>
+<li class="chapter" data-level="2.5" data-path="socialexplorer.html"><a href="socialexplorer.html#select-your-variables"><i class="fa fa-check"></i><b>2.5</b> Select your variables</a></li>
+<li class="chapter" data-level="2.6" data-path="socialexplorer.html"><a href="socialexplorer.html#export-data"><i class="fa fa-check"></i><b>2.6</b> Export data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="geocoding.html"><a href="geocoding.html"><i class="fa fa-check"></i><b>3</b> Geocoding</a></li>
+<li class="chapter" data-level="4" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html"><i class="fa fa-check"></i><b>4</b> Mapping Crime Data</a></li>
+<li class="chapter" data-level="5" data-path="calculating-and-mapping-segregation.html"><a href="calculating-and-mapping-segregation.html"><i class="fa fa-check"></i><b>5</b> Calculating and Mapping Segregation</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Social Life of Neighborhoods Tutorials: Data Processing &amp; Mapping Tutorials</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="socialexplorer" class="section level1">
+<h1><span class="header-section-number">2</span> Using Social Explorer</h1>
+<p>In this chapter we will cover how to use the Social Explorer data tool to access demographic and social data for your neighborhood and the city that encompasses it. The tool is quite intuitive to use and allows you to quickly acquire current and historical census and demographic data. Although Social Explorer allows users to create maps, we will not use the mapping functionality. We will use a different mapping software - ArcGIS Online (AGO) - that is easier to incorporate into the final ArcGIS Story Map that you will create. AGO and Story Maps software will be introduced in the subsequent tutorials.</p>
+<p>Social Explorer will be particularly helpful for you as you complete Neighborhood Assignment #1 (especially question #5). This tool may also be useful to you when you complete Neighborhood Assignment #5 in week 5.</p>
+<p>A basic outline of the steps you will need to take to complete the assignment are as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Log-in to Social Explorer via Stanford Libraries &amp; Stanford credentials</li>
+<li>Navigate to data tables</li>
+<li>Select a dataset</li>
+<li>Select a geography</li>
+<li>Select variables</li>
+<li>Export data</li>
+</ol>
+<p>This tutorial will walk through each of the steps using an example city and census tracts.</p>
+<div id="accessing-social-explorer" class="section level2">
+<h2><span class="header-section-number">2.1</span> Accessing Social Explorer</h2>
+<p>Stanford provides students and staff with access to Social Explorer via an institutional license. All that is required to use Social Explorer is your Stanford key and password. Go to the <a href="https://library.stanford.edu/">Stanford Libraries homepage</a> and type Social Explorer into the search bar. <a href="https://library.stanford.edu/all/?q=social+explorer&amp;op=Search">Try this</a>. The first hit under the Catalog panel is the Social Explorer data tool. Click on the external Social Explorer link at the bottom of the top entry, which is outlined in red in the image below.</p>
+<div class="figure">
+<img src="loggingin.png" alt="" />
+<p class="caption">Stanford library login for Social Explorer</p>
+</div>
+<p>You will then be prompted to provide your Stanford credentials. After logging in you should see the Social Explorer home page pictured below.</p>
+<div class="figure">
+<img src="social_explorer_home_page.png" alt="" />
+<p class="caption">Social Explorer Home Page</p>
+</div>
+</div>
+<div id="navigate-to-data-tables" class="section level2">
+<h2><span class="header-section-number">2.2</span> Navigate to Data Tables</h2>
+</div>
+<div id="select-your-dataset" class="section level2">
+<h2><span class="header-section-number">2.3</span> Select your dataset</h2>
+</div>
+<div id="select-your-geography" class="section level2">
+<h2><span class="header-section-number">2.4</span> Select your geography</h2>
+</div>
+<div id="select-your-variables" class="section level2">
+<h2><span class="header-section-number">2.5</span> Select your variables</h2>
+</div>
+<div id="export-data" class="section level2">
+<h2><span class="header-section-number">2.6</span> Export data</h2>
+<p>Census data, despite its various limitations, is some of the best data researchers and practitioners typically have to understand who’s in our urban areas, and how they’re doing in their year-to-year lives. Understanding how to work with this data is critical and deserves a whole chapter in this curriculum.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="geocoding.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection",
+"split_by": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

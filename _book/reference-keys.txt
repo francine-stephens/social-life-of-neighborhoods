@@ -1,0 +1,11 @@
+introduction
+socialexplorer
+accessing-social-explorer
+navigate-to-data-tables
+select-your-dataset
+select-your-geography
+select-your-variables
+export-data
+geocoding
+mapping-crime-data
+calculating-and-mapping-segregation

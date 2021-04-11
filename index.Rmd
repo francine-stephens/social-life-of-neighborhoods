@@ -8,7 +8,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "This is a website with tutorials for the Social Life of Neighborhoods offered in SOC 176/276. The output format for this example is bookdown::gitbook."
+description: "This is a website with tutorials for the Social Life of Neighborhoods offered in SOC 176/276."
 ---
 
 ```{r include=FALSE}

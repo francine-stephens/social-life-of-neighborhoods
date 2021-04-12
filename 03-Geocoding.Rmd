@@ -31,7 +31,7 @@ You are now ready to bring the table of addresses into AGO for geocoding.
 
 ## Geocoding in AGO
 
-Open up Mapviewer and start with just the basemap. Feel free to change the basemap if you would like. You can also zoom into your neighborhood using any of the Zoom/Pan options or use the Search Bar, which is what I did. When you are ready to upload the non-profit locations, navigate to the **Add Button** on the Toolbar and follow the steps in the gif below. 
+Open up Mapviewer and start with just the basemap. Feel free to change the basemap if you would like. You can also zoom into your neighborhood using any of the Zoom/Pan options or use the Search Bar, which is what I did. When you are ready to upload the non-profit locations, navigate to the **Add Button** on the Toolbar and follow the steps in the GIF below. 
 
 ![Geocoding](images\Geocoding.gif)
 
@@ -49,7 +49,7 @@ Open up Mapviewer and start with just the basemap. Feel free to change the basem
 
 ## Changing the Symbology
 
-Don't leave the non-profit locations as colored dots. Instead, let's style the locations with symbols that reflect the type of service the non-profit provides. This is shown in the gif above (My apologies for not separating this part in the recording).
+Don't leave the non-profit locations as colored dots. Instead, let's style the locations with symbols that reflect the type of service the non-profit provides. This is shown in the GIF above (My apologies for not separating this part in the recording).
 
 1. In part 1, select the field labeled Service in the drop-down menu. 
 2. Then select the Options button on Types in Part 2. 
@@ -64,7 +64,7 @@ If you click on the **Show Legend button** underneath the layer name (highlighte
 
 ## Plotting Neighborhood Boundaries
 
-The neighborhood boundaries are saved in our class' group page. We can use the **Add Button** again to add the layer from our group page. The gif below shows the steps, which are also written out below.
+The neighborhood boundaries are saved in our class' group page - The Social Life of Neighborhoods. We will use the **Add Button** again to add the layer from our group page. The GIF below shows the steps, which are also written out below.
 
 ![Importing neighborhood boundaries](images\nhood_bounds.gif)
 
@@ -72,9 +72,12 @@ The neighborhood boundaries are saved in our class' group page. We can use the *
 2. The neighborhood is a colored polygon when imported onto the map. We should change the symbology to just show the boundaries and not color the full area of the neighborhood.
 3. Click on the Neighborhood layer in the Contents pane, and navigate to the button with three shapes. This is the change style button. 
 4. Keep the show location only option selected in part 1. In part 2, select **Options.** 
-5. Then, click on the symbol to change the symbology. The **Fill style** will come up first. Select **no color** option to remove color from the neighborhood area. Then, select the **Outline option** and pick a color to outline the neighborhood boundaries. You might also consider changing the heaviness of the line by increasing the line width. 
-6. When you are happy with the style, select Okay and Done, to get back to the map and contents pane. 
-7. Lastly, clean up the name of the layer in the Contents pane. On the layer, click the three horizontal dots button on the layer, which prompts a drop-down list of options. Select rename and change the name.
+5. Then, click on the symbol to change the symbology. The **Fill style** will come up first. Select **no color** option to remove color from the neighborhood area. This will leave the inside of the polygon transparent. 
+6. Then, select the **Outline option** and pick a color to outline the neighborhood boundaries. You might also consider changing the heaviness of the line by increasing the line width. 
+7. When you are happy with the style, select **Okay** and then **Done**, to get back to the map and contents pane. 
+8. Lastly, clean up the name of the layer in the Contents pane. On the layer, click the **three horizontal dots button** on the layer, which prompts a drop-down list of options. Select **rename** and change the name.
+
+**NOTE:** The neighborhood boundary files have been named based on this syntax:  "nhood_name_cityname". If you listed multiple names for your neighborhood, the first name may only be listed in the filename for brevity. The city name may be abbreviated in some instances. If you have trouble finding your neighborhood based with this naming system, open up a new tab in your browser and go to the **group page content.** The content has been organized, so you can filter to the files that have been *categorized as neighborhood boundaries.* Scroll through the neighborhood boundaries. You should be able to see the outlines and find the one that looks like your neighborhood. 
 
 
 ## Exporting your map as a PDF
@@ -84,7 +87,7 @@ If you click on the **Legend button** in the Content pane, you will see both lay
 ![Saving your map](images\save_map.png)
 
 
-The map is saved to your Content page in AGO. For this assignment, you will also want to export the map as a PDF. This is also a multistep process that converts your webmap to a web-app and then to a PDF file (I know that seems like a lot of work). The gif below will walk you through it along with the steps that are written out below. 
+The map is saved to your Content page in AGO. For this assignment, you will also want to export the map as a PDF. This is also a multi-step process that converts your webmap to a web-app and then to a PDF file (I know that seems like a lot of work). The GIF below will walk you through it along with the steps that are written out below. 
 
 ![Transform webmap to a web-app](images\webapp_widgets.gif)
 
@@ -108,4 +111,4 @@ Your PDF map should look something like this. Make sure that all of the layers a
 Don't worry about the strange legend layout in the PDF or if the layout did not zoom in on the extent of your neighborhood as much as the web-map did. The webmap is saved and is what will ultimately be part of your StoryMap. 
 
 
-You have now completed your first web-map! Way to go! In the next assignment, you'll build on these skills with a larger crime dataset. 
+You have now completed your first web-map! Way to go! In the next assignment, you'll build on these skills with a larger dataset that contains incidents of crime in the city where your neighborhood is located. 

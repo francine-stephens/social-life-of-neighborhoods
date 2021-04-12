@@ -64,7 +64,7 @@ Above the Content Pane and Map, shaded in gray are the **Toolbar** and **Search*
 
 Let's start getting acclimated to AGO by changing the basemap. ArcGIS Online provides multiple basemap options. The basemap provides geographic context for the data layers that you will bring into AGO. 
 
-Start by zooming into an area of interest. In the gif below, you will see that I typed San Francisco in the Search bar and zoomed into the city. Then, click on the **Basemap** button at on the Toolbar. You will see a list of basemap options appear. Select one of the provided basemap layers and watch the new basemap appear on your map. You should also notice that the Contents pane has updated. It should now show the name of the new basemap you selected as a layer.
+Start by zooming into an area of interest. In the GIF below, you will see that I typed San Francisco in the Search bar and zoomed into the city. Then, click on the **Basemap** button at on the Toolbar. You will see a list of basemap options appear. Select one of the provided basemap layers and watch the new basemap appear on your map. You should also notice that the Contents pane has updated. It should now show the name of the new basemap you selected as a layer.
 
 ![Change the basemap](images\basemaps.gif)
 
@@ -75,7 +75,7 @@ Change the basemap a few times to explore the available basemaps. Then, click on
 
 Our class has a group page on AGO. The group is called **The Social Life of Neighborhoods.** We will use the group page as a repository for data layers that Francine will curate for you. For example, your census tract neighborhood boundaries will be stored here. If your city does not provide crime data that in an exportable format, Francine will scrape the police department's crime web map and store the scraped map layer on the group page for you to add to your map. The next few chapters will review how to access the data layers from our group page. 
 
-Before you proceed to the next chapter and the Assignment #3 mapping exercise, you need to make sure that you have access to the group page. If you had used AGO in the past, your account was located and added to the group. If you are logging into AGO for the first time, you can find the group and request access to join. The gif below shows how you can navigate to the **Groups Tab** on the Tab bar from the Home page. Be sure to select **My Organization's Groups** on the Groups landing page. In the Search Bar type in the group name, and select it from the list. You should then see an option for requesting membership. Francine will add you after you put in your request.
+Before you proceed to the next chapter and the Assignment #3 mapping exercise, you need to make sure that you have access to the group page. If you had used AGO in the past, your account was located and added to the group. If you are logging into AGO for the first time, you can find the group and request access to join. The GIF below shows how you can navigate to the **Groups Tab** on the Tab bar from the Home page. Be sure to select **My Organization's Groups** on the Groups landing page. In the Search Bar type in the group name, and select it from the list. You should then see an option for requesting membership. Francine will add you after you put in your request.
 
 ![Find the Social Life of Neighborhoods Group](images\Group.gif)
 

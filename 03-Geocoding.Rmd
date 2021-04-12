@@ -31,16 +31,81 @@ You are now ready to bring the table of addresses into AGO for geocoding.
 
 ## Geocoding in AGO
 
-Start out on the AGO Home page and navigate over to the **Content Tab** on the Tab bar. On the Content page, 
+Open up Mapviewer and start with just the basemap. Feel free to change the basemap if you would like. You can also zoom into your neighborhood using any of the Zoom/Pan options or use the Search Bar, which is what I did. When you are ready to upload the non-profit locations, navigate to the **Add Button** on the Toolbar and follow the steps in the gif below. 
+
+![Geocoding](images\Geocoding.gif)
+
+
+1. Select **Add layer from File.**
+2. Find and select the CSV file that you saved with the addresses. Import the layer.
+3. You will see an Add CSV Layer dialogue box. Fill out the options as follows: 
+    i. For Locate features by, select the **Address or Places** radio button.
+    ii. Be sure you are using the ArcGIS World Geocoding Service. 
+    iii. For the In option, use the drop down box and find the United States.
+    iv. Finally, review the **Field Name** from your table and **Location Name** columns in the table. Make sure that they match up. If you named the columns as I did above, then they should automatically populate as they should. That is, Name should be Not Used; Address should be Address or Place; City should be City; State should be State; and Zip should be Postal. Service is not used. 
+    v. When you are sure that the Table Field Names and Location Field Names match up, select Add Layer.
+4. Now you should see the non-profits plotted as points on the map. 
 
 
 ## Changing the Symbology
 
+Don't leave the non-profit locations as colored dots. Instead, let's style the locations with symbols that reflect the type of service the non-profit provides. This is shown in the gif above (My apologies for not separating this part in the recording).
+
+1. In part 1, select the field labeled Service in the drop-down menu. 
+2. Then select the Options button on Types in Part 2. 
+3. You should see all of the labels for Serve appear next to the colored dots. Click on a colored dot icon, and you should see a dialogue box with other symbol options. Stay in the shape symbol type, and use the drop-down menu to find symbols that would represent the services provided by the non-profits in your neighborhood. 
+4. When you find an icon you like, you might also want to change the symbol size before you move on to the next symbol. 
+5. When you are happy with all of your symbols, select Okay and then Done. You should see the Contents pane contains the non-profits data layer. 
+
+If you click on the **Show Legend button** underneath the layer name (highlighted in the image below), the icons and labels will appear. Also, if you click on any of the icons on the map, you will see a pop-up emerge for that location. All of the information in your table is contained in the pop-up. These pop-ups will be more relevant later on when we build our story maps. Now, if you are happy with your non-profits, you can now move on to the neighborhood boundaries.
+
+![Non-profit locations symbology and popups](images\popup_info.png)
 
 
-## Accessing neighborhood boundaries
+## Plotting Neighborhood Boundaries
+
+The neighborhood boundaries are saved in our class' group page. We can use the **Add Button** again to add the layer from our group page. The gif below shows the steps, which are also written out below.
+
+![Importing neighborhood boundaries](images\nhood_bounds.gif)
+
+1. Select **Search for Layers.** Layers in My Content will be shown first, but you should find the drop-down options and select **My Groups.** Scroll through the Groups layers to find your neighborhood. Click on the Plus button on the bottom right corner of your neighborhood layer. You can close out the search for layers panel when you see the neighborhood polygon populate on your map and in the Contents pane.
+2. The neighborhood is a colored polygon when imported onto the map. We should change the symbology to just show the boundaries and not color the full area of the neighborhood.
+3. Click on the Neighborhood layer in the Contents pane, and navigate to the button with three shapes. This is the change style button. 
+4. Keep the show location only option selected in part 1. In part 2, select **Options.** 
+5. Then, click on the symbol to change the symbology. The **Fill style** will come up first. Select **no color** option to remove color from the neighborhood area. Then, select the **Outline option** and pick a color to outline the neighborhood boundaries. You might also consider changing the heaviness of the line by increasing the line width. 
+6. When you are happy with the style, select Okay and Done, to get back to the map and contents pane. 
+7. Lastly, clean up the name of the layer in the Contents pane. On the layer, click the three horizontal dots button on the layer, which prompts a drop-down list of options. Select rename and change the name.
 
 
 ## Exporting your map as a PDF
 
+If you click on the **Legend button** in the Content pane, you will see both layers and the detailed symbology. When you are happy with the look of your map, save the map by going to **Save button** (the disk) on the Toolbar. You will need to select the **Save As** option because it is the first time you are saving the map. Give the Map an informative title and a few tags when you are saving it.
 
+![Saving your map](images\save_map.png)
+
+
+The map is saved to your Content page in AGO. For this assignment, you will also want to export the map as a PDF. This is also a multistep process that converts your webmap to a web-app and then to a PDF file (I know that seems like a lot of work). The gif below will walk you through it along with the steps that are written out below. 
+
+![Transform webmap to a web-app](images\webapp_widgets.gif)
+
+1. Navigate to the **Share button** (the chain-link icon) on the toolbar. You can ignore the content at the top of the dialogue box. Find and click on the **Create a Webb App** button toward the bottom of the page.
+2. You will be redirected to a new dialgoue box to Create a New Web App. Select the middle tab that says **WebAppBuilder.** 
+3. Again, you are redirected to a new dialogue box, but the information in it should look familiar. The boxes should contain the information you included when you saved your webmap. Make sure that the radio box next to the sentence: "Share this app in the same way as the map (The Social Life of Neighborhoods)" is checked. Then, scroll to the bottom of the page and click get started. 
+4. Navigate over to the **Widget** controller on the WebApp Interface. Scroll down the left hand panel to the empty widget place-holders. Click on one of the empty ones. You will be redirected to an array of widgets. Find and select the Print widget. Be sure to select a print option **other than Map_Only and to have the Show Legend option selected.**
+5. Next, add the **legend widget** to one of the other empty widget containers.
+
+![Print the webapp as a PDF](images\print_webapp.gif)
+
+6. Select the Print widget icon on the map. 
+7. Title the map (again). Then select a layout option **other than Map_Only.** Keep the layout as PDF, and then select print. 
+8. When the PDF icon shows up on the print panel, select it so that it will open. You can save the PDF and submit it along with your write-up. 
+
+
+Your PDF map should look something like this. Make sure that all of the layers are showing up.
+
+![PDF version of map](images\orgs_map_pdf.png)
+
+Don't worry about the strange legend layout in the PDF or if the layout did not zoom in on the extent of your neighborhood as much as the web-map did. The webmap is saved and is what will ultimately be part of your StoryMap. 
+
+
+You have now completed your first web-map! Way to go! In the next assignment, you'll build on these skills with a larger crime dataset. 

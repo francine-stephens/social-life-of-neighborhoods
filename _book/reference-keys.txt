@@ -18,7 +18,7 @@ what-is-geocoding
 preparing-data-for-geocoding
 geocoding-in-ago
 changing-the-symbology
-accessing-neighborhood-boundaries
+plotting-neighborhood-boundaries
 exporting-your-map-as-a-pdf
 mapping-crime-data
 calculating-and-mapping-segregation

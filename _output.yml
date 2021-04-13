@@ -3,6 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
+        <li class="toc-logo"><a href="./"><img src="images/parcels_small.jpg" width="190.5" height="213" align="center"></a></li>
         <li><a href="./">Tutorials</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>

@@ -82,6 +82,8 @@ The neighborhood boundaries are saved in our class' group page - The Social Life
 
 ## Exporting your map as a PDF
 
+**Update: The assignment instructions have been changed since they were first published. Because exporting the map to a PDF is a little cumbersome, you now have the option of submitting your map as a webmap via a link. The instructions below will guide you through both options.**
+
 If you click on the **Legend button** in the Content pane, you will see both layers and the detailed symbology. When you are happy with the look of your map, save the map by going to **Save button** (the disk) on the Toolbar. You will need to select the **Save As** option because it is the first time you are saving the map. Give the Map an informative title and a few tags when you are saving it.
 
 ![Saving your map](images\save_map.png)

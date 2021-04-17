@@ -1,3 +1,72 @@
 # Mapping Crime Data
 
-Will be published for the start of week 4. 
+In Assignment #4, we will be adding more points to our map! We will map elements of social order/disorder in the neighborhood. By the end of the tutorial you will have produced a map or series of maps that include a new layer containing locations exemplifying the theory of public order that you have chosen as well as new layers for the crime incidents in your neighborhood. Go ahead and pull up your map from Assignment #3 in AGO, so we can step through the process of creating the new layers. 
+
+
+## Map observations of public order theory
+
+The guidelines for Assignment #4 ask you to record locations from your observations that exemplify one of the theories of public order that you read about in the weekly readings. Record those locations in a spreadsheet and geocode them following the steps for [geocoding][Geocoding]. 
+
+You can [style the symbols][Changing the Symbology] of the point locations as we did for the organizations in Assignment #3. If you want to be a little fancy and use symbols that better represent the elements that you observed in your neighborhood, then follow the instructions/GIF below for *importing custom symbols*. Otherwise, go ahead and proceed to the [Import Crime Data & Spatially Reduce] section. 
+
+### Importing Custom Symbols
+
+Before opening up the change style option, go ahead and find or create an image that you would like to use as an icon for your geocoded locations. The image needs to meet two criteria: 
+
+1) Be in png format (AGO says that it will read jpg, but I have not had any luck successfully reading in a JPG).
+2) The pixel size needs to be at most 120px x 120px.
+
+When you have located your image, copy the **URL of the image**. [Here](http://simpleicon.com/wp-content/uploads/eye2.png) is the link to the URL for the image of eyes on the street that I used on my map. Once you have that URL ready, follow the steps in the GIF/written out below.
+
+*Note for creating your own image:* If you have used graphics software to create and save the image locally on your computer. You will need to host it on the web. The easiest way to do this is to save the image to your Google drive and setting the sharing privileges to public, so that AGO can read the link.
+
+![Adding Custom Symbols](images\custom_icons.gif)
+
+1. In the change symbols menu, find and select the **Custom Images** option in the drop-down box.
+2. Select the underlined text that says, **"Use an Image"**, which prompts a text entry box to appear.
+3. **Paste your image's URL in the box** and click the blue plus sign next to the text box. Your image will appear as a tiny icon at the top of the symbols menu and below the drop-down box.
+4. **Resize your icon with the slider/pixel box**, and when you are happy with how it looks, **select Okay twice.** At that point, you should see the icon on your map and in the legend.
+
+
+## Import Crime Data & Spatially Reduce
+
+We are now ready to add the crime data as a layer to our map. You do not need to go fetch the crime data for your city because it is stored in the **Crime data folder** of our Class' AGO page. These data have been formatted in a way that will make your experience filtering by crime attributes, which is described in more detail below, much easier.
+
+Navigate to the **Add Layer tab**, and select **Search for Layers**. Make sure that you are searching for the layer from **My Groups**. In the search bar, type in the name of your city and crime, (e.g., San Francisco Crime) and the layer of crime incidents should populate. Add that layer to the map. You should see points representing the crime incidents in your city. Below is a screenshot of what the layer looks like for San Francisco. The number of points you see will vary based on the city and how the data were collected.
+
+![City-level crime incidents](images\city_crime_incidents.png)
+
+You will see crime incidents both in and outside of your neighborhood boundaries. Because we are interested in **spatial patterns of crime and elements of social order/disorder within the neighborhood**, we need to *spatially reduce* the crimes to the extent of the neighborhood boundaries. We will do this by using a technique called a **spatial join.** 
+
+Click on the **Analysis Tab** on the toolbar to open up the analysis operations in your content panel. Next, select the **Summarize Data** category, and then click on the **Join Features** operation. To perform the spatial join, follow GIF/steps written below: 
+
+![Spatial reduction of crimes to the neighborhood](images\spatial_join.gif)
+
+1. Set the **Target layer** to be the **crime incident points.** The target layer is the layer that we are trying to reduce. 
+2. Next, set the **Join layer** to be the neighborhood boundaries layer. This is the extent of our area of interest for our crime incidents.
+3. Specify the **Join Type** as **Choose a spatial relationship** and select **Completely Within** from the drop-down box. This tells AGO that we want to select only the crime incidents that lie completely within the neighborhood boundaries. 
+4. Specify the **Join Operation** as **One to One**. This defines the spatial join in binary times: crime incidents are assigned to the neighborhood if they fall within its boundaries or they are assigned to outside the boundary if they fall outside of it. Leave the other fields in #4 as they are. 
+5. Give the new layer that you are about to create an informative name. Keep the radio box for **Use Current Map Extent** checked.
+6. Run the analysis. 
+
+If your neighborhood is in a major city, you will have hundreds of thousands of points, so the analysis tool will take a while to perform the reduction and add the layer to your map. Just be patient. Once the layer is added, you will see the crime incidents that are within your neighborhood as shown in the image below.
+
+![City-level crime incidents](images\spatially_reduced_crimes.png)
+
+## Density Map/Hot Spot Map
+
+We have the points on the map representing crime incidents, but these are not super informative. You should notice a couple of things about the crime incidents plotted on your map. First, the points tend to show up at very particular points on the road network. They are either **street intersections or at the mid-point of a street segment.** Why is this? 
+
+Police Departments provide the spatial locations for the crime incidents with "blurred addresses" or "blurred coordinates." Blurring means that give you an approximate location, so they use the nearest street intersection to the actual address of the crime incident. Alternatively, if they do not provide the address, but the geographic coordinates, they blur the coordinates by truncating the number of decimal places in the longitude and latitude. This is done as a privacy control to minimize the risk of identifying individuals or establishments involved in the incident. The type and degree of blurring differs across cities. San Francisco's blurring is pretty high. Some of you may find your city's blurring practice is a little looser.
+
+The second thing you should notice is that **currently, the map does not clearly represent multiple incidents that may have occurred in a single location.** However, if you click on some of the crime points, you can find multiple incidents occurred at the location. As shown in the GIF below, when you look at the pop-up box, you can see the number of records listed, which tells you how many "crime incidents" occurred in the location (or, really nearby this intersection/mid-point of the street). 
+
+
+## Filter Crime Data by Attributes
+
+
+
+## Final Map Product(s)
+
+
+

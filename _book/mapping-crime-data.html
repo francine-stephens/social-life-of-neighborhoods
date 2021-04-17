@@ -96,11 +96,19 @@
 <li class="chapter" data-level="4.5" data-path="geocoding.html"><a href="geocoding.html#plotting-neighborhood-boundaries"><i class="fa fa-check"></i><b>4.5</b> Plotting Neighborhood Boundaries</a></li>
 <li class="chapter" data-level="4.6" data-path="geocoding.html"><a href="geocoding.html#exporting-your-map-as-a-pdf"><i class="fa fa-check"></i><b>4.6</b> Exporting your map as a PDF</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html"><i class="fa fa-check"></i><b>5</b> Mapping Crime Data</a></li>
+<li class="chapter" data-level="5" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html"><i class="fa fa-check"></i><b>5</b> Mapping Crime Data</a><ul>
+<li class="chapter" data-level="5.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#map-observations-of-public-order-theory"><i class="fa fa-check"></i><b>5.1</b> Map observations of public order theory</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#importing-custom-symbols"><i class="fa fa-check"></i><b>5.1.1</b> Importing Custom Symbols</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#import-crime-data-spatially-reduce"><i class="fa fa-check"></i><b>5.2</b> Import Crime Data &amp; Spatially Reduce</a></li>
+<li class="chapter" data-level="5.3" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#density-maphot-spot-map"><i class="fa fa-check"></i><b>5.3</b> Density Map/Hot Spot Map</a></li>
+<li class="chapter" data-level="5.4" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#filter-crime-data-by-attributes"><i class="fa fa-check"></i><b>5.4</b> Filter Crime Data by Attributes</a></li>
+<li class="chapter" data-level="5.5" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#final-map-products"><i class="fa fa-check"></i><b>5.5</b> Final Map Product(s)</a></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="calculating-and-mapping-segregation.html"><a href="calculating-and-mapping-segregation.html"><i class="fa fa-check"></i><b>6</b> Calculating and Mapping Segregation</a></li>
 <li class="chapter" data-level="7" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>7</b> Resources</a><ul>
-<li class="chapter" data-level="7.1" data-path="resources.html"><a href="resources.html#arcgis-online-resources"><i class="fa fa-check"></i><b>7.1</b> ArcGIS Online Resources</a></li>
-<li class="chapter" data-level="7.2" data-path="resources.html"><a href="resources.html#storymaps-resources"><i class="fa fa-check"></i><b>7.2</b> StoryMaps Resources</a></li>
+<li class="chapter" data-level="7.1" data-path="resources.html"><a href="resources.html#arcgis-online"><i class="fa fa-check"></i><b>7.1</b> ArcGIS Online</a></li>
+<li class="chapter" data-level="7.2" data-path="resources.html"><a href="resources.html#storymaps"><i class="fa fa-check"></i><b>7.2</b> StoryMaps</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -124,8 +132,49 @@
             <section class="normal" id="section-">
 <div id="mapping-crime-data" class="section level1">
 <h1><span class="header-section-number">5</span> Mapping Crime Data</h1>
-<p>Will be published for the start of week 4.</p>
+<p>In Assignment #4, we will be adding more points to our map! We will map elements of social order/disorder in the neighborhood. By the end of the tutorial you will have produced a map or series of maps that include a new layer containing locations exemplifying the theory of public order that you have chosen as well as new layers for the crime incidents in your neighborhood. Go ahead and pull up your map from Assignment #3 in AGO, so we can step through the process of creating the new layers.</p>
+<div id="map-observations-of-public-order-theory" class="section level2">
+<h2><span class="header-section-number">5.1</span> Map observations of public order theory</h2>
+<p>The guidelines for Assignment #4 ask you to record locations from your observations that exemplify one of the theories of public order that you read about in the weekly readings. Record those locations in a spreadsheet and geocode them following the steps for <a href="geocoding.html#geocoding">geocoding</a>.</p>
+<p>You can <a href="geocoding.html#changing-the-symbology">style the symbols</a> of the point locations as we did for the organizations in Assignment #3. If you want to be a little fancy and use symbols that better represent the elements that you observed in your neighborhood, then follow the instructions/GIF below for <em>importing custom symbols</em>. Otherwise, go ahead and proceed to the <a href="mapping-crime-data.html#import-crime-data-spatially-reduce">Import Crime Data &amp; Spatially Reduce</a> section.</p>
+<div id="importing-custom-symbols" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Importing Custom Symbols</h3>
+<p>Before opening up the change style option, go ahead and find or create an image that you would like to use as an icon for your geocoded locations. The image needs to meet two criteria:</p>
+<ol style="list-style-type: decimal">
+<li>Be in PNG format (AGO says that it will read JPG, but I have not had any luck successfully reading in a JPG).</li>
+<li>The pixel size needs to be at most 120px x 120px.</li>
+</ol>
+<p>When you have located your image, copy the <strong>URL of the image</strong>. <a href="http://simpleicon.com/wp-content/uploads/eye2.png">Here</a> is the link to the URL for the image of eyes on the street that I used on my map. Once you have that URL ready, follow the steps in the GIF/written out below.</p>
+<p><em>Note for creating your own image:</em> If you have used graphics software to create and save the image locally on your computer. You will need to host it on the web. The easiest way to do this is to save the image to your Google drive and setting the sharing privileges to public, so that AGO can read the link.</p>
+<div class="figure">
+<img src="images/custom_icons.gif" alt="" />
+<p class="caption">Adding Custom Symbols</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>In the change symbols menu, find and select the <strong>Custom Images</strong> option in the drop-down box.</li>
+<li>Select the underlined text that says, <strong>“Use an Image”</strong>, which prompts a text entry box to appear.</li>
+<li><strong>Paste your image’s URL in the box</strong> and click the blue plus sign next to the text box. Your image will appear as a tiny icon at the top of the symbols menu and below the drop-down box.</li>
+<li><strong>Resize your icon with the slider/pixel box</strong>, and when you are happy with how it looks, <strong>select Okay twice.</strong> At that point, you should see the icon on your map and in the legend.</li>
+</ol>
+</div>
+</div>
+<div id="import-crime-data-spatially-reduce" class="section level2">
+<h2><span class="header-section-number">5.2</span> Import Crime Data &amp; Spatially Reduce</h2>
+<p>We are now ready to add the crime data as a layer to our map. You do not need to go fetch the crime data for your city because it is stored in the <strong>Crime data folder</strong> of our Class’ AGO page. These data have been formatted in a way that will make your experience filtering by crime attributes, which is described in more detail below, much easier.</p>
+<p>Navigate to the <strong>Add Layer tab</strong>, and select <strong>Search for Layers</strong>. Make sure that you are searching for the layer from <strong>My Groups</strong>. In the search bar, type in the name of your city and crime, (e.g., San Francisco Crime) and the layer of crime incidents should populate. Add that layer to the map. You should see points representing the crime incidents in your city.</p>
+<p>You will see crime incidents both in and outside of your neighborhood boundaries. Because we are interested in spatial patterns of crime and elements of social order/disorder in the neighborhood, we need to <em>spatially reduce</em> the crimes to the extent of the neighborhood boundaries. We will do this by using a technique called a <strong>spatial join.</strong></p>
+</div>
+<div id="density-maphot-spot-map" class="section level2">
+<h2><span class="header-section-number">5.3</span> Density Map/Hot Spot Map</h2>
+<p>We have the points on the map representing crime incidents, but these are not super informative. You should notice a couple of things. First, the points tend to show up at intersections.</p>
+</div>
+<div id="filter-crime-data-by-attributes" class="section level2">
+<h2><span class="header-section-number">5.4</span> Filter Crime Data by Attributes</h2>
+</div>
+<div id="final-map-products" class="section level2">
+<h2><span class="header-section-number">5.5</span> Final Map Product(s)</h2>
 
+</div>
 </div>
             </section>
 

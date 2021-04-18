@@ -36,7 +36,7 @@ Navigate to the **Add Layer tab**, and select **Search for Layers**. Make sure t
 
 ![City-level crime incidents](images\city_crime_incidents.png)
 
-You will see crime incidents both in and outside of your neighborhood boundaries. Because we are interested in **spatial patterns of crime and elements of social order/disorder within the neighborhood**, we need to *spatially reduce* the crimes to the extent of the neighborhood boundaries. We will do this by using a technique called a **spatial join.** 
+You will see crime incidents both in and outside of your neighborhood boundaries. Because we are interested in **spatial patterns of crime within the neighborhood**, we need to *spatially reduce* the crimes to the extent of the neighborhood boundaries. We will do this by using a technique called a **spatial join.** 
 
 Click on the **Analysis Tab** on the toolbar to open up the analysis operations in your content panel. Next, select the **Summarize Data** category, and then click on the **Join Features** operation. To perform the spatial join, follow GIF/steps written below: 
 
@@ -53,20 +53,166 @@ If your neighborhood is in a major city, you will have hundreds of thousands of 
 
 ![City-level crime incidents](images\spatially_reduced_crimes.png)
 
-## Density Map/Hot Spot Map
+To see the number of crime incidents in your neighborhood, click on the **Table button** in the contents pane underneath your crime layer's-name. You will see a table appear at the bottom of your screen like in the screen shot below. At the top of the table, in parentheses, the number of features tells you how many crime incidents are in your neighborhood.  There are 769 crime incidents in Excelsior. The number of rows in the table match the number of features, which tells you that each row in the table represents a crime incident and the columns in this table contain descriptive information about each crime. We will return to this table and the descriptive attributes when we walk through the steps for filtering by attribute. To hide the table and just see your map in the map viewer, click on the 'X' in the upper-right corner of the table or click on the table button in the contents pane again.
 
-We have the points on the map representing crime incidents, but these are not super informative. You should notice a couple of things about the crime incidents plotted on your map. First, the points tend to show up at very particular points on the road network. They are either **street intersections or at the mid-point of a street segment.** Why is this? 
+![Crime incident attribute table preview](images\attribute_table_feature_count.png)
 
-Police Departments provide the spatial locations for the crime incidents with "blurred addresses" or "blurred coordinates." Blurring means that give you an approximate location, so they use the nearest street intersection to the actual address of the crime incident. Alternatively, if they do not provide the address, but the geographic coordinates, they blur the coordinates by truncating the number of decimal places in the longitude and latitude. This is done as a privacy control to minimize the risk of identifying individuals or establishments involved in the incident. The type and degree of blurring differs across cities. San Francisco's blurring is pretty high. Some of you may find your city's blurring practice is a little looser.
+Be sure to check out the information about your crime data layer. This can be found by navigating to the layer in the content page in our Group. You will find important information like the time span of your crime data and the attribute (i.e., variable) definitions. 
 
-The second thing you should notice is that **currently, the map does not clearly represent multiple incidents that may have occurred in a single location.** However, if you click on some of the crime points, you can find multiple incidents occurred at the location. As shown in the GIF below, when you look at the pop-up box, you can see the number of records listed, which tells you how many "crime incidents" occurred in the location (or, really nearby this intersection/mid-point of the street). 
+At this point, it is a good idea to save a new map with your work. Go ahead and remove the geocoded city-level crime incidents layers using by clicking on the **three blue dots icon below the layer and selecting the remove layer option.** Then, go to the **Save icon** in the toolbar and select **Save As**. Save this new map with an informative title, summary, and some tags. You can continue working off of this map for the next few steps of this assignment.
+
+
+## Visualizing aggregated incidents
+
+We have the points on the map representing crime incidents, but these points are not really indicative of point patterns when they are symbolized in this manner. There are two things to take note of when looking at the points as they currently plotted. 
+
+**First, the points tend to show up at very particular points on the road network: street intersections or at the mid-point of a street segment.** Why is this? Police departments provide the spatial locations for the crime incidents with "blurred addresses" or "blurred coordinates." Blurring means that give you an approximate location. The department uses the nearest street intersection or midpoint to the actual address of the crime incident or the midpoint of the street segment. Alternatively, if they do not provide the address, but the geographic coordinates, they blur the coordinates by truncating the number of decimal places in the longitude and latitude. Blurring is done as a privacy control to minimize the risk of identifying individuals or establishments involved in the incident. The type and degree of blurring differs across cities. San Francisco's blurring is pretty high. Some of you may find your city's blurring practice is a little looser.
+
+**The second thing you should notice is that the map does not clearly represent multiple incidents that may have occurred in a single location with this type of symbology.** At the moment, the only way you can tell whether multiple incidents occurred at a given location is by clicking on a crime point and reading the pop-up box content. As shown in the GIF below, when you look at the pop-up box, you can see the number of records listed and flip through them. This interactive pop-up box tells us a little bit about the number "crime incidents" occurred in the location (or, really nearby this intersection/mid-point of the street), but we want this information about the concentration and distribution of crime incidents to be seen discerned with the symbology. Let's walk through two approaches for doing aggregating and visualizing points.
+
+![Pop-up boxes show the number of crimes at a location](images\popups_records.gif)
+
+### Heat Map
+
+One quick and easy way to convey the concentration and distribution of the point pattern is to change the symbology to a **"heat map".** A heat map is a very generalized form of a point density map. *This map is good for drawing attention to where points are concentrated the most.* Where the color is "hot" (on the legend), the incidents are concentrated the most, and where the color is "cold" represents fewer or no incidents. 
+
+In other GIS software, we would have to compute a density map to get a heat map, but AGO has a heat map symbology style built into its drawing styles. Navigate to the **Change style button** on the crime layer. Then, view the steps in the GIF and written out below.
+
+![Create a Heat mapping](images\crime_heat_map.gif)
+
+1. Set **Show location only** in the first drop-down box as the attribute to show. 
+2. Select the **Heat map** drawing style. 
+
+If you want to adjust the transparency, color-scheme, or the scale of the high-low legend, click on the **Options button** and adjust those settings as you see fit. If not, click **Okay** and notice how the crime incidents have been represented now. 
+
+The visual is no longer a set of points, but a smoothed raster with colors ranging from light blue, which represents low frequency of incidents,to yellow representing areas with high frequencies. Zoom in and out of your neighborhood and you will notice that the visualization change. When the layer is zoomed out, the entire area is very "hot" and pointless to view. But, as you zoom in on the layer, the heat map becomes less developed as some of the raster cells disappear. When you zoom in even more, the layer starts to look more like points along the intersections. *The redrawing makes heat maps a source only for reference, but not for in-depth analyzing.*
+
+
+### Hot Spot & Graduated Symbol Maps
+
+To visualize the concentration of crime incidents by location in a more detailed, quantitative fashion, we would want to use a **graduated symbol map,** where the size of the symbol indicates the number or range of numbers of incidents that occured in the location. The first step in creating the graduated symbol map is to "aggregate" the incidents. Unlike other GIS software, AGO does not have tool to aggregate points based on point location. The best we can do with AGO is to aggregate to a polygon. For this reason, we will use a **Hot Spot Analysis** to aggregate to a series of small polygons that cover the area of our neighborhood. Aggregating to small polygons makes sense given that the points were blurred by the police department and represent the approximate locations of crimes. Thus, the polygons can represent the potential area where the incidents may have occurred.
+
+The hot spot analysis will output a map of hot spots, but we will end up changing the attribute to the point counts and visualize the counts with a different drawing symbology to get a graduated symbol map.
+
+![Use the hot spot analysis tool](images\crime_hot_spots.gif)
+
+Return to the **Analysis tab** on the toolbar, and then select the **Analyze Patterns** category. Open up the **Find Hot Spots** tool and fill in the tool parameters as follows: 
+
+1. The layer you will use to calculate hot spots is the **neighborhood crime incidents layers.**
+2. Set the clusters of high and low values to **Point counts.** This tells AGO to just calculate the points per area, not any of the numeric attributes of the crime points. 
+3. You need to specify to count points within either **Fishnet grid** or a **Hexagon grid.** The grid is going to include the units for aggregating - either rectangles or hexagons. Hexagons are good if you have a curvature in your neighborhood boundaries or roadway networks like in this example. If your neighborhood is more square/rectangular in shape, then the fishnet grid would be more ideal. If you have an irregularly shaped neighborhood and are unsure which type of grid to use, the hexagon would probably be a better option for you. However, feel free to run it one way and then repeat the analysis with the other grid and compare. More likely than not, you will not see substantial differences, which means you can opt for whichever one you prefer. If the outputs differ noticeably, reach out to Francine to discuss this.
+4. In the field labeled: **Define where points are possible, select the neighborhood boundaries.** 
+5. You can leave the **Divide by field** as **None.** If you want to set it to population, feel free, but AGO's population normalization tends to work better at higher levels of geography like zipcodes, cities, and counties.
+6. You do not need to set any of the options. AGO tends to do a decent job at guessing an appropriate cell size. 
+7. Give the new layer that you are about to create an informative name. Leave the radio box for **Use current map extent** checked. Finally, click **Run Analysis.**
+
+AGO will output two items for you. You will see the hot spot layer with the grid you selected and shaded based on statistically significant hot and cold spots populate on your map. You will also get a report with specific details about the hot spot analysis, including the dimensions of the grid cells, the scale, and the number of hot spots. 
+
+The hot spot map, shown below, is not really what we are trying to map. We are interested in the frequency of crime incidents in these locations, so we need to take one more step to get there. However, it feels a little weird to not provide any background on a hot spot map. That is why I have included a brief description of hot spots and what they mean below. I am not including any information about how to clean up the styling of the hot spot map because my guess is that the graduated symbol map is going to be far more useful to most of the class than the hot spot map. If you find that the hot spots are helpful for conveying the points you are trying to make in your assignment write-up, and want help with the styling contact [Francine](mailto:fis@stanford.edu) or come to office hours.
+
+![Crime hot-spots map layer](images\crime_hot_spots_legend.png)
+
+
+**What makes a hot spot map different from a heat map?** The short answer is statistics! A heat map maps how concentrated points are across the space in your viewing frame, but a hot spot map compares how concentrated points are in sub-regions of the area of interest (e.g., neighborhood) to how concentrated points would be if the points were distributed in a completely random manner across the area of interest. From the map, you can see which aggregated regions (hexagons or squares, depending on your grid) have more or less incidents than we would expect if the "crime generating process" was completely random. So, the hot spots indicate regions where the frequency of crimes is higher than we would expect if crime was randomly distributed across the neighborhood. Cold spots would represent regions with frequencies that are lower than expected if crime was randomly distributed across the neighborhood. The darker the shading indicates higher levels of statistical confidence in the hot spot estimates.
+
+
+Now, let's press onward to making the graduated symbol map for crime! As you might guess, we want to select the **Change style button** on the hot spot layer. Follow the steps below: 
+
+1. In the drop-down box, change the **Attribute to Number of Points.** You should see your map's visualization style change to circles of different sizes. The legend also shows how the sizing relates to the number of points.
+2. Click on the **Options** for **Counts and Amounts (Size) style**.
+3. **[Optional] Change the symbol.** I like the fireflies symbol because the glow kind of mimics the aesthetic of the heat map in point form. However, other symbols work fine, too.
+4. Once you are happy with the symbol, go to the **Polygons symbol** and set the **Outline to No Color.**
+5. Lastly, check the **Classify Data radio box** and set the **Using option** as **Equal interval.** This makes the frequency bins for each symbol level of equal size. 
+6. Also, **Play with the number of classes.** Four may leave you with really large frequency bins, so you will want to increase. Be mindful that creating a large number of classes may make it trickier for the reader to discern differences in the size of the symbol. The rule of thumb is to generally create more than 7 classes. 
+7. Scroll back up to change the range of the legend by clicking on the zero below the number of points legend scale and set it to 1. This will ensure that the map does not put a point in locations where there are no crime incidents recorded.
+8. **Round** your classes to the nearest 1 or 10 (depending on your data).
+9. **[Optional] Change transparency** if you are choosing a colored shape symbol.
+10. When you are happy with the drawing style of the symbology, **select Okay, and then Done.**
+
+You will end up with a map that looks something like the screen shot below.
+
+![Graduated symbol map](images\crime_graduated_symbols.png)
+
+Now, we have a map that tells us something about the number of crime incidents in different areas of our neighborhood over the timespan covered by the crime data For San Francisco, this represents the number of crimes since January of 2020. We can see that the area near Geneva Ave and Mission St. tends to have the highest number of crime incidents over this time period. 
+
+One thing to note about this visualization approach is that the points represent the centroid of the hexagon areas. It is common practice to represent polygon areas that aggregate points by the polygon's center point.  However, note that these centroids distribute the points across the study area more than the street intersections or street midpoints. The other thing you might notice is that a few points may show up outside of your neighborhood. That is because the hexagon or square cells in your hot spot grid may have had their center point outside of your neighborhood boundaries. You do not need to clean this up. It is not unreasonable to imagine that even some of the blurred crime locations that you imported actually occurred on the edge or just outside of your neighborhood boundaries. 
+
+Be sure to **Save** all of these new layers to your map. Now we can move from aggregation to mapping some disaggregated characteristics of crime incidents in your neighborhood.
 
 
 ## Filter Crime Data by Attributes
 
+In addition to mapping *all* of the crime incidents in your neighborhood, Assignment #4 asks you to dive a little deeper into at least one characteristic of the crime data. Whenever you start to analyze particular attributes or subcategories of a dataset this is referred to as disaggregation. We are going to do this in AGO using the filtering options in the attribute table. 
+
+**Before you head over to the attribute table of the crime incident data in your neighborhood, you need to take a look at your data to see what characteristics you have available.** Police departments do not have a standardized way of releasing their data to the public. Looking over your dataset will give you a sense of your attribute options. There are two ways to "take a look" at your data. The first way is more cursory, and the second way is a little more detailed and will make the filtering process a bit easier. The second option is recommended.
+
+Go to the content page for your crime layer to see the list of attributes and the variable names they are given. Some data layers also have links to the metadata from the police department. These metadata offer more detailed definitions of the attributes. If you have questions about your attributes and what they mean, send your questions to [Francine](mailto:fis@stanford.edu). 
+
+To take a closer, more hands-on look at your data, you will want to export the neighborhood crime incident layer data as a CSV that you can open up in Excel or Google Sheets on your computer. The plus side of this approach is that you can practice filtering different attributes in the spreadsheet on your computer. When you go to the filtering tool in AGO you will know what text to type into the filters to reduce the data points down to the attributes that you care about. Navigate to the **Analysis tab** and follow the steps below to extract your neighborhood-level crime data to a CSV: 
 
 
-## Final Map Product(s)
+![Export your neighborhood crime data to a CSV](images\export_crime_csv.gif)
+
+*Note: In the GIF, you might notice that I have switched back to the heat map layer and moved it to be above the other layers (i.e., eyes on the street, organizations, and hot spot). I did this just for ease. Moving it up in the contents pane brings it toward the top of the drop-down box options. Also, turning this layer on and the hot spots off was just a way to remind myself that this is the layer with the full layer of crime incident points that I want to pull down in the CSV.*
+
+1. Select the **Manage Data category** and the **Extract Data tool.**
+2. Specify the **Neighborhood-level Crime Data layer (i.e., the layer drawn as a heat map)** as the layer to extract. 
+3. Set the **Study Area** as **Same as your neighborhood boundaries** Keep the radio button for **Select features** checked.
+4. Leave the **Output format** as **CSV.**
+5. Give the **Output file** an informative name. Keep the radio box for **Current extent checked,** and click on **Run Analysis**
+
+You should now be able to open up the CSV in a spreadsheet software and examine the attributes. The next two sections will demonstrate filtering for two different attributes - day and type of crime. 
 
 
+### By Day of the Week
 
+The day of the week that the incident occurred is one attribute in all of your crime datasets. We can use an attribute filter to reduce the crimes to that occurred on a particular day. Let's say that I conducted my observations in Excelsior. I could set the day of the week filter to Friday to only have crimes that took place on a Friday. Find the column name for the day of the week attribute (e.g., incident_day_of_week), and then follow the steps shown in the GIF and written out below: 
+
+![Example of filtering by the day of the week.](images\filter_day_of_week.gif)
+
+1. Before applying the filter, **copy the heat-map layer with your neighborhood's crime incidents.** You can do this by clicking on the **three blue dots** below your layer and selecting the copy-option.
+2. Click on the *attribute table** button below this copied layer. 
+3. Select **Filter** in the drop-down menu options in the top right corner of the attribute table preview. 
+4. In the first drop-down menu, **find and select the name of the day of the week field** (i.e., variable) in your dataset. 
+5. Keep the middle drop-down menu set to **is.** (Think of is as signifying day of the week "is equal to")
+6. In the **third drop-down menu, type in the name of the value you are interested in mapping.** In this case, that is crimes that occurred on a **"Friday"**.
+7. Click on **Apply Filter.** Notice that the number of features in the attribute table preview has decreased.
+8. Close out the attribute table preview. 
+
+Notice that your map has changed. The high heat areas may reduce in intensity or disappear all together. You should inspect your map for patterns, and try visualizing using the hot spot tool and graduated symbols map like we did with the full dataset in the previous sections. Pay attention to how this particular set of crimes compared to the full set of crimes and how it compares to the elements of public order/disorder that you observed during your walk through the neighborhood or on Google Street View. 
+
+It is possible to go another step in disaggregating your data. For example, some of you will also have time-stamps on your crime incident data. You could add **another expression** in the filter window and set the drop-down menus in that second filter to the specific time period when you conducted your observations (e.g., between 7pm and 8pm). The next example will show the process for setting multiple expressions in a filter, but with type of crime attributes. 
+
+
+### By Type of Crime
+
+Another type of characteristic you might be interested in is the type of crime. In my observations, I identified some public spaces where I found many eyes on the street. These tended to be in public spaces that the Excelsior community has spent a lot of time beautifying and renovating, so I'm interested in whether crimes labeled as "vandalism" are distant from the eyes on the street or if they are co-located. 
+
+Most datasets only classify crimes with a single variable (e.g., crime_type, crime_description, crime_category). However, some datasets have classify crime types with multiple variables. This is the case for San Francisco, so I need to use two crime-type variables - the crime category and crime subcategory to pull the vandalism crimes that I am interested in. Specifically, I need to filter for the **incident_category value: "Malicious Mischief"** and the **sub-category value:  "Vandalism"**.
+
+The date filter from the previous section was cleared, so the GIF starts from the heat map of the full set of incidents. Also, notice how the raster of the heat map became much sparser. This because the filter left us with 40 incidents. The other thing to note is that I renamed the filtered layer at the end with a new, more informative label. This is important for the legend label. 
+
+![Example of filtering by type of crime with two filter expressions](images\filter_crime_type.gif)
+
+
+As mentioned in the previous section, you would want to consider the an appropriate visualization technique for your filtered points. There are a couple of things to be mindful of when it comes to visualizing the filtered data. 
+
+**First, if your filtering yields fewer than 30 crimes, do not use the hot spot tool.** Check to see if you have any points that are co-located (i.e., on top of one another). If you do not have co-located points, just map the locations (not counts/amounts). If you do have co-located points, just use the heat map and adjust the drawing style for the High-Low scale and the area of influence to more clearly show which locations multiple incidents of this type. 
+
+**If you have at least 30 crimes, but fewer than 60 crimes in your neighborhood after filtering, there is a small chance that the Find Hot Spots tool will not work using the settings described in the section above** on [hot spots and graduated symbol maps][Hot Spot & Graduated Symbol Maps]. The tool can be picky about the size of the area of interest (our neighborhood) when there are fewer than 60 points. **Try using the drawing tool** next to the field labeled, **Define where points are possible** to draw a polygon that encloses the neighborhood boundaries. If you get an error message, email or meet with [Francine](mailto:fis@stanford.edu) to do a little more trouble-shooting.
+
+
+Once you have chosen the characteristic you want to focus on - day, time, or some attribute of the crime - and created your filtered view and visualization, do not forget to **Save** your map. If you would like, go ahead and use the **Save As** option and give the new map an informative title/summary based on the filtering option you used. This will come in handy for the map products you turn in and later on when we make the Story Map.
+
+
+## Final Map Products
+
+This tutorial walked you through creating multiple layers. For both aesthetic and readability reasons, it is not necessarily ideal to show all of the layers that you created on the same map at once. Assignment #4 does not require that you use all of these map layers in your write-up. Instead, you might consider using a couple of maps to reveal the patterns (or lack thereof) that you find compelling or interesting and want to discuss in your write-up. I could see one map for showing the general/aggregated distribution of crime incidents with layers for your social order/disorder elements and key organizations. The second map would feature the disaggregated crime characteristics that you chose to focus on (e.g., type of crime) alongside layers for your social order/disorder elements and key institutions. This is where the comment above about **Saving As** after making the filtered map comes in handy.
+
+For the map with the generalized/aggregated crime data, you do not need to have the heat map layer and the graduated symbol layer both visible. Even if you have both layers turned on, it may be hard to view them together. Determine which visualization style better supports the patterns you are discussing in your write-up. The heat map is good for conveying generalized/high-level patterns, so if you are focused on broad regional differences within your neighborhood (e.g., the difference in crime prevalence between areas east and west of Main Street), then the heat map may be a good choice. On the other hand, if you want to quantify differences in crime incidents at a finer-grained spatial level, then the graduated symbol map would be the better option. 
+
+The hot spot map does not need to be included in your write-up. The hot spot tool/map was a map layer we had to use to get to the aggregated points. If you want to make a statement about statistically significant patterns of crime in your neighborhood, you can use the map layer/reference it in your write-up. Just know that even if an area does not have a statistically significant hot or cold spot, it does not mean there are not meaningful or substantively interesting patterns occurring there. **There are plenty of patterns in the real world that are not statistically significant, but still compelling/interesting/surprising.**
+
+To conclude, **the map products you choose to submit should be the ones that most effectively convey the argument you are trying to make about how crime patterns in your neighborhood compare to the theoretical ideas about public order/disorder that you read about this week.** But, don't delete or forget to save the map layers that you do not submit! It is possible that those layers may work better for the Story Map that you will create later this quarter. 
+
+Hopefully you enjoyed getting to try out different visualization approaches this week. Next week we will have another opportunity to play with visualization strategies when we map segregation trends and changes in racial composition within the neighborhood.

@@ -110,7 +110,7 @@ Your PDF map should look something like this. Make sure that all of the layers a
 
 ![PDF version of map](images\orgs_map_pdf.png)
 
-Don't worry about the strange legend layout in the PDF or if the layout did not zoom in on the extent of your neighborhood as much as the web-map did. The webmap is saved and is what will ultimately be part of your StoryMap. 
+Don't worry about the strange legend layout in the PDF or if the layout did not zoom in on the extent of your neighborhood as much as the web-map did. The webmap is saved and is what will ultimately be part of your Story Map. 
 
 
 You have now completed your first web-map! Way to go! In the next assignment, you'll build on these skills with a larger dataset that contains incidents of crime in the city where your neighborhood is located. 

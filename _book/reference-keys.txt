@@ -27,7 +27,7 @@ import-crime-data-spatially-reduce
 visualizing-crime-distribution-concentration
 clustered-point-map
 heat-map
-hot-spot-graduated-symbol-maps
+hot-spots-optional
 filter-crime-data-by-attributes
 by-day-of-the-week
 by-type-of-crime

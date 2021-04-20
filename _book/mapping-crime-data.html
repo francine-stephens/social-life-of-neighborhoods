@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="geocoding.html"/>
-<link rel="next" href="calculating-and-mapping-segregation.html"/>
+<link rel="next" href="mapping-segregation.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -101,9 +101,10 @@
 <li class="chapter" data-level="5.1.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#importing-custom-symbols"><i class="fa fa-check"></i><b>5.1.1</b> Importing Custom Symbols</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#import-crime-data-spatially-reduce"><i class="fa fa-check"></i><b>5.2</b> Import Crime Data &amp; Spatially Reduce</a></li>
-<li class="chapter" data-level="5.3" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#visualizing-aggregated-incidents"><i class="fa fa-check"></i><b>5.3</b> Visualizing aggregated incidents</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#heat-map"><i class="fa fa-check"></i><b>5.3.1</b> Heat Map</a></li>
-<li class="chapter" data-level="5.3.2" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#hot-spot-graduated-symbol-maps"><i class="fa fa-check"></i><b>5.3.2</b> Hot Spot &amp; Graduated Symbol Maps</a></li>
+<li class="chapter" data-level="5.3" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#visualizing-crime-distribution-concentration"><i class="fa fa-check"></i><b>5.3</b> Visualizing Crime Distribution &amp; Concentration</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#clustered-point-map"><i class="fa fa-check"></i><b>5.3.1</b> Clustered Point Map</a></li>
+<li class="chapter" data-level="5.3.2" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#heat-map"><i class="fa fa-check"></i><b>5.3.2</b> Heat Map</a></li>
+<li class="chapter" data-level="5.3.3" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#hot-spot-graduated-symbol-maps"><i class="fa fa-check"></i><b>5.3.3</b> Hot Spot &amp; Graduated Symbol Maps</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#filter-crime-data-by-attributes"><i class="fa fa-check"></i><b>5.4</b> Filter Crime Data by Attributes</a><ul>
 <li class="chapter" data-level="5.4.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#by-day-of-the-week"><i class="fa fa-check"></i><b>5.4.1</b> By Day of the Week</a></li>
@@ -111,10 +112,12 @@
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#final-map-products"><i class="fa fa-check"></i><b>5.5</b> Final Map Products</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="calculating-and-mapping-segregation.html"><a href="calculating-and-mapping-segregation.html"><i class="fa fa-check"></i><b>6</b> Calculating and Mapping Segregation</a></li>
-<li class="chapter" data-level="7" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>7</b> Resources</a><ul>
-<li class="chapter" data-level="7.1" data-path="resources.html"><a href="resources.html#arcgis-online"><i class="fa fa-check"></i><b>7.1</b> ArcGIS Online</a></li>
-<li class="chapter" data-level="7.2" data-path="resources.html"><a href="resources.html#storymaps"><i class="fa fa-check"></i><b>7.2</b> StoryMaps</a></li>
+<li class="chapter" data-level="6" data-path="mapping-segregation.html"><a href="mapping-segregation.html"><i class="fa fa-check"></i><b>6</b> Mapping Segregation</a></li>
+<li class="chapter" data-level="7" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html"><i class="fa fa-check"></i><b>7</b> Mapping Gentrification</a></li>
+<li class="chapter" data-level="8" data-path="globalization-migration-flow-maps.html"><a href="globalization-migration-flow-maps.html"><i class="fa fa-check"></i><b>8</b> Globalization &amp; Migration Flow Maps</a></li>
+<li class="chapter" data-level="9" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>9</b> Resources</a><ul>
+<li class="chapter" data-level="9.1" data-path="resources.html"><a href="resources.html#arcgis-online"><i class="fa fa-check"></i><b>9.1</b> ArcGIS Online</a></li>
+<li class="chapter" data-level="9.2" data-path="resources.html"><a href="resources.html#storymaps"><i class="fa fa-check"></i><b>9.2</b> StoryMaps</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -166,7 +169,7 @@
 </div>
 <div id="import-crime-data-spatially-reduce" class="section level2">
 <h2><span class="header-section-number">5.2</span> Import Crime Data &amp; Spatially Reduce</h2>
-<p>We are now ready to add the crime data as a layer to our map. You do not need to go fetch the crime data for your city because it is stored in the <strong>Crime data folder</strong> of our Class’ AGO page. These data have been formatted in a way that will make your experience filtering by crime attributes, which is described in more detail below, much easier.</p>
+<p>We are now ready to add the crime data as a layer to our map. You do not need to go fetch the crime data for your city because it is stored in the <strong>Crime data folder</strong> of our Class’ AGO page. These data have been formatted in a way that will make your experience filtering by crime attributes much easier.</p>
 <p>Navigate to the <strong>Add Layer tab</strong>, and select <strong>Search for Layers</strong>. Make sure that you are searching for the layer from <strong>My Groups</strong>. In the search bar, type in the name of your city and crime, (e.g., San Francisco Crime) and the layer of crime incidents should populate. Add that layer to the map. You should see points representing the crime incidents in your city. Below is a screenshot of what the layer looks like for San Francisco. The number of points you see will vary based on the city and how the data were collected.</p>
 <div class="figure">
 <img src="images/city_crime_incidents.png" alt="" />
@@ -199,8 +202,8 @@
 <p>Be sure to check out the information about your crime data layer. This can be found by navigating to the layer in the content page in our Group. You will find important information like the time span of your crime data and the attribute (i.e., variable) definitions.</p>
 <p>At this point, it is a good idea to save a new map with your work. Go ahead and remove the geocoded city-level crime incidents layers using by clicking on the <strong>three blue dots icon below the layer and selecting the remove layer option.</strong> Then, go to the <strong>Save icon</strong> in the toolbar and select <strong>Save As</strong>. Save this new map with an informative title, summary, and some tags. You can continue working off of this map for the next few steps of this assignment.</p>
 </div>
-<div id="visualizing-aggregated-incidents" class="section level2">
-<h2><span class="header-section-number">5.3</span> Visualizing aggregated incidents</h2>
+<div id="visualizing-crime-distribution-concentration" class="section level2">
+<h2><span class="header-section-number">5.3</span> Visualizing Crime Distribution &amp; Concentration</h2>
 <p>We have the points on the map representing crime incidents, but these points are not really indicative of point patterns when they are symbolized in this manner. There are two things to take note of when looking at the points as they currently plotted.</p>
 <p><strong>First, the points tend to show up at very particular points on the road network: street intersections or at the mid-point of a street segment.</strong> Why is this? Police departments provide the spatial locations for the crime incidents with “blurred addresses” or “blurred coordinates.” Blurring means that give you an approximate location. The department uses the nearest street intersection or midpoint to the actual address of the crime incident or the midpoint of the street segment. Alternatively, if they do not provide the address, but the geographic coordinates, they blur the coordinates by truncating the number of decimal places in the longitude and latitude. Blurring is done as a privacy control to minimize the risk of identifying individuals or establishments involved in the incident. The type and degree of blurring differs across cities. San Francisco’s blurring is pretty high. Some of you may find your city’s blurring practice is a little looser.</p>
 <p><strong>The second thing you should notice is that the map does not clearly represent multiple incidents that may have occurred in a single location with this type of symbology.</strong> At the moment, the only way you can tell whether multiple incidents occurred at a given location is by clicking on a crime point and reading the pop-up box content. As shown in the GIF below, when you look at the pop-up box, you can see the number of records listed and flip through them. This interactive pop-up box tells us a little bit about the number “crime incidents” occurred in the location (or, really nearby this intersection/mid-point of the street), but we want this information about the concentration and distribution of crime incidents to be seen discerned with the symbology. Let’s walk through two approaches for doing aggregating and visualizing points.</p>
@@ -208,13 +211,18 @@
 <img src="images/popups_records.gif" alt="" />
 <p class="caption">Pop-up boxes show the number of crimes at a location</p>
 </div>
+<div id="clustered-point-map" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Clustered Point Map</h3>
+<p><em>[This subsection is being updated on Tuesday 4/20/2021. The content for this subsection will be published by 3 PM PST.]</em></p>
+<p>If your neighborhood has very few crime incidents and there are not locations where of multiple crimes have occurred, then simply adding the points to the map and cleaning up the symbology to a manner that looks pleasing is fine. You do not need to worry about creating a clustered point map or the two maps covered in the next two sub-sections. Just experiment with the **location only symbology to find a color/shape style that you like to find and then skip down to the section on <a href="mapping-crime-data.html#filter-crime-data-by-attributes">disaggregating the crime data by attribute</a>. If you have many points on your map and locations where multiple crime incidents have occurred, let’s walk through the steps to make a clustered point map.</p>
+</div>
 <div id="heat-map" class="section level3">
-<h3><span class="header-section-number">5.3.1</span> Heat Map</h3>
-<p>One quick and easy way to convey the concentration and distribution of the point pattern is to change the symbology to a <strong>“heat map”.</strong> A heat map is a very generalized form of a point density map. <em>This map is good for drawing attention to where points are concentrated the most.</em> Where the color is “hot” (on the legend), the incidents are concentrated the most, and where the color is “cold” represents fewer or no incidents.</p>
+<h3><span class="header-section-number">5.3.2</span> Heat Map</h3>
+<p>In the cluster map, we get a very general sense of the distribution of crime incidents, however you might be looking for a visual that can convey the concentration of incidents in space. This is where a density or <em>heat map</em> can be useful! <em>This map is good for drawing attention to where points are concentrated the most.</em> Where the color is “hot”, the incidents are concentrated the most, and where the color is “cold” there are fewer or no incidents occurring.</p>
 <p>In other GIS software, we would have to compute a density map to get a heat map, but AGO has a heat map symbology style built into its drawing styles. Navigate to the <strong>Change style button</strong> on the crime layer. Then, view the steps in the GIF and written out below.</p>
 <div class="figure">
 <img src="images/crime_heat_map.gif" alt="" />
-<p class="caption">Create a Heat mapping</p>
+<p class="caption">Create a Heat map</p>
 </div>
 <ol style="list-style-type: decimal">
 <li>Set <strong>Show location only</strong> in the first drop-down box as the attribute to show.</li>
@@ -224,8 +232,8 @@
 <p>The visual is no longer a set of points, but a smoothed raster with colors ranging from light blue, which represents low frequency of incidents,to yellow representing areas with high frequencies. Zoom in and out of your neighborhood and you will notice that the visualization change. When the layer is zoomed out, the entire area is very “hot” and pointless to view. But, as you zoom in on the layer, the heat map becomes less developed as some of the raster cells disappear. When you zoom in even more, the layer starts to look more like points along the intersections. <em>The redrawing makes heat maps a source only for reference, but not for in-depth analyzing.</em></p>
 </div>
 <div id="hot-spot-graduated-symbol-maps" class="section level3">
-<h3><span class="header-section-number">5.3.2</span> Hot Spot &amp; Graduated Symbol Maps</h3>
-<p>To visualize the concentration of crime incidents by location in a more detailed, quantitative fashion, we would want to use a <strong>graduated symbol map,</strong> where the size of the symbol indicates the number or range of numbers of incidents that occured in the location. The first step in creating the graduated symbol map is to “aggregate” the incidents. Unlike other GIS software, AGO does not have tool to aggregate points based on point location. The best we can do with AGO is to aggregate to a polygon. For this reason, we will use a <strong>Hot Spot Analysis</strong> to aggregate to a series of small polygons that cover the area of our neighborhood. Aggregating to small polygons makes sense given that the points were blurred by the police department and represent the approximate locations of crimes. Thus, the polygons can represent the potential area where the incidents may have occurred.</p>
+<h3><span class="header-section-number">5.3.3</span> Hot Spot &amp; Graduated Symbol Maps</h3>
+<p>To visualize the concentration of crime incidents by location in a more detailed, quantitative fashion, we would want to use a <strong>graduated symbol map,</strong> where the size of the symbol indicates the number or range of numbers of incidents that occurred in the location. The first step in creating the graduated symbol map is to “aggregate” the incidents. Unlike other GIS software, AGO does not have tool to aggregate points based on point location. The best we can do with AGO is to aggregate to a polygon. For this reason, we will use a <strong>Hot Spot Analysis</strong> to aggregate to a series of small polygons that cover the area of our neighborhood. Aggregating to small polygons makes sense given that the points were blurred by the police department and represent the approximate locations of crimes. Thus, the polygons can represent the potential area where the incidents may have occurred.</p>
 <p>The hot spot analysis will output a map of hot spots, but we will end up changing the attribute to the point counts and visualize the counts with a different drawing symbology to get a graduated symbol map.</p>
 <div class="figure">
 <img src="images/crime_hot_spots.gif" alt="" />
@@ -248,7 +256,7 @@
 <p class="caption">Crime hot-spots map layer</p>
 </div>
 <p><strong>What makes a hot spot map different from a heat map?</strong> The short answer is statistics! A heat map maps how concentrated points are across the space in your viewing frame, but a hot spot map compares how concentrated points are in sub-regions of the area of interest (e.g., neighborhood) to how concentrated points would be if the points were distributed in a completely random manner across the area of interest. From the map, you can see which aggregated regions (hexagons or squares, depending on your grid) have more or less incidents than we would expect if the “crime generating process” was completely random. So, the hot spots indicate regions where the frequency of crimes is higher than we would expect if crime was randomly distributed across the neighborhood. Cold spots would represent regions with frequencies that are lower than expected if crime was randomly distributed across the neighborhood. The darker the shading indicates higher levels of statistical confidence in the hot spot estimates.</p>
-<p>Now, let’s press onward to making the graduated symbol map for crime! As you might guess, we want to select the <strong>Change style button</strong> on the hot spot layer. Follow the steps below:</p>
+<p>Let’s press onward to making the graduated symbol map for crime! As you might guess, we want to select the <strong>Change style button</strong> on the hot spot layer. Follow the steps below:</p>
 <ol style="list-style-type: decimal">
 <li>In the drop-down box, change the <strong>Attribute to Number of Points.</strong> You should see your map’s visualization style change to circles of different sizes. The legend also shows how the sizing relates to the number of points.</li>
 <li>Click on the <strong>Options</strong> for <strong>Counts and Amounts (Size) style</strong>.</li>
@@ -327,8 +335,8 @@
 </div>
 <div id="final-map-products" class="section level2">
 <h2><span class="header-section-number">5.5</span> Final Map Products</h2>
-<p>This tutorial walked you through creating multiple layers. For both aesthetic and readability reasons, it is not necessarily ideal to show all of the layers that you created on the same map at once. Assignment #4 does not require that you use all of these map layers in your write-up. Instead, you might consider using a couple of maps to reveal the patterns (or lack thereof) that you find compelling or interesting and want to discuss in your write-up. I could see one map for showing the general/aggregated distribution of crime incidents with layers for your social order/disorder elements and key organizations. The second map would feature the disaggregated crime characteristics that you chose to focus on (e.g., type of crime) alongside layers for your social order/disorder elements and key institutions. This is where the comment above about <strong>Saving As</strong> after making the filtered map comes in handy.</p>
-<p>For the map with the generalized/aggregated crime data, you do not need to have the heat map layer and the graduated symbol layer both visible. Even if you have both layers turned on, it may be hard to view them together. Determine which visualization style better supports the patterns you are discussing in your write-up. The heat map is good for conveying generalized/high-level patterns, so if you are focused on broad regional differences within your neighborhood (e.g., the difference in crime prevalence between areas east and west of Main Street), then the heat map may be a good choice. On the other hand, if you want to quantify differences in crime incidents at a finer-grained spatial level, then the graduated symbol map would be the better option.</p>
+<p>This tutorial walked you through creating multiple layers. For both aesthetic and readability reasons, it is not necessarily ideal to show all of the layers that you created on the same map at once. Assignment #4 does not require that you use all of these map layers in your write-up. Instead, you might consider using a couple of maps to reveal the patterns (or lack thereof) that you find compelling or surprising and want to discuss in your write-up. I could see one map for showing the general/aggregated distribution of crime incidents with layers for your social order/disorder elements and key organizations. The second map would feature the disaggregated crime characteristics that you chose to focus on (e.g., type of crime) alongside layers for your social order/disorder elements and key institutions. This is where the comment above about <strong>Saving As</strong> after making the filtered map comes in handy.</p>
+<p>For the map with the generalized/aggregated crime data, you do not need to have the clustered points layer, the heat map layer, and the graduated symbol layer all visible. Even if you have all of these layers turned on, it may be hard to view them together. Determine which visualization style better supports the patterns you are discussing in your write-up. The clustered point map may be good if you have many points that co-occur (either in the spot or near one another) and your neighborhood has a small areal extent. The heat map is good for conveying generalized/high-level patterns, so if you are focused on broad regional differences within your neighborhood (e.g., the difference in crime prevalence between areas east and west of Main Street), then the heat map may be a good choice. On the other hand, if you want to quantify differences in crime incidents at a finer-grained spatial level, then the graduated symbol map would be the better option.</p>
 <p>The hot spot map does not need to be included in your write-up. The hot spot tool/map was a map layer we had to use to get to the aggregated points. If you want to make a statement about statistically significant patterns of crime in your neighborhood, you can use the map layer/reference it in your write-up. Just know that even if an area does not have a statistically significant hot or cold spot, it does not mean there are not meaningful or substantively interesting patterns occurring there. <strong>There are plenty of patterns in the real world that are not statistically significant, but still compelling/interesting/surprising.</strong></p>
 <p>To conclude, <strong>the map products you choose to submit should be the ones that most effectively convey the argument you are trying to make about how crime patterns in your neighborhood compare to the theoretical ideas about public order/disorder that you read about this week.</strong> But, don’t delete or forget to save the map layers that you do not submit! It is possible that those layers may work better for the Story Map that you will create later this quarter.</p>
 <p>Hopefully you enjoyed getting to try out different visualization approaches this week. Next week we will have another opportunity to play with visualization strategies when we map segregation trends and changes in racial composition within the neighborhood.</p>
@@ -341,7 +349,7 @@
         </div>
       </div>
 <a href="geocoding.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="calculating-and-mapping-segregation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="mapping-segregation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

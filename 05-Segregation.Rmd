@@ -1,3 +1,41 @@
 # Mapping Segregation
 
-Will be published for the start of week 5. 
+With Assignment #5, we are once again we are interested in tracking spatial patterns and distributions in and around our neighborhood. Instead of focusing on events/incidents like crime and public order like we did last week, we are now interested in how people of different racial/ethnic backgrounds are distributed across our chosen neighborhood and in the city and region that encompass our neighborhood. 
+
+The assignment asks you to think about the prevalence and consistency of segregation in and around your neighborhood. To be able to make claims about the segregation, we will need to create a couple of maps and graphs. These visuals will help us understand which racial groups have resided in the neighborhood, the city, and the region, and how the distribution of the racial groups in the neighborhood compares to the distribution in the city and to the distribution across places within the region. On top of that, we are going to enable time functionality on our maps and graphs, so that we can track change over time in the composition and distribution of racial groups in the three different geographies. You're probably noticing that in the process of mapping segregation, we are dealing with multiple dimensions. The dimensions that we want to pay careful attention to are:
+
+1. Racial groups - Non-Hispanic Black, Non-Hispanic White, Asian, Native, Hispanic, Nonwhite (aggregate of all non-white groups)
+2. Geographic units - Neighborhood, City/Place, Region
+3. Time - Each decade from 1970 to 2020. Some of you may find that the first decade in your data is 1980. This is because data were not collected for your city at the census tract level. 
+
+That may seem like a lot of dimensions to consider, but you will find that there are visual techniques in GIS, especially web-based GIS, that make expressing all of these dimensions in a map straightforward and digestible. In the following sections, we will walk through three mapping styles that are useful for understanding segregation: dot density, predominance, and choropleth mapping. The data you need to make your maps is provided on our AGO class group page. Each section will point you to where to find those data layers to make your maps and graphs. 
+
+
+## Predominance Map of Census Tract-Neighborhoods
+
+
+
+## Dot Density Map of Census Tract-Neighborhoods
+
+
+
+## Visualizing Segregation Measures
+
+
+### Graphing the Dissimilarity Index
+
+
+
+### Choropleth Map of Divergence Index
+
+
+
+## Segregation between Places
+
+
+### Racial Composition
+
+
+### Mapping Segregation
+
+

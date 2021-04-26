@@ -125,12 +125,33 @@ At this point, you might notice that there are a couple of constraints of the di
 
 ### Divergence Index Choropleth Map 
 
-With the divergence index, we are representing the departure of the tract's racial make-up to the super-unit of interest, which in this case is the city.
+With the divergence index, we are representing the departure of the tract's racial make-up to the super-unit of interest, which in this case is the city. Although this measure takes into account all of the racial groups present in a census tract and the city at the same time, there is not a particularly straightforward way of interpreting the divergence index score. Unlike the dissimilarity index, the score does not represent the share of people from one racial group that would need to be redistributed across the city/larger sub-unit. Instead, the divergence score is generally interpreted based on which categorical level the score falls into: 
 
+1. High Segregation >= 0.25,
+2. Moderate Segregation >= 0.1 & <0.25,
+3. Low Segregation < 0.1
+
+In the steps below, we will first walk through mapping the raw divergence index scores in a choropleth map. Then, we will  reclassify the choropleth map into the three levels of segregation categories presented above.
+
+In a new map viewer window, navigate to the **Add Layer** button and find the layer of census tracts in your city with the divergence index scores [Naming style: "San_Francisco_tracts_divergence"]. Once you have added the layer, check that time is enabled and set the interval to decades in the configure options. Let's now build the choropleth map by navigating to the **Change style** button on the layer.
+
+1. In the change style page, set the attribute to **divergence** in the drop-down menu. 
+2. Select the **color** drawing style, and go into the **options.**
+3. 
+
+Push play on the time slider and notice how the shading of the tracts in and around your neighborhood changes over time. Darkening of colors over time indicates that the tract's population is becoming increasingly segregated. Tracts that trend toward lighter shades over time are experiencing decreases in segregation.
+
+With an index measure like the divergence index, sometimes the changes in the score over time are not clearly visualized using a choropleth map with the full numeric scale. It can be easier to view tracts experiencing changes in segregation levels by reclassifying them into categories, like the ones listed above for segregation levels. Return to the **Change Styles** page for the layer and again select the **Options** button on the color drawing style. 
+
+1. Check the **Reclassify data** radio button. 
+2. 
+
+
+Now, when you play the time animated map, this reclassified, categories spotlight the tracts that experience substantial changes in segregation levels. 
 
 ## Segregation between Places
 
-Now, let's turn to a larger scale - the region. The Schafran chapter made an argument about segregation being more prominent *between places across a region* instead of just *between neighborhoods in the same city*. To get a sense of segregation between places in a region, we need to transform our units. In our maps and graphs, our sub-unit needs to change from census tracts/neighborhoods to places - cities, suburbs, and exurbs - in a region. The super-unit is now the region, instead of the city.
+Now, let's turn to a larger scale - the region. The Schafran chapter made an argument about segregation becoming more prominent *between places across a region* instead of just *between neighborhoods in the same city* over time. To get a sense of segregation between places in a region, we need to change our units. In our maps and graphs, our sub-unit needs to change from census tracts/neighborhoods to places - cities, suburbs, and exurbs - in a region. The super-unit is now the region, instead of the city.
 
 The approach we are taking in measuring and visualizing regional segregation parallels Schafran's, but there are a few departures that we are going to take that are worth mentioning briefly here. 
 
@@ -150,8 +171,28 @@ Schafran also takes issue with using the Census Bureau's Metropolitan Statistica
 
 ### Racial Composition Map
 
+Now that you are familiar with these larger units, navigate to the **Add layers** button and search for the places layer in your region that has racial composition data [Naming style: "Bay_Area_Region_places_race"]. Add the places layer and change your basemap to the same minimalist style one that you used when you mapped racial composition of your neighborhood and the tracts in the city. 
 
+At this point, you will want to apply the mapping techniques covered above on mapping [racial composition][Racial Composition] to this new layer of places in the region. Do not forget to **configure the time settings** to the one decade intervals. 
+
+There is a lot of variation across the class in terms of the size of the region and number of places, so a dot density map may not be the most effective approach for all students. Regardless of the type of map you choose for racial composition in your region, be sure to pay attention to the racial composition in your city and how it compares to other places - cities, suburbs, and exurbs - in your region across time. Consider how the composition changes you are seeing across places compare to the changes you saw in racial composition of neighborhoods in your city.
+
+
+[INSERT PREDOMINANCE MAP ABOUT HERE]
+
+
+When you are happy with your map, **Save it as a new map with an informative title.** Don't forget to set the sharing options to our class group before you move onto mapping segregation in the region.
 
 ### Segregation Maps
 
+Finally, we will visualize the segregation measures for the places in our region. At this scale, we can map all of our segregation measures. No graphing is necessary here. Open up a new Map Viewer window and set-up your basemap with the style you prefer.
 
+Then, navigate to the **Add Layers** button and search for the places layers in your region with segregation data [Naming style: "Bay_Area_Region_places_segregation"]. Add the layer to the map. The layer contains the dissimilarity index scores and divergence index scores for all places in the region at each decade. When you interpret the index scores, remember that your **sub-unit is the place** and the **super-unit is the region**.
+
+You can visualize both types of indices using the same choropleth mapping technique demonstrated in the section above where we [mapped the Divergence index][Divergence Index Choropleth Map]. However, **be mindful of the fact that you cannot represent the dissimilarity index for all race pairs (e.g., Black-white, Asian-white, Hispanic-white, etc.) at the same time on a single map.** At this point in the assignment, you may have a sense of which racial/ethnic group pairs that you are particularly focused on. If that is the case and you want to use the dissimilarity index, you can proceed to mapping the set of relevant dissimilarity indices for your analysis. On the other hand, if you have not been focused on certain pairs of racial/ethnic groups, then you have two options. One would be to opt for the divergence index so that you are considering all racial groups at once. The other option is to really explore each of the dissimilarity indices in your maps and see if any patterns jump out. Again, juxtapose the dissimilarity indices of places in the region with your city, and see how they compare over time. 
+
+
+In the end, we do not need to see every single dissimilarity index and the divergence index mapped in your write-up. Just feature the racial composition and segregation maps that allow you to tease out some spatio-temporal patterns and engage with the theories of segregation you read about this past week. 
+
+
+**Final Note:** In just a few assignments, you have acquired several mapping techniques in your tool-kit. Take a minute to appreciate how quickly you have picked up on web-mapping and visualizing spatial data. The plus-side of picking up all of these mapping techniques in just a few weeks time is that when we return to mapping in two weeks for Assignment #7, we will end up re-using a lot of these techniques to map gentrification in the neighborhood and across the city. If you have made it this far in the mapping exercises, it should be smooth sailing from here on out.  

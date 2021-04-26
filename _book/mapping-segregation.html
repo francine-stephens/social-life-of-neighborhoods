@@ -112,7 +112,20 @@
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#final-map-products"><i class="fa fa-check"></i><b>5.5</b> Final Map Products</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="mapping-segregation.html"><a href="mapping-segregation.html"><i class="fa fa-check"></i><b>6</b> Mapping Segregation</a></li>
+<li class="chapter" data-level="6" data-path="mapping-segregation.html"><a href="mapping-segregation.html"><i class="fa fa-check"></i><b>6</b> Mapping Segregation</a><ul>
+<li class="chapter" data-level="6.1" data-path="mapping-segregation.html"><a href="mapping-segregation.html#racial-composition"><i class="fa fa-check"></i><b>6.1</b> Racial Composition</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="mapping-segregation.html"><a href="mapping-segregation.html#predominance-map"><i class="fa fa-check"></i><b>6.1.1</b> Predominance Map</a></li>
+<li class="chapter" data-level="6.1.2" data-path="mapping-segregation.html"><a href="mapping-segregation.html#dot-density-map"><i class="fa fa-check"></i><b>6.1.2</b> Dot Density Map</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="mapping-segregation.html"><a href="mapping-segregation.html#visualizing-segregation-indices"><i class="fa fa-check"></i><b>6.2</b> Visualizing Segregation Indices</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="mapping-segregation.html"><a href="mapping-segregation.html#dissimilarity-index-graph"><i class="fa fa-check"></i><b>6.2.1</b> Dissimilarity Index Graph</a></li>
+<li class="chapter" data-level="6.2.2" data-path="mapping-segregation.html"><a href="mapping-segregation.html#divergence-index-choropleth-map"><i class="fa fa-check"></i><b>6.2.2</b> Divergence Index Choropleth Map</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="mapping-segregation.html"><a href="mapping-segregation.html#segregation-between-places"><i class="fa fa-check"></i><b>6.3</b> Segregation between Places</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="mapping-segregation.html"><a href="mapping-segregation.html#racial-composition-map"><i class="fa fa-check"></i><b>6.3.1</b> Racial Composition Map</a></li>
+<li class="chapter" data-level="6.3.2" data-path="mapping-segregation.html"><a href="mapping-segregation.html#segregation-maps"><i class="fa fa-check"></i><b>6.3.2</b> Segregation Maps</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html"><i class="fa fa-check"></i><b>7</b> Mapping Gentrification</a></li>
 <li class="chapter" data-level="8" data-path="globalization-migration-flow-maps.html"><a href="globalization-migration-flow-maps.html"><i class="fa fa-check"></i><b>8</b> Globalization &amp; Migration Flow Maps</a></li>
 <li class="chapter" data-level="9" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>9</b> Resources</a><ul>
@@ -141,8 +154,144 @@
             <section class="normal" id="section-">
 <div id="mapping-segregation" class="section level1">
 <h1><span class="header-section-number">6</span> Mapping Segregation</h1>
-<p>Will be published for the start of week 5.</p>
+<p>With Assignment #5, we are once again we are interested in tracking spatial patterns and distributions in and around our neighborhood. Instead of focusing on events/incidents like crime and public order like we did last week, we are now interested in how people of different racial/ethnic backgrounds are distributed across our chosen neighborhood and in the city and region that encompass our neighborhood.</p>
+<p>The assignment asks you to think about the prevalence and consistency of segregation in and around your neighborhood. To be able to make claims about the segregation, we will need to create a couple of maps and graphs. These visuals will help us understand which racial groups have resided in the neighborhood, the city, and the region, and how the distribution of the racial groups in the neighborhood compares to the distribution in the city and to the distribution across places within the region. On top of that, we are going to enable time functionality on our maps and graphs, so that we can track change over time in the composition and distribution of racial groups in the three different geographies. You’re probably noticing that in the process of mapping segregation, we are dealing with multiple dimensions. The dimensions that we want to pay careful attention to are:</p>
+<ol style="list-style-type: decimal">
+<li>Racial groups - Non-Hispanic Black, Non-Hispanic White, Asian, Native, Hispanic, Nonwhite (aggregate of all non-white groups)</li>
+<li>Geographic units - Neighborhood, City/Place, Region</li>
+<li>Time - Each decade from 1970 to 2020. Some of you may find that the first decade in your data is 1980. This is because data were not collected for your city at the census tract level.</li>
+</ol>
+<p>That may seem like a lot of dimensions to consider, but you will find that there are visual techniques in GIS, especially web-based GIS, that make expressing all of these dimensions in a map straightforward and digestible. In the following sections, we will walk through three mapping styles that are useful for understanding segregation: dot density, predominance, and choropleth mapping. The data you need to make your maps is provided on our AGO class group page. Each section will direct you to the appropriate data layers.</p>
+<div id="racial-composition" class="section level2">
+<h2><span class="header-section-number">6.1</span> Racial Composition</h2>
+<p>Before we get to point of quantifying racial residential segregation in and around our neighborhood, we need to be able to see the racial composition of our neighborhood and other neighborhoods in the city in which it is located. A map of racial composition will tell us which racial groups are present and how much of the overall population each group represents. In your readings for the week, the Massey &amp; Denton and Schafran provided a sense of racial composition when they pointed to tables with the breakdown of race by percentages and in maps that were shaded by the percent of a single race group, e.g., % African American population. In the next few sections, we are going to go a step further with some mapping techniques that can show multiple racial groups at once and which racial groups are predominant in the neighborhood population.</p>
+<div id="predominance-map" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Predominance Map</h3>
+<p>Let’s start with a predominance map. The sub-units (smaller geography) that we will map are census tracts and our super-unit (larger geography) is the city. The predominance map will show two attributes for each census tract in the city:</p>
+<ol style="list-style-type: decimal">
+<li>The most common racial group in the census tract,</li>
+<li>How predominant the most common group is (i.e., the clear majority or just barely the majority).</li>
+</ol>
+<p>Start by opening up a new map in the Map Viewer. Navigate to the <strong>Add Layers</strong> button and search within our group page for the layer of census tracts in your neighborhood’s city [Naming Style: CITY_NAME_Tracts_Race]. Add the layer to the map. You should see a time slider at the bottom of your Map viewer now like the one shown in the image below. If you do not see the time slider, email <a href="mailto:fis@stanford.edu">Francine</a> so she can fix the configuration of your layer.</p>
+<div class="figure">
+<img src="images/add_census_tracts.png" alt="" />
+<p class="caption">Add the time-series census tract layer</p>
+</div>
+<p>** Style the Predominance Layer**</p>
+<div class="figure">
+<img src="images/style_predominance_census_tracts.gif" alt="" />
+<p class="caption">Add the time-series census tract layer</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Once you have added the layer to the map, go into the layer and <strong>Change the Style</strong>. You will need to specify the racial groups as attributes. The GIF above shows how to add each group successively.<br />
+</li>
+<li>Select <strong>Predominant Category</strong> as the drawing style, and click on the options.</li>
+<li>In the options, change the label names from the abbreviated variable names to the actual racial group names.
+<ol style="list-style-type: lower-roman">
+<li>Select a color scheme that you would like. You can manually select colors or pick a palette that you would prefer.</li>
+<li>Do not change the transparency settings.<br />
+</li>
+</ol></li>
+<li>Select Okay and Done and view the predominant racial groups in each of the census tracts in your city.</li>
+</ol>
+<p>Notice in the legend that the strength of predominance is represented based on the intensity of the color shading. Darker colors indicate more predominance, while lighter/more transparent coloring represents more of a plurality of groups being present in the tract. However, right now this visual is deceptive because each decade is stacked on one another in this layer. We need to turn on the time-slider to see the predominant groups in each decade.</p>
+<p><strong>Adjust the time intervals</strong></p>
+<p>To set the time slider intervals to show decade-steps, navigate to the <strong>Configure button</strong> on the time slider. It is the button all the way to the right of the slider.</p>
+<div class="figure">
+<img src="images/adjust_time_slider_predominance.gif" alt="" />
+<p class="caption">Adjust the time slider to show all decades</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Select advanced options.</li>
+<li>Change the interval to <strong>Decade</strong> and the step is <strong>1</strong></li>
+<li>You can adjust the play-back speed by moving the slider at the top.</li>
+</ol>
+<p>Before you watch your animated map, I recommend making a couple of aesthetic decisions:</p>
+<ol style="list-style-type: decimal">
+<li>Add the layer with your neighborhood boundaries, <strong>style it so that the polygon area is transparent and you only have an outline of the neighborhood boundaries.</strong> This will draw attention to your neighborhood.</li>
+<li>Because the series of maps we will be making are thematic maps with lots of colors, it is a good idea to opt for a basemap with a neutral background style and minimal colors, labels, and features. I would recommend changing the background style to the <strong>Light or Dark Gray Canvas</strong>.</li>
+</ol>
+<p>When you are happy with your basemap, hit play on the time slider and watch where the predominant groups change and stay the same. Note what is happening within the census tracts in and around your neighborhood. Save your map with the <strong>Save As</strong> button. Be sure to give it an informative title.</p>
+<div class="figure">
+<img src="images/predominance_animated.gif" alt="" />
+<p class="caption">Watch your animated racial group predominance map</p>
+</div>
+<p>This map gives us a good sense of the predominant groups, but does not show all groups residing in the census tract at once. For this, we need to turn to the quintessential composition map - the dot density map!</p>
+</div>
+<div id="dot-density-map" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Dot Density Map</h3>
+<p>The Map Viewer we have been using up to this point does not have the ability to render a dot density map. However, the new Map Viewer does, so we are going to switch into its interface for the dot density map. With your predominance map open in the (classic) Map Viewer, navigate to the button in the top bar that says: <strong>Open in new Map Viewer</strong>.</p>
+<div class="figure">
+<img src="images/open_new_map_viewer.png" alt="" />
+<p class="caption">Open the map in the New Map Viewer</p>
+</div>
+<p>Follow the steps in the GIF and written below to style the dot density map:</p>
+<div class="figure">
+<img src="images/dot_density_drawing_style.gif" alt="" />
+<p class="caption">Style your dot density map</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Navigate over to the <strong>Layers Pane</strong> and click on the <strong>three dots on the census tract layer with your racial groups.</strong></li>
+<li>Select <strong>Show Properties</strong>. The properties pane will appear on the right-hand side of your screen for you to change the drawing style.</li>
+<li>Select <strong>Edit layer style</strong> to change the drawing style.</li>
+<li>Then, select <strong>Dot Density</strong> from the Drawing Styles.</li>
+<li>Select the <strong>Style Options</strong> to change some of the properties. Set style options similar to the way you did in the Predominance map.
+<ol style="list-style-type: lower-roman">
+<li>Rename the race group categories with their real names instead of the abbreviated variable names.</li>
+<li>Change the color scheme. I replicated the color scheme of the predominance map.</li>
+<li>Test out different dot value representations. I found bumping down the value to work better and capture density in more dense neighborhoods. However, the ideal value is going to vary based on how urbanized/dense your city is, so test out different sizes.</li>
+</ol></li>
+</ol>
+<p>Go ahead and play the time animation and watch what happens.</p>
+<div class="figure">
+<img src="images/animate_dot_density_map.gif" alt="" />
+<p class="caption">Animated dot density map</p>
+</div>
+<p>Zoom and pan around your map. Notice that the dots move and re-size. The dots are not representing specific locations of residents within the tract; they are randomly distributed across the tract. The resizing changes as you zoom in and out. To change that, go into the layer options and turn off the rescaling option. You may have to try several different drawing sizes before you find one that works best for your neighborhood/city.</p>
+<p>If you have multiple tracts in your neighborhood, it might be worth filtering down to the extent of your neighborhood as I have done in the image below. Go to the filter tab on the side bar and filter based on the tract GEOIDs in your neighborhood. You can find your tract GEOIDs by clicking on the tracts and viewing the pop-up information.</p>
+<div class="figure">
+<img src="images/filter_dot_density_nhood.png" alt="" />
+<p class="caption">Filter down dot density map down to your neighborhood</p>
+</div>
+<p><strong>Before you close your map be sure to save your map with a new name.</strong></p>
+<p>For your assignment, you do not need to present both the predominance map and the dot-density map. Pick the visual that helps to convey your message. If presenting all groups or the denseness/sparseness of the population is important, then the dot density map would be ideal. If you are more focused on closely tracking one or two groups in the neighborhood/city, then the predominance map would probably be effective. You cannot save a time series map as a PDF, so you will need to Share the link to the web-map with us. <strong>If you create the dot density map, set the share settings to the AGO class group. We will access the map from the group when grading.</strong></p>
+</div>
+</div>
+<div id="visualizing-segregation-indices" class="section level2">
+<h2><span class="header-section-number">6.2</span> Visualizing Segregation Indices</h2>
+<p>Now, that we have mapped racial composition, we will want to quantify the level of segregation between neighborhoods within the city and examine how the level of segregation has changed over time. Some measures of segregation are more clearly visualized in a graph rather than a map. This is the case for the dissimilarity index. Other segregation measures like the divergence index can be clearly captured in a choropleth map. We will walk through what each index means and how to visualize it.</p>
+<div id="dissimilarity-index-graph" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Dissimilarity Index Graph</h3>
+<p>The dissimilarity index is the most commonly used measure of segregation. It is the simplest to calculate and interpret. The dissimilarity index indicates how unevenly two racial groups are distributed across tracts within a city. The dissimilarity score can be interpreted as the percent of one racial group (in the pair being considered) that would need to move to other neighborhoods in order to have an even distribution of the two racial groups across the city.</p>
+<p>We can use a spreadsheet software like Excel or Google sheets to view and chart the dissimilarity index over time for neighborhoods in the city. If you know how to make graphs using a statistical software like R, Stata, SPSS, or Python, you are welcome to use that, but I am going to walk through how to do this in Excel.</p>
+<ol style="list-style-type: decimal">
+<li>Download the CSV of the dissimilarity scores from the AGO class group page. You can find the <strong>datafile for your city</strong> stored under the <strong>Segregation Data</strong> category.</li>
+<li></li>
+</ol>
+<p>At this point, you might notice that there are a couple of constraints of the dissimilarity index. First, we can only consider segregation between two racial groups at a time. Second, the dissimilarity score is produced for the super-unit (the city) and we cannot decompose the dissimilarity index to show how much each tract contributes to the dissimilarity score of the city. Let’s turn to a measure that allows us to get around those two limitations - the divergence index.</p>
+</div>
+<div id="divergence-index-choropleth-map" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Divergence Index Choropleth Map</h3>
+</div>
+</div>
+<div id="segregation-between-places" class="section level2">
+<h2><span class="header-section-number">6.3</span> Segregation between Places</h2>
+<p>Now, let’s turn to a larger scale - the region. The Schafran chapter made an argument about segregation being more prominent <em>between places across a region</em> instead of just <em>between neighborhoods in the same city</em>. To get a sense of segregation between places in a region, we need to transform our units. In our maps and graphs, our sub-unit needs to change from census tracts/neighborhoods to places - cities, suburbs, and exurbs - in a region. The super-unit is now the region, instead of the city.</p>
+<p>The approach we are taking in measuring and visualizing regional segregation parallels Schafran’s, but there are a few departures that we are going to take that are worth mentioning briefly here.</p>
+<p><strong>Places</strong></p>
+<p>Schafran uses <strong>places as designated by the U.S. Census Bureau.</strong> Census places are a good approximation of cities and suburbs, but this geographic unit does not actually cover all of the land area, and consequently people, in a county/region. View the maps of the 50/500 club in the assigned chapter to see this. The Census Bureau lets states’ OMB identify what constitutes a “place”, so there is actually a lot of variation across the U.S. in terms of what gets designated as a place or not. Some states specify a certain population threshold, and others, like Hawaii, make sure that they draw boundaries in such a way that accounts for the entirety of the land area/population.</p>
+<p>Why does this shortcoming of Census places matter for racial residential segregation? Some of the areas that are not <em>emplaced</em> by the Census are these exurban places that are experiencing population and housing growth in the last decade. This is especially true in the South and American sunbelt region. At this point, there is not much research on these types of areas, so we do not really know if these exurban areas are becoming home to homogeneous or racially diverse populations. In the attribute table of your places map layer, you will see both the census designated places, which have names that end in city, town, or CDP as well as the non-emplaced areas, which have been labeled an unincorporated place in the county in which they are located (e.g., San Mateo County unincorporated place).</p>
+<p><strong>Region</strong></p>
+<p>Schafran also takes issue with using the Census Bureau’s Metropolitan Statistical Area (MSA) as a region. The geographic extent of MSAs varies across the U.S. because they are drawn according to population size thresholds. Schafran thinks that commuting patterns are an important dimension of a region, which is what he uses to define the 9 counties that make-up the Bay Area region. It is tricky to apply his approach to defining a region to other parts of the country, so regions are going to be defined differently based on where your neighborhood is located. If your neighborhood is in the Bay Area, your region extent will be the same as Schafran’s. If your neighborhood is located somewhere else, check-out the table below to see how it has been defined.</p>
+<p><strong>[Insert table about here]</strong></p>
+<div id="racial-composition-map" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Racial Composition Map</h3>
+</div>
+<div id="segregation-maps" class="section level3">
+<h3><span class="header-section-number">6.3.2</span> Segregation Maps</h3>
 
+</div>
+</div>
 </div>
             </section>
 

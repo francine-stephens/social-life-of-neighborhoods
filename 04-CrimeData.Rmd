@@ -220,4 +220,17 @@ For the map with the generalized/aggregated crime data, you do not need to have 
 
 To conclude, **the map products you choose to submit should be the ones that most effectively convey the argument you are trying to make about how crime patterns in your neighborhood compare to the theoretical ideas about public order/disorder that you read about this week.** But, don't delete or forget to save the map layers that you do not submit! It is possible that those layers may work better for the Story Map that you will create later this quarter. 
 
-Hopefully you enjoyed getting to try out different visualization approaches this week. Next week we will have another opportunity to play with visualization strategies when we map segregation trends and changes in racial composition within the neighborhood.
+**A note on sharing your maps:** You have two options for sharing your maps when you submit your assignment. You can print the maps as a "PDF" with the web-app as was demonstrated in the section about [PDF exports][Exporting your map as a PDF]. Alternatively, you have the option to share the web-map. This will be an interactive map for your viewer to engage with. In my opinion, this sharing option is a lot simpler: 
+
+![Navigate to the Share Link tab](images\sharing_link.png)
+
+
+1. Go to the share tab in the tool bar shown in the picture above. 
+2. In the sharing settings dialogue box be sure to check the box for our class group. Your sharing settings should look like the ones outlined in red in the image below.
+3. Copy the weblink at the bottom of the dialogue and paste or link it to the write-up you are turning in.
+
+![Set your sharing settings](images\share_settings.png)
+
+
+
+Hopefully you enjoyed getting to try out different visualization approaches this week. Next week we will have another opportunity to play with visualization strategies when we map changes in racial composition and segregation trends.

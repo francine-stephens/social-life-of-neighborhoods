@@ -33,6 +33,15 @@ by-day-of-the-week
 by-type-of-crime
 final-map-products
 mapping-segregation
+racial-composition
+predominance-map
+dot-density-map
+visualizing-segregation-indices
+dissimilarity-index-graph
+divergence-index-choropleth-map
+segregation-between-places
+racial-composition-map
+segregation-maps
 mapping-gentrification
 globalization-migration-flow-maps
 resources

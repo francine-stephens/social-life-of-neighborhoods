@@ -107,47 +107,120 @@ For your assignment, you do not need to present both the predominance map and th
 
 ## Visualizing Segregation Indices
 
-Now, that we have mapped racial composition, we will want to quantify the level of segregation between neighborhoods within the city and examine how the level of segregation has changed over time. Some measures of segregation are more clearly visualized in a graph rather than a map. This is the case for the dissimilarity index. Other segregation measures like the divergence index can be clearly captured in a choropleth map. We will walk through what each index means and how to visualize it. 
+Now, that we have mapped racial composition, we want to quantify the level of segregation between neighborhoods within the city and examine how the level of segregation has changed over time. Some measures of segregation are more clearly visualized in a graph rather than a map. This is the case for the dissimilarity index. Other segregation measures like the divergence index can be clearly captured in a choropleth map. We will walk through what each index means and how to visualize it. 
 
 
 ### Dissimilarity Index Graph
 
 The dissimilarity index is the most commonly used measure of segregation. It is the simplest to calculate and interpret. The dissimilarity index indicates how unevenly two racial groups are distributed across tracts within a city. The dissimilarity score can be interpreted as the percent of one racial group (in the pair being considered) that would need to move to other neighborhoods in order to have an even distribution of the two racial groups across the city. 
 
-We can use a spreadsheet software like Excel or Google sheets to view and chart the dissimilarity index over time for neighborhoods in the city. If you know how to make graphs using a statistical software like R, Stata, SPSS, or Python, you are welcome to use that, but I am going to walk through how to do this in Excel. 
+Because the dissimilarity score applies to the whole city, it would not be informative to color the map for just our city. Instead, we can more effectively track the dissimilarity scores for a city over time by using a graph. A spreadsheet software like Excel or Google sheets will allow us to view and chart the dissimilarity index over time. If you know how to make graphs using a statistical software like R, Stata, SPSS, or Python, you are welcome to use one of those statistical tools. The dissimilarity measures are stored as CSV files on our AGO page. Navigate to the **Content page** for our class group and **filter by categories for the Segregation Data** to find your city's data. The screenshot below shows you where to look on the content page. 
 
-1. Download the CSV of the dissimilarity scores from the AGO class group page. You can find the **datafile for your city** stored under the **Segregation Data** category. 
-2. 
+![Find your city's dissimilarity scores](images\find_dissim_data.png)
+
+1. Download the CSV and open it in your spreadsheet software of choice. 
+2. The spreadsheet has columns for the: city name, year, and the dissimilarity scores based on the two group-pairs. 
+3. Make a line chart in Excel using the year and the dissimilarity score columns. The GIF below walks you through the process. 
+    i. Remove the "year" label to get the graph to render as a line graph. Excel is picky about the x-axis not having a column label.
+
+![Graph the dissimilarity scores over time](images\dissimilarity_excel.gif)
+
+This GIF is just to give you a sense of how to quickly pull together a line graph from your data in Excel. You do not need to replicate this graph exactly. It is up to you as to which dissimilarity scores you present and how you style the chart. Base your decisions on which patterns jump out to you and what points you are making in your write-up. 
+
+Once you are happy with your graph, **save it as an image** so that you can include it in your assignment write-up and the Story Map that you create at the end of the quarter. 
+
+**How do you interpret the scores?** For the 1970 Asian-Hispanic score in this example, we would say that 54.1 dissimilarity score as indicating that about 54% of Asians (or Hispanics) would need to move neighborhoods in the city in order to achieve an even distribution of these racial groups across the city. 
+
+**What is considered a low or high segregation level?**
+
+The dissimilarity index is minimized (i.e., equals 0), when the proportion of each group in the census tract matches the proportions of the group in the city. By contrast, a score of 100 would signal that the tract is home to only one racial/ethnic group.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(readr)
+
+```
 
 
-At this point, you might notice that there are a couple of constraints of the dissimilarity index. First, we can only consider segregation between two racial groups at a time. Second, the dissimilarity score is produced for the super-unit (the city) and we cannot decompose the dissimilarity index to show how much each tract contributes to the dissimilarity score of the city. Let's turn to a measure that allows us to get around those two limitations - the divergence index. 
+```{r dissimilarity interpretations}
+dissim_scores <- tribble(
+  ~Level,  ~Score,  
+  "Low", "(0, 30]", 
+  "Moderate", "(30, 60]",
+  "High",  "(60, 100]"
+) 
+
+knitr::kable(dissim_scores,
+             #col.names = gsub("[_]", " ", names(dissim_scores)),
+             caption = "Dissimilarity Index: Levels of Segregation")
+
+```
+
+**What are the limitations of the Dissimilarity index?**
+
+At this point, you might notice that there are a couple of constraints of the dissimilarity index. First, we can only consider segregation between two racial groups at a time. Areas with more overall racial diversity tend to show lower overall Black-white dissimilarity scores,  for example. This is not necessarily because Blacks and whites are more integrated, but because there are fewer all-white or all-Black neighborhoods. 
+
+Second, the dissimilarity score is produced for the super-unit (the city) and we cannot decompose the dissimilarity index to show how much each tract contributes to the dissimilarity score of the city. Let's turn to a measure that allows us to get around those two limitations - the divergence index. 
+
 
 
 ### Divergence Index Choropleth Map 
 
-With the divergence index, we are representing the departure of the tract's racial make-up to the super-unit of interest, which in this case is the city. Although this measure takes into account all of the racial groups present in a census tract and the city at the same time, there is not a particularly straightforward way of interpreting the divergence index score. Unlike the dissimilarity index, the score does not represent the share of people from one racial group that would need to be redistributed across the city/larger sub-unit. Instead, the divergence score is generally interpreted based on which categorical level the score falls into: 
+With the divergence index, we are representing the departure of the tract's racial make-up from the super-unit of interest, which in this case is the city. Although this measure takes into account all of the racial groups present in a census tract and the city at the same time, there is not a particularly straightforward way of interpreting the divergence index score. Unlike the dissimilarity index, the score does not represent the share of people from one racial group that would need to be redistributed across the city/larger sub-unit. Instead, the divergence score is generally interpreted based on which categorical level the score falls into: 
 
-1. High Segregation >= 0.25,
-2. Moderate Segregation >= 0.1 & <0.25,
-3. Low Segregation < 0.1
+```{r divergence interpretations}
+diverg_scores <- tribble(
+  ~Level,  ~Score,  
+  "Low", "[0, 0.1]", 
+  "Moderate", "(0.1, 0.25]",
+  "High",  "(0.25, 1.0]"
+) 
+
+knitr::kable(diverg_scores,
+             #col.names = gsub("[_]", " ", names(dissim_scores)),
+             caption = "Divergence Index: Levels of Segregation")
+
+```
 
 In the steps below, we will first walk through mapping the raw divergence index scores in a choropleth map. Then, we will  reclassify the choropleth map into the three levels of segregation categories presented above.
 
-In a new map viewer window, navigate to the **Add Layer** button and find the layer of census tracts in your city with the divergence index scores [Naming style: "San_Francisco_tracts_divergence"]. Once you have added the layer, check that time is enabled and set the interval to decades in the configure options. Let's now build the choropleth map by navigating to the **Change style** button on the layer.
+**Choropleth Map of Divergence Index**
 
-1. In the change style page, set the attribute to **divergence** in the drop-down menu. 
-2. Select the **color** drawing style, and go into the **options.**
-3. 
+In a new map viewer window, navigate to the **Add Layer** button and find the layer of census tracts in your city with the divergence index scores [Naming style: "City_Name_tracts_divergence"]. Once you have added the layer, check that time is enabled and set the interval to decades in the configure options. Next, **add the neighborhood boundaries layer** and once again **style it with a transparent area and outlined borders.** Let's now build the choropleth map by navigating to the **Change style** button on the layer.
+
+![Create a choropleth map of the divergence index](images\divergence_choropleth.gif)
+
+1. In the change style page, set the attribute to **divergence (abbreviated divrgnc)** in the drop-down menu. 
+2. Select the **Counts and Amounts (Color)** drawing style, and go into the **Options.**
+3. You should notice that the color-scheme for low to high values is automatically populated as is the scaling of the shading in the legend. You can change the color scheme if you would prefer. More importantly, set the scale on the legend based on the low/moderate and moderate/high thresholds listed in the table above. 
 
 Push play on the time slider and notice how the shading of the tracts in and around your neighborhood changes over time. Darkening of colors over time indicates that the tract's population is becoming increasingly segregated. Tracts that trend toward lighter shades over time are experiencing decreases in segregation.
 
-With an index measure like the divergence index, sometimes the changes in the score over time are not clearly visualized using a choropleth map with the full numeric scale. It can be easier to view tracts experiencing changes in segregation levels by reclassifying them into categories, like the ones listed above for segregation levels. Return to the **Change Styles** page for the layer and again select the **Options** button on the color drawing style. 
+
+![View changes in segregation in and around your neighborhood over time](images\divergence_choropleth_animated.gif)
+
+
+**Categorical Thematic Map of Segregation Levels**
+
+With an index measure like the divergence index, the changes in the score over time are not clearly communicated using a choropleth map with the full numeric scale. It can be easier to spot the neighborhoods (i.e., census tracts) experiencing changes in segregation by reclassifying them into categories of low, moderate, and high, like the ones listed in the table above for segregation levels. Let's do this with our map! Return to the **Change Styles** page for the layer and again select the **Options** button again on the color drawing style. 
+
+
+![Transform your choropleth to a categorical thematic map](images\divergence_categorical_animated.gif)
 
 1. Check the **Reclassify data** radio button. 
-2. 
+2. Select the **Manual Breaks** Classification as the **Using** option from the drop down menu, and enter **3** for the **number of breaks.** 
+3. We want to match the 3 levels to match those in the table above, so go to the legend and change the values for the breaks to match the ones in the table. 
+4. Then, change the labels on the legend to high, moderate, and low. 
+5. Confirm your changes by clicking Okay/Done, and watch your time animated map again.
 
 
-Now, when you play the time animated map, this reclassified, categories spotlight the tracts that experience substantial changes in segregation levels. 
+When you play the time animated map, this reclassified version with segregation level categories draws more attention to the tracts that experience substantial changes in segregation levels (e.g., from low to medium or medium to high or vice-versa). As with the racial composition maps, you do not need to include both styles in your submission, select the one that does the best job conveying the trends in segregation occuring in and around your neighborhood. 
+
+Don't forget to save your map with the **Save As** option and give it an informative title!
+
+
 
 ## Segregation between Places
 
@@ -156,6 +229,8 @@ Now, let's turn to a larger scale - the region. The Schafran chapter made an arg
 The approach we are taking in measuring and visualizing regional segregation parallels Schafran's, but there are a few departures that we are going to take that are worth mentioning briefly here. 
 
 **Places**
+
+**NOTE: This section is being updated due to some AGO data rendering issues. The section will be live by 4/27/2020**
 
 Schafran uses **places as designated by the U.S. Census Bureau.** Census places are a good approximation of cities and suburbs, but this geographic unit does not actually cover all of the land area, and consequently people, in a county/region. View the maps of the 50/500 club in the assigned chapter to see this. The Census Bureau lets states' OMB identify what constitutes a "place", so there is actually a lot of variation across the U.S. in terms of what gets designated as a place or not. Some states specify a certain population threshold, and others, like Hawaii, make sure that they draw boundaries in such a way that accounts for the entirety of the land area/population. 
 

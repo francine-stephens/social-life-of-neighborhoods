@@ -52,6 +52,70 @@
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -259,16 +323,68 @@
 </div>
 <div id="visualizing-segregation-indices" class="section level2">
 <h2><span class="header-section-number">6.2</span> Visualizing Segregation Indices</h2>
-<p>Now, that we have mapped racial composition, we will want to quantify the level of segregation between neighborhoods within the city and examine how the level of segregation has changed over time. Some measures of segregation are more clearly visualized in a graph rather than a map. This is the case for the dissimilarity index. Other segregation measures like the divergence index can be clearly captured in a choropleth map. We will walk through what each index means and how to visualize it.</p>
+<p>Now, that we have mapped racial composition, we want to quantify the level of segregation between neighborhoods within the city and examine how the level of segregation has changed over time. Some measures of segregation are more clearly visualized in a graph rather than a map. This is the case for the dissimilarity index. Other segregation measures like the divergence index can be clearly captured in a choropleth map. We will walk through what each index means and how to visualize it.</p>
 <div id="dissimilarity-index-graph" class="section level3">
 <h3><span class="header-section-number">6.2.1</span> Dissimilarity Index Graph</h3>
 <p>The dissimilarity index is the most commonly used measure of segregation. It is the simplest to calculate and interpret. The dissimilarity index indicates how unevenly two racial groups are distributed across tracts within a city. The dissimilarity score can be interpreted as the percent of one racial group (in the pair being considered) that would need to move to other neighborhoods in order to have an even distribution of the two racial groups across the city.</p>
-<p>We can use a spreadsheet software like Excel or Google sheets to view and chart the dissimilarity index over time for neighborhoods in the city. If you know how to make graphs using a statistical software like R, Stata, SPSS, or Python, you are welcome to use that, but I am going to walk through how to do this in Excel.</p>
+<p>Because the dissimilarity score applies to the whole city, it would not be informative to color the map for just our city. Instead, we can more effectively track the dissimilarity scores for a city over time by using a graph. A spreadsheet software like Excel or Google sheets will allow us to view and chart the dissimilarity index over time. If you know how to make graphs using a statistical software like R, Stata, SPSS, or Python, you are welcome to use one of those statistical tools. The dissimilarity measures are stored as CSV files on our AGO page. Navigate to the <strong>Content page</strong> for our class group and <strong>filter by categories for the Segregation Data</strong> to find your city’s data. The screenshot below shows you where to look on the content page.</p>
+<div class="figure">
+<img src="images/find_dissim_data.png" alt="" />
+<p class="caption">Find your city’s dissimilarity scores</p>
+</div>
 <ol style="list-style-type: decimal">
-<li>Download the CSV of the dissimilarity scores from the AGO class group page. You can find the <strong>datafile for your city</strong> stored under the <strong>Segregation Data</strong> category.</li>
-<li></li>
+<li>Download the CSV and open it in your spreadsheet software of choice.</li>
+<li>The spreadsheet has columns for the: city name, year, and the dissimilarity scores based on the two group-pairs.</li>
+<li>Make a line chart in Excel using the year and the dissimilarity score columns. The GIF below walks you through the process.
+<ol style="list-style-type: lower-roman">
+<li>Remove the “year” label to get the graph to render as a line graph. Excel is picky about the x-axis not having a column label.</li>
+</ol></li>
 </ol>
-<p>At this point, you might notice that there are a couple of constraints of the dissimilarity index. First, we can only consider segregation between two racial groups at a time. Second, the dissimilarity score is produced for the super-unit (the city) and we cannot decompose the dissimilarity index to show how much each tract contributes to the dissimilarity score of the city. Let’s turn to a measure that allows us to get around those two limitations - the divergence index.</p>
+<div class="figure">
+<img src="images/dissimilarity_excel.gif" alt="" />
+<p class="caption">Graph the dissimilarity scores over time</p>
+</div>
+<p>This GIF is just to give you a sense of how to quickly pull together a line graph from your data in Excel. You do not need to replicate this graph exactly. It is up to you as to which dissimilarity scores you present and how you style the chart. Base your decisions on which patterns jump out to you and what points you are making in your write-up.</p>
+<p>Once you are happy with your graph, <strong>save it as an image</strong> so that you can include it in your assignment write-up and the Story Map that you create at the end of the quarter.</p>
+<p><strong>How do you interpret the scores?</strong> For the 1970 Asian-Hispanic score in this example, we would say that 54.1 dissimilarity score as indicating that about 54% of Asians (or Hispanics) would need to move neighborhoods in the city in order to achieve an even distribution of these racial groups across the city.</p>
+<p><strong>What is considered a low or high segregation level?</strong></p>
+<p>The dissimilarity index is minimized (i.e., equals 0), when the proportion of each group in the census tract matches the proportions of the group in the city. By contrast, a score of 100 would signal that the tract is home to only one racial/ethnic group.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="mapping-segregation.html#cb1-1"></a>dissim_scores &lt;-<span class="st"> </span><span class="kw">tribble</span>(</span>
+<span id="cb1-2"><a href="mapping-segregation.html#cb1-2"></a>  <span class="op">~</span>Level,  <span class="op">~</span>Score,  </span>
+<span id="cb1-3"><a href="mapping-segregation.html#cb1-3"></a>  <span class="st">&quot;Low&quot;</span>, <span class="st">&quot;(0, 30]&quot;</span>, </span>
+<span id="cb1-4"><a href="mapping-segregation.html#cb1-4"></a>  <span class="st">&quot;Moderate&quot;</span>, <span class="st">&quot;(30, 60]&quot;</span>,</span>
+<span id="cb1-5"><a href="mapping-segregation.html#cb1-5"></a>  <span class="st">&quot;High&quot;</span>,  <span class="st">&quot;(60, 100]&quot;</span></span>
+<span id="cb1-6"><a href="mapping-segregation.html#cb1-6"></a>) </span>
+<span id="cb1-7"><a href="mapping-segregation.html#cb1-7"></a></span>
+<span id="cb1-8"><a href="mapping-segregation.html#cb1-8"></a>knitr<span class="op">::</span><span class="kw">kable</span>(dissim_scores,</span>
+<span id="cb1-9"><a href="mapping-segregation.html#cb1-9"></a>             <span class="co">#col.names = gsub(&quot;[_]&quot;, &quot; &quot;, names(dissim_scores)),</span></span>
+<span id="cb1-10"><a href="mapping-segregation.html#cb1-10"></a>             <span class="dt">caption =</span> <span class="st">&quot;Levels of Segregation&quot;</span>)</span></code></pre></div>
+<table>
+<caption>(#tab:dissimilarity interpretations)Levels of Segregation</caption>
+<thead>
+<tr class="header">
+<th align="left">Level</th>
+<th align="left">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Low</td>
+<td align="left">(0, 30]</td>
+</tr>
+<tr class="even">
+<td align="left">Moderate</td>
+<td align="left">(30, 60]</td>
+</tr>
+<tr class="odd">
+<td align="left">High</td>
+<td align="left">(60, 100]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What are the limitations of the Dissimilarity index?</strong></p>
+<p>At this point, you might notice that there are a couple of constraints of the dissimilarity index. First, we can only consider segregation between two racial groups at a time. Areas with more overall racial diversity tend to show lower overall Black-white dissimilarity scores, for example. This is not necessarily because Blacks and whites are more integrated, but because there are fewer all-white or all-Black neighborhoods.</p>
+<p>Second, the dissimilarity score is produced for the super-unit (the city) and we cannot decompose the dissimilarity index to show how much each tract contributes to the dissimilarity score of the city. Let’s turn to a measure that allows us to get around those two limitations - the divergence index.</p>
 </div>
 <div id="divergence-index-choropleth-map" class="section level3">
 <h3><span class="header-section-number">6.2.2</span> Divergence Index Choropleth Map</h3>

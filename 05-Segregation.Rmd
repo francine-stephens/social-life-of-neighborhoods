@@ -28,7 +28,8 @@ Start by opening up a new map in the Map Viewer. Navigate to the **Add Layers** 
 
 ![Add the time-series census tract layer](images\add_census_tracts.png)
 
-** Style the Predominance Layer**
+**Style the Predominance Layer**
+
 
 ![Add the time-series census tract layer](images\style_predominance_census_tracts.gif)
 
@@ -48,7 +49,7 @@ To set the time slider intervals to show decade-steps, navigate to the **Configu
 ![Adjust the time slider to show all decades](images\adjust_time_slider_predominance.gif)
 
 1. Select advanced options.
-2. Change the interval to **Decade** and the step is **1**
+2. Change the **interval to Decade** and the **count to 1**.
 3. You can adjust the play-back speed by moving the slider at the top.
 
 
@@ -67,7 +68,7 @@ This map gives us a good sense of the predominant groups, but does not show all 
 
 ### Dot Density Map
 
-The Map Viewer we have been using up to this point does not have the ability to render a dot density map. However, the new Map Viewer does, so we are going to switch into its interface for the dot density map. With your predominance map open in the (classic) Map Viewer, navigate to the button in the top bar that says: **Open in new Map Viewer**. 
+The Map Viewer we have been using up to this point does not have the ability to render a dot density map. However, the new Map Viewer does, so we are going to switch into its interface for the dot density map. With your predominance map open in the (classic) Map Viewer, navigate to the button in the top bar that says: **Open in New Map Viewer**. 
 
 
 ![Open the map in the New Map Viewer](images\open_new_map_viewer.png)
@@ -133,56 +134,31 @@ Once you are happy with your graph, **save it as an image** so that you can incl
 
 **What is considered a low or high segregation level?**
 
-The dissimilarity index is minimized (i.e., equals 0), when the proportion of each group in the census tract matches the proportions of the group in the city. By contrast, a score of 100 would signal that the tract is home to only one racial/ethnic group.
+The dissimilarity index is minimized (i.e., equals 0), when the proportion of each group in the census tract matches the proportions of the group in the city. By contrast, a score of 100 would signal that the tract is home to only one racial/ethnic group. Generally, the breakdown for low-moderate-high levels of segregation looks like:
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+* Low = (0, 30] 
+* Moderate = (30, 60]
+* High = (60, 100]
 
-library(tidyverse)
-library(readr)
-
-```
-
-
-```{r dissimilarity interpretations}
-dissim_scores <- tribble(
-  ~Level,  ~Score,  
-  "Low", "(0, 30]", 
-  "Moderate", "(30, 60]",
-  "High",  "(60, 100]"
-) 
-
-knitr::kable(dissim_scores,
-             #col.names = gsub("[_]", " ", names(dissim_scores)),
-             caption = "Dissimilarity Index: Levels of Segregation")
-
-```
 
 **What are the limitations of the Dissimilarity index?**
 
 At this point, you might notice that there are a couple of constraints of the dissimilarity index. First, we can only consider segregation between two racial groups at a time. Areas with more overall racial diversity tend to show lower overall Black-white dissimilarity scores,  for example. This is not necessarily because Blacks and whites are more integrated, but because there are fewer all-white or all-Black neighborhoods. 
 
-Second, the dissimilarity score is produced for the super-unit (the city) and we cannot decompose the dissimilarity index to show how much each tract contributes to the dissimilarity score of the city. Let's turn to a measure that allows us to get around those two limitations - the divergence index. 
+Second, the dissimilarity score is produced for the super-unit (the city) and we cannot decompose the dissimilarity index to show how much each tract contributes to the dissimilarity score of the city. Let's turn to a measure that allows us to get around those two limitations - the divergence index.  
 
+
+**N.b: 2020 race data:** The 2020 data are based on estimates from the ACS, **NOT counts** from the Decennial Census. For urbanized areas, the estimates will be reasonable, but the same cannot be said for small urban areas and suburban areas. The ACS coverage in these areas was not as robust. If your neighborhood's city is not highly urbanized area, you will probably notice that the dissimilarity values tick upward or downward substantially from 2010 to 2020. This is probably a product of using an estimate with some coverage issues, especially for minority groups. If these conditions apply to your city's data, then take the 2020 values with a grain of salt in your write-up.  
 
 
 ### Divergence Index Choropleth Map 
 
 With the divergence index, we are representing the departure of the tract's racial make-up from the super-unit of interest, which in this case is the city. Although this measure takes into account all of the racial groups present in a census tract and the city at the same time, there is not a particularly straightforward way of interpreting the divergence index score. Unlike the dissimilarity index, the score does not represent the share of people from one racial group that would need to be redistributed across the city/larger sub-unit. Instead, the divergence score is generally interpreted based on which categorical level the score falls into: 
 
-```{r divergence interpretations}
-diverg_scores <- tribble(
-  ~Level,  ~Score,  
-  "Low", "[0, 0.1]", 
-  "Moderate", "(0.1, 0.25]",
-  "High",  "(0.25, 1.0]"
-) 
+* Low = [0, 0.1]
+* Moderate = (0.1, 0.25]
+* High = (0.25, 1.0]
 
-knitr::kable(diverg_scores,
-             #col.names = gsub("[_]", " ", names(dissim_scores)),
-             caption = "Divergence Index: Levels of Segregation")
-
-```
 
 In the steps below, we will first walk through mapping the raw divergence index scores in a choropleth map. Then, we will  reclassify the choropleth map into the three levels of segregation categories presented above.
 
@@ -194,7 +170,7 @@ In a new map viewer window, navigate to the **Add Layer** button and find the la
 
 1. In the change style page, set the attribute to **divergence (abbreviated divrgnc)** in the drop-down menu. 
 2. Select the **Counts and Amounts (Color)** drawing style, and go into the **Options.**
-3. You should notice that the color-scheme for low to high values is automatically populated as is the scaling of the shading in the legend. You can change the color scheme if you would prefer. More importantly, set the scale on the legend based on the low/moderate and moderate/high thresholds listed in the table above. 
+3. You should notice that the color-scheme for low to high values is automatically populated as is the scaling of the shading in the legend. You can change the color scheme if you would prefer. More importantly, set the scale on the legend based on the low/moderate and moderate/high thresholds listed in above. 
 
 Push play on the time slider and notice how the shading of the tracts in and around your neighborhood changes over time. Darkening of colors over time indicates that the tract's population is becoming increasingly segregated. Tracts that trend toward lighter shades over time are experiencing decreases in segregation.
 
@@ -204,19 +180,19 @@ Push play on the time slider and notice how the shading of the tracts in and aro
 
 **Categorical Thematic Map of Segregation Levels**
 
-With an index measure like the divergence index, the changes in the score over time are not clearly communicated using a choropleth map with the full numeric scale. It can be easier to spot the neighborhoods (i.e., census tracts) experiencing changes in segregation by reclassifying them into categories of low, moderate, and high, like the ones listed in the table above for segregation levels. Let's do this with our map! Return to the **Change Styles** page for the layer and again select the **Options** button again on the color drawing style. 
+With an index measure like the divergence index, the changes in the score over time are not clearly communicated using a choropleth map with the full numeric scale. It can be easier to spot the neighborhoods (i.e., census tracts) experiencing changes in segregation by reclassifying them into categories of low, moderate, and high, like the ones listed above for segregation levels. Let's do this with our map! Return to the **Change Styles** page for the layer and again select the **Options** button again on the color drawing style. 
 
 
 ![Transform your choropleth to a categorical thematic map](images\divergence_categorical_animated.gif)
 
 1. Check the **Reclassify data** radio button. 
-2. Select the **Manual Breaks** Classification as the **Using** option from the drop down menu, and enter **3** for the **number of breaks.** 
-3. We want to match the 3 levels to match those in the table above, so go to the legend and change the values for the breaks to match the ones in the table. 
+2. Select the **Manual Breaks** Classification as the **Using** option from the drop down menu, and enter **3** for the **number of classes.** 
+3. We want to match the 3 levels to match those in the series of bullets above, so go to the legend and change the values for the breaks to match the ones in the table. 
 4. Then, change the labels on the legend to high, moderate, and low. 
 5. Confirm your changes by clicking Okay/Done, and watch your time animated map again.
 
 
-When you play the time animated map, this reclassified version with segregation level categories draws more attention to the tracts that experience substantial changes in segregation levels (e.g., from low to medium or medium to high or vice-versa). As with the racial composition maps, you do not need to include both styles in your submission, select the one that does the best job conveying the trends in segregation occuring in and around your neighborhood. 
+When you play the time animated map, this reclassified version with segregation level categories draws more attention to the tracts that experience substantial changes in segregation levels (e.g., from low to medium or medium to high or vice-versa). As with the racial composition maps, you do not need to include both styles in your submission, select the one that does the best job conveying the trends in segregation occurring in and around your neighborhood. 
 
 Don't forget to save your map with the **Save As** option and give it an informative title!
 
@@ -230,8 +206,6 @@ The approach we are taking in measuring and visualizing regional segregation par
 
 **Places**
 
-**NOTE: This section is being updated due to some AGO data rendering issues. The section will be live by 4/27/2020**
-
 Schafran uses **places as designated by the U.S. Census Bureau.** Census places are a good approximation of cities and suburbs, but this geographic unit does not actually cover all of the land area, and consequently people, in a county/region. View the maps of the 50/500 club in the assigned chapter to see this. The Census Bureau lets states' OMB identify what constitutes a "place", so there is actually a lot of variation across the U.S. in terms of what gets designated as a place or not. Some states specify a certain population threshold, and others, like Hawaii, make sure that they draw boundaries in such a way that accounts for the entirety of the land area/population. 
 
 Why does this shortcoming of Census places matter for racial residential segregation? Some of the areas that are not *emplaced* by the Census are these exurban places that are experiencing population and housing growth in the last decade. This is especially true in the South and American sunbelt region. At this point, there is not much research on these types of areas, so we do not really know if these exurban areas are becoming home to homogeneous or racially diverse populations. In the attribute table of your places map layer, you will see both the census designated places, which have names that end in city, town, or CDP as well as the non-emplaced areas, which have been labeled an unincorporated place in the county in which they are located (e.g., San Mateo County unincorporated place).
@@ -239,35 +213,57 @@ Why does this shortcoming of Census places matter for racial residential segrega
 
 **Region**
 
-Schafran also takes issue with using the Census Bureau's Metropolitan Statistical Area (MSA) as a region. The geographic extent of MSAs varies across the U.S. because they are drawn according to population size thresholds. Schafran thinks that commuting patterns are an important dimension of a region, which is what he uses to define the 9 counties that make-up the Bay Area region. It is tricky to apply his approach to defining a region to other parts of the country, so regions are going to be defined differently based on where your neighborhood is located. If your neighborhood is in the Bay Area, your region extent will be the same as Schafran's. If your neighborhood is located somewhere else, check-out the table below to see how it has been defined. 
+Schafran also takes issue with using the Census Bureau's Metropolitan Statistical Area (MSA) as a region. The geographic extent of MSAs varies across the U.S. because they are drawn according to population size thresholds. Schafran thinks that commuting patterns are an important dimension of a region, which is what he uses to define 12 counties that make-up the Bay Area region. It is tricky to apply his approach to defining a region to other parts of the country, so regions are going to be defined differently based on where your neighborhood is located. If your neighborhood is in the Bay Area, your region extent will be the same as Schafran's. If your neighborhood is located somewhere else, we will just use the combined-statistical area geography from the U.S. Census Bureau.  Check-out the table below to see how it has been defined. 
 
-**[Insert table about here]**
+| City        | CBSA Census Region      |
+| ----------- | ----------------------- |
+| Pittsburgh  | Pittsburgh, PA |
+| Yakima      | Yakima, WA  |
+| Los Angeles, Westminster  | Los Angeles-Long Beach-Santa Ana, CA |
+| Bakersfield | Bakersfield-Delano, CA |
+| Chino       | Riverside-San Bernandino-Ontario, CA |
+| Denver      | Denver-Aurora-Broomfield, CO |
+| Kansas City | Kansas City, MO-KS |
+| Detroit     | Detroit-Warren-Livonia, MI |
 
 
 ### Racial Composition Map
 
-Now that you are familiar with these larger units, navigate to the **Add layers** button and search for the places layer in your region that has racial composition data [Naming style: "Bay_Area_Region_places_race"]. Add the places layer and change your basemap to the same minimalist style one that you used when you mapped racial composition of your neighborhood and the tracts in the city. 
+Now that you are familiar with these larger units, navigate to the **Add layers** button and search for the places layer in your region that has racial composition data [Naming style: "Region_Name_places_race"]. Add the places layer and change your basemap to the same minimalist style one that you used when you mapped racial composition of your neighborhood and the tracts in the city. 
 
-At this point, you will want to apply the mapping techniques covered above on mapping [racial composition][Racial Composition] to this new layer of places in the region. Do not forget to **configure the time settings** to the one decade intervals. 
+At this point, you will want to apply the mapping techniques covered above on mapping [racial composition][Racial Composition] to this new layer of places in the region. Do not forget to **configure the time settings** to the one decade intervals. Also, remember that you can interact with the features in your map layers. As shown in the image below, clicking on any of the places opens up a pop-up with the data in the attribute table for that place (e.g., Name, Total population).
 
-There is a lot of variation across the class in terms of the size of the region and number of places, so a dot density map may not be the most effective approach for all students. Regardless of the type of map you choose for racial composition in your region, be sure to pay attention to the racial composition in your city and how it compares to other places - cities, suburbs, and exurbs - in your region across time. Consider how the composition changes you are seeing across places compare to the changes you saw in racial composition of neighborhoods in your city.
+![Interact with your map to find the name of the places and other information](images\identify_places_in_region.png)
 
 
-[INSERT PREDOMINANCE MAP ABOUT HERE]
+
+There is a lot of variation across the class in terms of the size of the region and number of places, so a dot density map may not be the most effective approach for all students. Regardless of the type of map you choose for racial composition in your region, be sure to pay attention to the racial composition in your city and how it compares to other places - cities, suburbs, and exurbs - in your region across time. Consider how the composition changes you are seeing across places compare to the changes you saw in racial composition of neighborhoods in your city.  
+
+If you are interested in tracking a particular racial/ethnic group like Schafran did with the Black population in the Bay Area, you may also want to make a choropleth map that just shows the proportion of the racial group in each place. Navigate to the **Counts and Amounts (Colors)** and in the options page, set the **Divide by** drop down box to **POP**. This will allow you to map the proportion of the population that the racial group represents. The image below provides an example of how to map the proportion of Black residents for places in the region. 
+
+
+![You can make a choropleth map for proportions of a particular racial group like Schar](images\recreate_Scharfran_map_pblack.png)
+
+As you map the places in the region, especially if your region is large like the Bay Area, you might find that the time animator may struggle to render the map (it might lag for some places or not show them). You can see this in the GIF below. You have two options to work around this problem. One is to just pause at each decade and make note of your observations (we can do that too when you submit your maps). The other option is to use a **filter** like you did with the crime data and create separate layers for each decade in our time span. You can turn on and off the layers manually and make note of your patterns.  
+
+![Predominance map of Bay Area region](images\region_predominance_map.gif)
 
 
 When you are happy with your map, **Save it as a new map with an informative title.** Don't forget to set the sharing options to our class group before you move onto mapping segregation in the region.
 
 ### Segregation Maps
 
-Finally, we will visualize the segregation measures for the places in our region. At this scale, we can map all of our segregation measures. No graphing is necessary here. Open up a new Map Viewer window and set-up your basemap with the style you prefer.
+Finally, we will visualize the segregation measures for the places in our region. At this scale, we can map all of our segregation measures. No graphing is necessary here.   
 
-Then, navigate to the **Add Layers** button and search for the places layers in your region with segregation data [Naming style: "Bay_Area_Region_places_segregation"]. Add the layer to the map. The layer contains the dissimilarity index scores and divergence index scores for all places in the region at each decade. When you interpret the index scores, remember that your **sub-unit is the place** and the **super-unit is the region**.
+Open up a new Map Viewer window and set-up your basemap with the style you prefer. Then, navigate to the **Add Layers** button and search for the places layers in your region with segregation data [Naming style: "Region_Name_places_segregation"]. Add the layer to the map. The layer contains the dissimilarity index scores and divergence index score for all places in the region at each decade. When you interpret the index scores, remember that your **sub-unit is the place** and the **super-unit is the region**.
 
-You can visualize both types of indices using the same choropleth mapping technique demonstrated in the section above where we [mapped the Divergence index][Divergence Index Choropleth Map]. However, **be mindful of the fact that you cannot represent the dissimilarity index for all race pairs (e.g., Black-white, Asian-white, Hispanic-white, etc.) at the same time on a single map.** At this point in the assignment, you may have a sense of which racial/ethnic group pairs that you are particularly focused on. If that is the case and you want to use the dissimilarity index, you can proceed to mapping the set of relevant dissimilarity indices for your analysis. On the other hand, if you have not been focused on certain pairs of racial/ethnic groups, then you have two options. One would be to opt for the divergence index so that you are considering all racial groups at once. The other option is to really explore each of the dissimilarity indices in your maps and see if any patterns jump out. Again, juxtapose the dissimilarity indices of places in the region with your city, and see how they compare over time. 
+You can visualize both types of indices using the same choropleth and categorical mapping techniques demonstrated in the section above where we [mapped the Divergence index][Divergence Index Choropleth Map]. If the time animator was acting up for your regional composition map, you will have the same problem again with the segregation map. Use one of the two work-arounds mentioned above to get by for this assignments. We will come back and tweak these maps at the end of the quarter to fold into the Story Maps.  
 
+When mapping segregation, **be mindful of the fact that you cannot represent the dissimilarity index for all race pairs (e.g., Black-white, Asian-white, Hispanic-white, etc.) at the same time on a single map.** If your focus is on evenness of the distribution of race groups in places across the region, then you would need to pick the group pairs that you want to speak to in your write-up and map them as separate choropleth/categorical layers.  
 
 In the end, we do not need to see every single dissimilarity index and the divergence index mapped in your write-up. Just feature the racial composition and segregation maps that allow you to tease out some spatio-temporal patterns and engage with the theories of segregation you read about this past week. 
 
 
-**Final Note:** In just a few assignments, you have acquired several mapping techniques in your tool-kit. Take a minute to appreciate how quickly you have picked up on web-mapping and visualizing spatial data. The plus-side of picking up all of these mapping techniques in just a few weeks time is that when we return to mapping in two weeks for Assignment #7, we will end up re-using a lot of these techniques to map gentrification in the neighborhood and across the city. If you have made it this far in the mapping exercises, it should be smooth sailing from here on out.  
+**Taking Stock & Looking Ahead**   
+
+In just a few assignments, you have acquired several mapping techniques in your tool-kit. Take a minute to appreciate how quickly you have picked up on web-mapping and visualizing spatial data. The plus-side of picking up all of these mapping techniques in just a few weeks time is that when we return to mapping in two weeks for Assignment #7, we will end up re-using a lot of these techniques to map gentrification in the neighborhood and across the city. If you have made it this far in the mapping exercises, it should be smooth sailing from here on out.  

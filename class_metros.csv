@@ -1,9 +1,10 @@
-CBSAFP10,REGION
-38300,"Pittsburgh, PA"
-49420,"Yakima, WA"
-31100,"Los Angeles-Long Beach-Santa Ana, CA"
-12540,"Bakersfield-Delano, CA"
-28140,"Kansas City, MO-KS"
-19820,"Detroit-Warren-Livonia, MI"
-19740,"Denver-Aurora-Broomfield, CO"
-40140,"Riverside-San Bernardino-Ontario, CA"
+CBSAFP10,Region,City
+38300,"Pittsburgh, PA",Pittsburgh
+49420,"Yakima, WA",Yakima
+31100,"Los Angeles-Long Beach-Santa Ana, CA","Los Angeles, Westminster"
+12540,"Bakersfield-Delano, CA",Bakersfield
+28140,"Kansas City, MO-KS","Kansas City, MO"
+19820,"Detroit-Warren-Livonia, MI",Detroit
+19740,"Denver-Aurora-Broomfield, CO",Denver
+40140,"Riverside-San Bernardino-Ontario, CA",Chino
+,Bay Area,"San Francisco, Oakland, San Jose, Palo Alto, East Palo Alto, San Mateo, Fremont"

@@ -33,7 +33,13 @@ Start by opening up a new map in the Map Viewer. Navigate to the **Add Layers** 
 
 ![Add the time-series census tract layer](images\style_predominance_census_tracts.gif)
 
-1. Once you have added the layer to the map, go into the layer and **Change the Style**. You will need to specify the racial groups as attributes. The GIF above shows how to add each group successively.   
+1. Once you have added the layer to the map, go into the layer and **Change the Style**. You will need to specify the racial groups as attributes. The GIF above shows how to add each group successively. Select race groups from the list below. You do not need to select all of them. 
+    i. Non-Hispanic White (NHWHITE)
+    ii. Non-Hispanic Black (NHBLACK)
+    iii. Asian & Pacific Islander (ASIAN)
+    iv. Native American (NATIVE)
+    v. Hispanic/Latinx (HISPANIC)
+    vi. Alternatively, if you are just interested in the binary white/non-white group distribution, use only Non-Hispanic White and Nonwhite (NONWHITE) as your attributes. Nonwhite aggregates the Non-Hispanic Black, AAPI, Native American, and Hispanic/Latinx groups. 
 2. Select **Predominant Category** as the drawing style, and click on the options.
 3. In the options, change the label names from the abbreviated variable names to the actual racial group names. 
     i. Select a color scheme that you would like. You can manually select colors or pick a palette that you would prefer.

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6 Mapping Segregation | The Social Life of Neighborhoods: Data Processing &amp; Mapping Tutorials</title>
+  <title>6 Mapping Segregation | The Social Life of Neighborhoods: Data Preparation &amp; Mapping Tutorials</title>
   <meta name="description" content="This is a website with tutorials for the Social Life of Neighborhoods offered in SOC 176/276." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6 Mapping Segregation | The Social Life of Neighborhoods: Data Processing &amp; Mapping Tutorials" />
+  <meta property="og:title" content="6 Mapping Segregation | The Social Life of Neighborhoods: Data Preparation &amp; Mapping Tutorials" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6 Mapping Segregation | The Social Life of Neighborhoods: Data Processing &amp; Mapping Tutorials" />
+  <meta name="twitter:title" content="6 Mapping Segregation | The Social Life of Neighborhoods: Data Preparation &amp; Mapping Tutorials" />
   
   <meta name="twitter:description" content="This is a website with tutorials for the Social Life of Neighborhoods offered in SOC 176/276." />
   
@@ -66,7 +66,6 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="toc-logo"><a href="./"><img src="images/parcels_small.jpg" width="190.5" height="213" align="center"></a></li>
 <li><a href="./">Tutorials</a></li>
 
 <li class="divider"></li>
@@ -144,7 +143,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Social Life of Neighborhoods: Data Processing &amp; Mapping Tutorials</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Social Life of Neighborhoods: Data Preparation &amp; Mapping Tutorials</a>
           </h1>
         </div>
 
@@ -321,7 +320,7 @@
 <p class="caption">View changes in segregation in and around your neighborhood over time</p>
 </div>
 <p><strong>Categorical Thematic Map of Segregation Levels</strong></p>
-<p>With an index measure like the divergence index, the changes in the score over time are not clearly communicated using a choropleth map with the full numeric scale. It can be easier to spot the neighborhoods (i.e., census tracts) experiencing changes in segregation by reclassifying them into categories of low, moderate, and high, like the ones listed above for segregation levels. Let’s do this with our map! Return to the <strong>Change Styles</strong> page for the layer and again select the <strong>Options</strong> button again on the color drawing style.</p>
+<p>With an index measure like the divergence index, the changes in the score over time are not clearly communicated using a choropleth map with the full numeric scale. One of the limitations of the divergence index is that the values tend to be quite small, so it can be tricky to discern what is a low segregation and what is a moderate level. We can help out someone who is reading our map by grouping the index scores into categories. It also can be easier to spot the neighborhoods (i.e., census tracts) experiencing changes in segregation by reclassifying them into categories of low, moderate, and high, like the ones listed above for segregation levels. Let’s do this with our map! Return to the <strong>Change Styles</strong> page for the layer and again select the <strong>Options</strong> button again on the color drawing style.</p>
 <div class="figure">
 <img src="images/divergence_categorical_animated.gif" alt="" />
 <p class="caption">Transform your choropleth to a categorical thematic map</p>
@@ -342,10 +341,15 @@
 <p>Now, let’s turn to a larger scale - the region. The Schafran chapter made an argument about segregation becoming more prominent <em>between places across a region</em> instead of just <em>between neighborhoods in the same city</em> over time. To get a sense of segregation between places in a region, we need to change our units. In our maps and graphs, our sub-unit needs to change from census tracts/neighborhoods to places - cities, suburbs, and exurbs - in a region. The super-unit is now the region, instead of the city.</p>
 <p>The approach we are taking in measuring and visualizing regional segregation parallels Schafran’s, but there are a few departures that we are going to take that are worth mentioning briefly here.</p>
 <p><strong>Places</strong></p>
-<p>Schafran uses <strong>places as designated by the U.S. Census Bureau.</strong> Census places are a good approximation of cities and suburbs, but this geographic unit does not actually cover all of the land area, and consequently people, in a county/region. View the maps of the 50/500 club in the assigned chapter to see this. The Census Bureau lets states’ OMB identify what constitutes a “place”, so there is actually a lot of variation across the U.S. in terms of what gets designated as a place or not. Some states specify a certain population threshold, and others, like Hawaii, make sure that they draw boundaries in such a way that accounts for the entirety of the land area/population.</p>
+<p>Schafran uses a geographic unit called <strong>places that have been designated by the U.S. Census Bureau.</strong> Census places are a good approximation of cities and suburbs, but this geographic unit does not actually cover all of the land area in the region. Moreover, this geographic unit leaves out some of the population in the region.</p>
+<div class="figure">
+<img src="images/50_5000_club_places_schafran.png" alt="" />
+<p class="caption">Map 5 in The Road to Resegregation: The 50/5,000 club Places</p>
+</div>
+<p>The Census Bureau lets states’ OMB identify what constitutes a “place”, so there is actually a lot of variation across the U.S. in terms of what gets designated as a place or not. Some states specify a certain population threshold, and others, like Hawaii, make sure that they draw boundaries in such a way that accounts for the entirety of the land area/population.</p>
 <p>Why does this shortcoming of Census places matter for racial residential segregation? Some of the areas that are not <em>emplaced</em> by the Census are these exurban places that are experiencing population and housing growth in the last decade. This is especially true in the South and American sunbelt region. At this point, there is not much research on these types of areas, so we do not really know if these exurban areas are becoming home to homogeneous or racially diverse populations. In the attribute table of your places map layer, you will see both the census designated places, which have names that end in city, town, or CDP as well as the non-emplaced areas, which have been labeled an unincorporated place in the county in which they are located (e.g., San Mateo County unincorporated place).</p>
 <p><strong>Region</strong></p>
-<p>Schafran also takes issue with using the Census Bureau’s Metropolitan Statistical Area (MSA) as a region. The geographic extent of MSAs varies across the U.S. because they are drawn according to population size thresholds. Schafran thinks that commuting patterns are an important dimension of a region, which is what he uses to define 12 counties that make-up the Bay Area region. It is tricky to apply his approach to defining a region to other parts of the country, so regions are going to be defined differently based on where your neighborhood is located. If your neighborhood is in the Bay Area, your region extent will be the same as Schafran’s. If your neighborhood is located somewhere else, we will just use the combined-statistical area geography from the U.S. Census Bureau. Check-out the table below to see how it has been defined.</p>
+<p>Schafran also takes issue with using the Census Bureau’s Metropolitan Statistical Area (MSA) as a region. The geographic extent of MSAs varies across the U.S. because they are drawn according to population size thresholds. Schafran thinks that commuting patterns and the employment landscape are also important dimensions of a region. He relies on these dimensions to establish his 12 county definition of the Bay Area region. It is tricky to apply his approach to defining a region to other parts of the country, so regions are going to be defined differently based on where your neighborhood is located. If your neighborhood is in the Bay Area, your region extent will be the same as Schafran’s. If your neighborhood is located somewhere else, we will just use the combined-statistical area geography from the U.S. Census Bureau. Check-out the table below to see how your region has been defined.</p>
 <table>
 <thead>
 <tr class="header">
@@ -363,7 +367,7 @@
 <td>Yakima, WA</td>
 </tr>
 <tr class="odd">
-<td>Los Angeles, Westminster</td>
+<td>Los Angeles; Westminster</td>
 <td>Los Angeles-Long Beach-Santa Ana, CA</td>
 </tr>
 <tr class="even">
@@ -372,7 +376,7 @@
 </tr>
 <tr class="odd">
 <td>Chino</td>
-<td>Riverside-San Bernandino-Ontario, CA</td>
+<td>Riverside-San Bernardino-Ontario, CA</td>
 </tr>
 <tr class="even">
 <td>Denver</td>
@@ -388,9 +392,10 @@
 </tr>
 </tbody>
 </table>
+<p><strong>N.b. Changes in places from 1970 to 1990:</strong> There are some regions in this table that contained places and entire counties that were not assigned census tracts prior to 1990. You may see that your region grows in size around 1990. This is not an error in the data layer or an AGO rendering problem. This reflects a change in tracting practices by the Census Bureau. For the places that do not appear on your map until 1990, your ability to make temporal comparisons will be slightly constrained.</p>
 <div id="racial-composition-map" class="section level3">
 <h3><span class="header-section-number">6.3.1</span> Racial Composition Map</h3>
-<p>Now that you are familiar with these larger units, navigate to the <strong>Add layers</strong> button and search for the places layer in your region that has racial composition data [Naming style: “Region_Name_places_race”]. Add the places layer and change your basemap to the same minimalist style one that you used when you mapped racial composition of your neighborhood and the tracts in the city.</p>
+<p>Now that you are familiar with these larger geographic units, navigate to the <strong>Add layers</strong> button and search for the places layer in your region that has racial composition data [Naming style: “Region_Name_places_race”]. Add the places layer and change your basemap to the same minimalist style one that you used when you mapped racial composition of your neighborhood and the tracts in the city.</p>
 <p>At this point, you will want to apply the mapping techniques covered above on mapping <a href="mapping-segregation.html#racial-composition">racial composition</a> to this new layer of places in the region. Do not forget to <strong>configure the time settings</strong> to the one decade intervals. Also, remember that you can interact with the features in your map layers. As shown in the image below, clicking on any of the places opens up a pop-up with the data in the attribute table for that place (e.g., Name, Total population).</p>
 <div class="figure">
 <img src="images/identify_places_in_region.png" alt="" />
@@ -400,9 +405,9 @@
 <p>If you are interested in tracking a particular racial/ethnic group like Schafran did with the Black population in the Bay Area, you may also want to make a choropleth map that just shows the proportion of the racial group in each place. Navigate to the <strong>Counts and Amounts (Colors)</strong> and in the options page, set the <strong>Divide by</strong> drop down box to <strong>POP</strong>. This will allow you to map the proportion of the population that the racial group represents. The image below provides an example of how to map the proportion of Black residents for places in the region.</p>
 <div class="figure">
 <img src="images/recreate_Scharfran_map_pblack.png" alt="" />
-<p class="caption">You can make a choropleth map for proportions of a particular racial group like Schar</p>
+<p class="caption">You can make a choropleth map for proportions of a particular racial group like Map 3 in Chapter 1 of The Road to Resegregation</p>
 </div>
-<p>As you map the places in the region, especially if your region is large like the Bay Area, you might find that the time animator may struggle to render the map (it might lag for some places or not show them). You can see this in the GIF below. You have two options to work around this problem. One is to just pause at each decade and make note of your observations (we can do that too when you submit your maps). The other option is to use a <strong>filter</strong> like you did with the crime data and create separate layers for each decade in our time span. You can turn on and off the layers manually and make note of your patterns.</p>
+<p>As you map the places in the region, especially if your region is large like the Bay Area, you might find that the time animator struggles to render the map. It might lag for some places or not show them. You can see this in the GIF below. You have two options to work around this problem. One is to just pause at each decade and make note of your observations; we can do that too when you submit your maps as a link. The other option is to <strong>turn off the time option</strong> and use a <strong>filter</strong> like you did with the crime data and <strong>to create separate layers for each decade in our time span.</strong> You can turn on and off the layers manually and make note of your patterns. If you choose to share the region-wide map of place-based composition with the filtered layers, you need to put each layer on a separate map and share all of the web-links or print all of them as PDFs and include them in your write-up.</p>
 <div class="figure">
 <img src="images/region_predominance_map.gif" alt="" />
 <p class="caption">Predominance map of Bay Area region</p>
@@ -412,10 +417,16 @@
 <div id="segregation-maps" class="section level3">
 <h3><span class="header-section-number">6.3.2</span> Segregation Maps</h3>
 <p>Finally, we will visualize the segregation measures for the places in our region. At this scale, we can map all of our segregation measures. No graphing is necessary here.</p>
-<p>Open up a new Map Viewer window and set-up your basemap with the style you prefer. Then, navigate to the <strong>Add Layers</strong> button and search for the places layers in your region with segregation data [Naming style: “Region_Name_places_segregation”]. Add the layer to the map. The layer contains the dissimilarity index scores and divergence index score for all places in the region at each decade. When you interpret the index scores, remember that your <strong>sub-unit is the place</strong> and the <strong>super-unit is the region</strong>.</p>
-<p>You can visualize both types of indices using the same choropleth and categorical mapping techniques demonstrated in the section above where we <a href="mapping-segregation.html#divergence-index-choropleth-map">mapped the Divergence index</a>. If the time animator was acting up for your regional composition map, you will have the same problem again with the segregation map. Use one of the two work-arounds mentioned above to get by for this assignments. We will come back and tweak these maps at the end of the quarter to fold into the Story Maps.</p>
-<p>When mapping segregation, <strong>be mindful of the fact that you cannot represent the dissimilarity index for all race pairs (e.g., Black-white, Asian-white, Hispanic-white, etc.) at the same time on a single map.</strong> If your focus is on evenness of the distribution of race groups in places across the region, then you would need to pick the group pairs that you want to speak to in your write-up and map them as separate choropleth/categorical layers.</p>
+<p>Open up a new Map Viewer window and set-up your basemap with the style you prefer. Then, navigate to the <strong>Add Layers</strong> button and search for the places layers in your region with segregation data. <strong>The naming format for the segregation files is: “Region_Name_places_seg_decade”.</strong> Add the layer to the map. The layer contains the dissimilarity index scores and divergence index score for all places in the region for the decade. You will notice that unlike the region-wide racial composition data, the segregation data are broken up into separate layers by decade. We decided to divide up the segregation measures by decade because the time animator was not able to read all of these measures across all six decades. This means there will be some repetition in your work-flow because you will be creating the same mapping style on five or six separate layers, depending on how many decades of data are available to you.</p>
+<div class="figure">
+<img src="images/by_decade_region_seg_level.png" alt="" />
+<p class="caption">Map of multi-group racial residential segregation in the Bay Area in 2020</p>
+</div>
+<p>You can visualize both types of indices using the same choropleth and categorical mapping techniques demonstrated in the section above where we <a href="mapping-segregation.html#divergence-index-choropleth-map">mapped the Divergence index</a>. If you are mapping the dissimilarity index, <strong>be mindful of the fact that you cannot show the dissimilarity index for all race pairs (e.g., Black-white, Asian-white, Hispanic-white, etc.) at the same time on a single map.</strong> If your focus is on evenness of the distribution of race groups in places across the region, then you would need to pick the group pairs that you want to speak to in your write-up and map them as separate choropleth/categorical layers.</p>
 <p>In the end, we do not need to see every single dissimilarity index and the divergence index mapped in your write-up. Just feature the racial composition and segregation maps that allow you to tease out some spatio-temporal patterns and engage with the theories of segregation you read about this past week.</p>
+<p><strong>Interpreting Segregation at the Region and Place Scale</strong></p>
+<p>The dissimilarity indices still represent segregation between neighborhoods (i.e., <strong>census tracts - sub-units</strong>) within the <strong>place (super-unit).</strong> In your interpretations of the dissimilarity scores, you can compare places based on the level of residential segregation that exists within the places boundaries.</p>
+<p>The divergence score, on the other hand, was computed with the <strong>place as the sub-unit</strong> and the <strong>region as the super-unit</strong>. The score for each place represents how much the composition of the place departs from the composition of the region as a whole. Therefore, your interpretations of segregation based on the divergence score should be oriented toward between-place comparisons in the region.</p>
 <p><strong>Taking Stock &amp; Looking Ahead</strong></p>
 <p>In just a few assignments, you have acquired several mapping techniques in your tool-kit. Take a minute to appreciate how quickly you have picked up on web-mapping and visualizing spatial data. The plus-side of picking up all of these mapping techniques in just a few weeks time is that when we return to mapping in two weeks for Assignment #7, we will end up re-using a lot of these techniques to map gentrification in the neighborhood and across the city. If you have made it this far in the mapping exercises, it should be smooth sailing from here on out.</p>
 

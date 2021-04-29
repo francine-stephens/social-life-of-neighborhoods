@@ -1,5 +1,5 @@
 --- 
-title: "The Social Life of Neighborhoods: Data Processing & Mapping Tutorials"
+title: "The Social Life of Neighborhoods: Data Preparation & Mapping Tutorials"
 author: "Professor Forrest Stuart, TA: Francine Stephens"
 date: "Last updated: `r format(Sys.time(), '%B %d, %Y')`"
 site: bookdown::bookdown_site

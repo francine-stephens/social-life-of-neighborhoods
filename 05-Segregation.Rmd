@@ -161,9 +161,9 @@ Second, the dissimilarity score is produced for the super-unit (the city) and we
 
 With the divergence index, we are representing the departure of the tract's racial make-up from the super-unit of interest, which in this case is the city. Although this measure takes into account all of the racial groups present in a census tract and the city at the same time, there is not a particularly straightforward way of interpreting the divergence index score. Unlike the dissimilarity index, the score does not represent the share of people from one racial group that would need to be redistributed across the city/larger sub-unit. Instead, the divergence score is generally interpreted based on which categorical level the score falls into: 
 
-* Low = [0, 0.1]
-* Moderate = (0.1, 0.25]
-* High = (0.25, 1.0]
+* Low Segregation = [0, 0.1]
+* Moderate Segregation = (0.1, 0.25]
+* High Segregation = (0.25, 1.0]
 
 
 In the steps below, we will first walk through mapping the raw divergence index scores in a choropleth map. Then, we will  reclassify the choropleth map into the three levels of segregation categories presented above.
@@ -258,7 +258,7 @@ If you are interested in tracking a particular racial/ethnic group like Schafran
 
 ![You can make a choropleth map for proportions of a particular racial group like Map 3 in Chapter 1 of The Road to Resegregation](images\recreate_Scharfran_map_pblack.png)
 
-As you map the places in the region, especially if your region is large like the Bay Area, you might find that the time animator struggles to render the map. It might lag for some places or not show them. You can see this in the GIF below. You have two options to work around this problem. One is to just pause at each decade and make note of your observations; we can do that too when you submit your maps as a link. The other option is to **turn off the time option** and use a **filter** like you did with the crime data and **to create separate layers for each decade in our time span.** You can turn on and off the layers manually and make note of your patterns. If you choose to share the region-wide map of place-based composition with the filtered layers, you need to put each layer on a separate map and share all of the web-links or print all of them as PDFs and include them in your write-up. 
+As you map the places in the region, especially if your region is large like the Bay Area, you might find that the time animator struggles to render the map. It might lag for some places or not show them. You can see this in the GIF below. You have two options to work around this problem. One is to just pause at each decade and make note of your observations; we can do that too when you submit your maps as a link. The other option is to **turn off the time option** and use a **filter** like you did with the crime data and **to create separate layers for each decade in our time span.** You can turn on and off the layers manually and make note of your patterns. If you choose to share the region-wide map of place-based racial composition with the filtered layers, you need to put each layer on the same map and share the web-link in your write-up. When Professor Stuart and I are grading your assignments, we can turn on and off the layers to see the time trends.
 
 ![Predominance map of Bay Area region](images\region_predominance_map.gif)
 
@@ -269,13 +269,25 @@ When you are happy with your map, **Save it as a new map with an informative tit
 
 Finally, we will visualize the segregation measures for the places in our region. At this scale, we can map all of our segregation measures. No graphing is necessary here.   
 
-Open up a new Map Viewer window and set-up your basemap with the style you prefer. Then, navigate to the **Add Layers** button and search for the places layers in your region with segregation data. **The naming format for the segregation files is: "Region_Name_places_seg_decade".** Add the layer to the map. The layer contains the dissimilarity index scores and divergence index score for all places in the region for the decade. You will notice that unlike the region-wide racial composition data, the segregation data are broken up into separate layers by decade. We decided to divide up the segregation measures by decade because the time animator was not able to read all of these measures across all six decades. This means there will be some repetition in your work-flow because you will be creating the same mapping style on five or six separate layers, depending on how many decades of data are available to you.
+Open up a new Map Viewer window and set-up your basemap with the style you prefer. Then, navigate to the **Add Layers** button and search for the places layers in your region with segregation data. **The naming format for the segregation files is: "Region_Name_places_seg_decade".** Add the layer to the map. The layer contains the dissimilarity index scores and divergence index score for all places in the region for the decade. Notice that unlike the region-wide racial composition data, the segregation data are already broken up into separate layers by decade. We decided to divide up the segregation measures by decade because the time animator was not able to read all of these measures across all six decades. This means there will be some repetition in your work-flow because you will be creating the same mapping style on five or six separate layers, depending on how many decades of data are available to you. If you are submitting this map with your assignment, just submit the weblink of the map with each decades included as separate layers in your contents pane. Professor Stuart and I can turn on and off the layers to see the time trend.
 
 
 ![Map of multi-group racial residential segregation in the Bay Area in 2020](images\by_decade_region_seg_level.png)
 
 
-You can visualize both types of indices using the same choropleth and categorical mapping techniques demonstrated in the section above where we [mapped the Divergence index][Divergence Index Choropleth Map]. If you are mapping the dissimilarity index, **be mindful of the fact that you cannot show the dissimilarity index for all race pairs (e.g., Black-white, Asian-white, Hispanic-white, etc.) at the same time on a single map.** If your focus is on evenness of the distribution of race groups in places across the region, then you would need to pick the group pairs that you want to speak to in your write-up and map them as separate choropleth/categorical layers.  
+You can visualize both types of indices using the same choropleth and categorical mapping techniques demonstrated in the section above where we [mapped the Divergence index][Divergence Index Choropleth Map]. If you are mapping the dissimilarity index, **be mindful of the fact that you cannot show the dissimilarity index for all race pairs (e.g., Black-white, Asian-white, Hispanic-white, etc.) at the same time on a single map.** You will need to pick the group pairs that you want to speak to in your write-up and map them as separate choropleth/categorical layers. The abbreviated variable names for the segregation measures are listed in the table below with the group-pairs that they represent. 
+
+
+| Variable Name | Group-Pair Measure Name                               |
+|  :---         | :---                                                  |
+| Dis_NWW       | Non White - Non-Hispanic White Dissimilarity          |
+| Dis_BW        | Non-Hispanic Black - Non-Hispanic White Dissimilarity |
+| Dis_AW        | Asian - Non-Hispanic White Dissimilarity              |
+| Dis_BH        | Non-Hispanic Black - Hispanic Dissimilarity           |
+| Dis_BA        | Non-Hispanic Black - Asian Dissimilarity              |
+| Dis_AH        | Asian - Hispanic Dissimilarity                        |
+| Divrgnc       | Multi-group racial divergence index                   |
+
 
 In the end, we do not need to see every single dissimilarity index and the divergence index mapped in your write-up. Just feature the racial composition and segregation maps that allow you to tease out some spatio-temporal patterns and engage with the theories of segregation you read about this past week.
 

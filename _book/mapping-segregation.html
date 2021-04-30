@@ -305,9 +305,9 @@
 <h3><span class="header-section-number">6.2.2</span> Divergence Index Choropleth Map</h3>
 <p>With the divergence index, we are representing the departure of the tract’s racial make-up from the super-unit of interest, which in this case is the city. Although this measure takes into account all of the racial groups present in a census tract and the city at the same time, there is not a particularly straightforward way of interpreting the divergence index score. Unlike the dissimilarity index, the score does not represent the share of people from one racial group that would need to be redistributed across the city/larger sub-unit. Instead, the divergence score is generally interpreted based on which categorical level the score falls into:</p>
 <ul>
-<li>Low = [0, 0.1]</li>
-<li>Moderate = (0.1, 0.25]</li>
-<li>High = (0.25, 1.0]</li>
+<li>Low Segregation = [0, 0.1]</li>
+<li>Moderate Segregation = (0.1, 0.25]</li>
+<li>High Segregation = (0.25, 1.0]</li>
 </ul>
 <p>In the steps below, we will first walk through mapping the raw divergence index scores in a choropleth map. Then, we will reclassify the choropleth map into the three levels of segregation categories presented above.</p>
 <p><strong>Choropleth Map of Divergence Index</strong></p>
@@ -414,7 +414,7 @@
 <img src="images/recreate_Scharfran_map_pblack.png" alt="" />
 <p class="caption">You can make a choropleth map for proportions of a particular racial group like Map 3 in Chapter 1 of The Road to Resegregation</p>
 </div>
-<p>As you map the places in the region, especially if your region is large like the Bay Area, you might find that the time animator struggles to render the map. It might lag for some places or not show them. You can see this in the GIF below. You have two options to work around this problem. One is to just pause at each decade and make note of your observations; we can do that too when you submit your maps as a link. The other option is to <strong>turn off the time option</strong> and use a <strong>filter</strong> like you did with the crime data and <strong>to create separate layers for each decade in our time span.</strong> You can turn on and off the layers manually and make note of your patterns. If you choose to share the region-wide map of place-based composition with the filtered layers, you need to put each layer on a separate map and share all of the web-links or print all of them as PDFs and include them in your write-up.</p>
+<p>As you map the places in the region, especially if your region is large like the Bay Area, you might find that the time animator struggles to render the map. It might lag for some places or not show them. You can see this in the GIF below. You have two options to work around this problem. One is to just pause at each decade and make note of your observations; we can do that too when you submit your maps as a link. The other option is to <strong>turn off the time option</strong> and use a <strong>filter</strong> like you did with the crime data and <strong>to create separate layers for each decade in our time span.</strong> You can turn on and off the layers manually and make note of your patterns. If you choose to share the region-wide map of place-based racial composition with the filtered layers, you need to put each layer on the same map and share the web-link in your write-up. When Professor Stuart and I are grading your assignments, we can turn on and off the layers to see the time trends.</p>
 <div class="figure">
 <img src="images/region_predominance_map.gif" alt="" />
 <p class="caption">Predominance map of Bay Area region</p>
@@ -424,12 +424,50 @@
 <div id="segregation-maps" class="section level3">
 <h3><span class="header-section-number">6.3.2</span> Segregation Maps</h3>
 <p>Finally, we will visualize the segregation measures for the places in our region. At this scale, we can map all of our segregation measures. No graphing is necessary here.</p>
-<p>Open up a new Map Viewer window and set-up your basemap with the style you prefer. Then, navigate to the <strong>Add Layers</strong> button and search for the places layers in your region with segregation data. <strong>The naming format for the segregation files is: “Region_Name_places_seg_decade”.</strong> Add the layer to the map. The layer contains the dissimilarity index scores and divergence index score for all places in the region for the decade. You will notice that unlike the region-wide racial composition data, the segregation data are broken up into separate layers by decade. We decided to divide up the segregation measures by decade because the time animator was not able to read all of these measures across all six decades. This means there will be some repetition in your work-flow because you will be creating the same mapping style on five or six separate layers, depending on how many decades of data are available to you.</p>
+<p>Open up a new Map Viewer window and set-up your basemap with the style you prefer. Then, navigate to the <strong>Add Layers</strong> button and search for the places layers in your region with segregation data. <strong>The naming format for the segregation files is: “Region_Name_places_seg_decade”.</strong> Add the layer to the map. The layer contains the dissimilarity index scores and divergence index score for all places in the region for the decade. Notice that unlike the region-wide racial composition data, the segregation data are already broken up into separate layers by decade. We decided to divide up the segregation measures by decade because the time animator was not able to read all of these measures across all six decades. This means there will be some repetition in your work-flow because you will be creating the same mapping style on five or six separate layers, depending on how many decades of data are available to you. If you are submitting this map with your assignment, just submit the weblink of the map with each decades included as separate layers in your contents pane. Professor Stuart and I can turn on and off the layers to see the time trend.</p>
 <div class="figure">
 <img src="images/by_decade_region_seg_level.png" alt="" />
 <p class="caption">Map of multi-group racial residential segregation in the Bay Area in 2020</p>
 </div>
-<p>You can visualize both types of indices using the same choropleth and categorical mapping techniques demonstrated in the section above where we <a href="mapping-segregation.html#divergence-index-choropleth-map">mapped the Divergence index</a>. If you are mapping the dissimilarity index, <strong>be mindful of the fact that you cannot show the dissimilarity index for all race pairs (e.g., Black-white, Asian-white, Hispanic-white, etc.) at the same time on a single map.</strong> If your focus is on evenness of the distribution of race groups in places across the region, then you would need to pick the group pairs that you want to speak to in your write-up and map them as separate choropleth/categorical layers.</p>
+<p>You can visualize both types of indices using the same choropleth and categorical mapping techniques demonstrated in the section above where we <a href="mapping-segregation.html#divergence-index-choropleth-map">mapped the Divergence index</a>. If you are mapping the dissimilarity index, <strong>be mindful of the fact that you cannot show the dissimilarity index for all race pairs (e.g., Black-white, Asian-white, Hispanic-white, etc.) at the same time on a single map.</strong> You will need to pick the group pairs that you want to speak to in your write-up and map them as separate choropleth/categorical layers. The abbreviated variable names for the segregation measures are listed in the table below with the group-pairs that they represent.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Variable Name</th>
+<th align="left">Group-Pair Measure Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Dis_NWW</td>
+<td align="left">Non White - Non-Hispanic White Dissimilarity</td>
+</tr>
+<tr class="even">
+<td align="left">Dis_BW</td>
+<td align="left">Non-Hispanic Black - Non-Hispanic White Dissimilarity</td>
+</tr>
+<tr class="odd">
+<td align="left">Dis_AW</td>
+<td align="left">Asian - Non-Hispanic White Dissimilarity</td>
+</tr>
+<tr class="even">
+<td align="left">Dis_BH</td>
+<td align="left">Non-Hispanic Black - Hispanic Dissimilarity</td>
+</tr>
+<tr class="odd">
+<td align="left">Dis_BA</td>
+<td align="left">Non-Hispanic Black - Asian Dissimilarity</td>
+</tr>
+<tr class="even">
+<td align="left">Dis_AH</td>
+<td align="left">Asian - Hispanic Dissimilarity</td>
+</tr>
+<tr class="odd">
+<td align="left">Divrgnc</td>
+<td align="left">Multi-group racial divergence index</td>
+</tr>
+</tbody>
+</table>
 <p>In the end, we do not need to see every single dissimilarity index and the divergence index mapped in your write-up. Just feature the racial composition and segregation maps that allow you to tease out some spatio-temporal patterns and engage with the theories of segregation you read about this past week.</p>
 <p><strong>Interpreting Segregation at the Region and Place Scale</strong></p>
 <p>The dissimilarity indices still represent segregation between neighborhoods (i.e., <strong>census tracts - sub-units</strong>) within the <strong>place (super-unit).</strong> In your interpretations of the dissimilarity scores, you can compare places based on the level of residential segregation that exists within the places boundaries.</p>

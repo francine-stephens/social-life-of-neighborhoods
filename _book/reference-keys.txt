@@ -43,10 +43,14 @@ segregation-between-places
 racial-composition-map
 segregation-maps
 mapping-gentrification
-gentrification-stages-map
+measuring-gentrification
+gentrification-map
 historical-google-street-view
 customizing-pop-ups-optional
 globalization-migration-flow-maps
+esri-story-maps
+creating-story-maps
+examples
 resources
 arcgis-online
-storymaps
+designvisualization

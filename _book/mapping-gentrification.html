@@ -126,14 +126,19 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html"><i class="fa fa-check"></i><b>7</b> Mapping Gentrification</a><ul>
-<li class="chapter" data-level="7.1" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#gentrification-stages-map"><i class="fa fa-check"></i><b>7.1</b> Gentrification Stages Map</a></li>
-<li class="chapter" data-level="7.2" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#historical-google-street-view"><i class="fa fa-check"></i><b>7.2</b> Historical Google Street View</a></li>
-<li class="chapter" data-level="7.3" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#customizing-pop-ups-optional"><i class="fa fa-check"></i><b>7.3</b> Customizing Pop-ups (Optional)</a></li>
+<li class="chapter" data-level="7.1" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#measuring-gentrification"><i class="fa fa-check"></i><b>7.1</b> Measuring Gentrification</a></li>
+<li class="chapter" data-level="7.2" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#gentrification-map"><i class="fa fa-check"></i><b>7.2</b> Gentrification Map</a></li>
+<li class="chapter" data-level="7.3" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#historical-google-street-view"><i class="fa fa-check"></i><b>7.3</b> Historical Google Street View</a></li>
+<li class="chapter" data-level="7.4" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#customizing-pop-ups-optional"><i class="fa fa-check"></i><b>7.4</b> Customizing Pop-ups (Optional)</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="globalization-migration-flow-maps.html"><a href="globalization-migration-flow-maps.html"><i class="fa fa-check"></i><b>8</b> Globalization &amp; Migration Flow Maps</a></li>
-<li class="chapter" data-level="9" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>9</b> Resources</a><ul>
-<li class="chapter" data-level="9.1" data-path="resources.html"><a href="resources.html#arcgis-online"><i class="fa fa-check"></i><b>9.1</b> ArcGIS Online</a></li>
-<li class="chapter" data-level="9.2" data-path="resources.html"><a href="resources.html#storymaps"><i class="fa fa-check"></i><b>9.2</b> StoryMaps</a></li>
+<li class="chapter" data-level="9" data-path="esri-story-maps.html"><a href="esri-story-maps.html"><i class="fa fa-check"></i><b>9</b> ESRI Story Maps</a><ul>
+<li class="chapter" data-level="9.1" data-path="esri-story-maps.html"><a href="esri-story-maps.html#creating-story-maps"><i class="fa fa-check"></i><b>9.1</b> Creating Story Maps</a></li>
+<li class="chapter" data-level="9.2" data-path="esri-story-maps.html"><a href="esri-story-maps.html#examples"><i class="fa fa-check"></i><b>9.2</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>10</b> Resources</a><ul>
+<li class="chapter" data-level="10.1" data-path="resources.html"><a href="resources.html#arcgis-online"><i class="fa fa-check"></i><b>10.1</b> ArcGIS Online</a></li>
+<li class="chapter" data-level="10.2" data-path="resources.html"><a href="resources.html#designvisualization"><i class="fa fa-check"></i><b>10.2</b> Design/Visualization</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -157,15 +162,53 @@
             <section class="normal" id="section-">
 <div id="mapping-gentrification" class="section level1">
 <h1><span class="header-section-number">7</span> Mapping Gentrification</h1>
-<p>Tutorial will be published for the start of week 7.</p>
-<div id="gentrification-stages-map" class="section level2">
-<h2><span class="header-section-number">7.1</span> Gentrification Stages Map</h2>
+<p>In Assignment #7, we have the opportunity to map gentrification occurring in and around your neighborhood over the last 30 years. Like with the segregation measures, gentrification is a phenomenon that we measure over space and time. The assignment instructions on Canvas noted that there are multiple ways to define and measure gentrification. For the purposes of this assignment, we will conceptualize gentrification as a neighborhood-level socioeconomic transformation comprised of both an influx of middle-and upper-class residents and an increase in housing prices in previously low-income, urban neighborhoods.</p>
+<div id="measuring-gentrification" class="section level2">
+<h2><span class="header-section-number">7.1</span> Measuring Gentrification</h2>
+<p>Our measure of gentrification is calculated at the census tract level for three consecutive decades: 1990 to 2000, 2000 to 2010, and 2010 to 2020, so that we can examine how the socioeconomic composition of neighborhoods in our cities changes over each decade. The four variables listed below are used in our categorical measure of gentrification:</p>
+<ul>
+<li>Median household income (in 2020 Dollars)</li>
+<li>Percent of college-educated residents</li>
+<li>Median home value (in 2020 Dollars)</li>
+<li>Median gross rent (in 2020 Dollars)</li>
+</ul>
+<p>The first step in computing the gentrification measure is determining whether or not a tract is <strong>eligible to gentrify (i.e., Gentrifiable).</strong> Generally, researchers consider tracts eligible to gentrify if they are relatively low-income neighborhoods such that they could undergo the revitalization that characterizes gentrification. We will operationalize eligibility to gentrify in a binary fashion using the median household income.</p>
+<blockquote>
+<p><strong>Not Gentrifiable</strong>: Census tracts had a median household income <em>above</em> the city-wide median household income at the start of the decade period.</p>
+</blockquote>
+<blockquote>
+<p><strong>Gentrifiable</strong>: Census tracts had a median household income <em>below</em> the city-wide median household income at the start of the decade period.</p>
+</blockquote>
+<p><strong>Among the census tracts that were Gentrifiable, we must determine if they were gentrifying over the decade period or not.</strong> To classify the gentrifiable tracts as gentrifying or not gentrifying, we will need to calculate how much socioeconomic change and housing value change the tract experienced over the decade and compare the rate of change to the rate in the city.</p>
+<blockquote>
+<p><strong>Gentrifying</strong>: Gentrifiable census tracts that had the socioeconomic status of their residents (i.e., % college graduates OR median household income) grow faster than the city wide-median <em>AND</em> the home values (median home value OR median gross rent value) grow faster than the city-wide median over the decade period.</p>
+</blockquote>
+<blockquote>
+<p><strong>Not Gentrifying</strong>: Gentrifiable census tracts that did NOT experience growth in the socioeconomic status of their residents <em>AND</em> their home values at a rate higher than the city-wide median values over the decade period.</p>
+</blockquote>
+<p>This measurement strategy results in a three-category gentrification measure - Not Gentrifiable, Gentrifying, and Not Gentrifying. With these three categories we can make a thematic map of census tracts in and around our neighborhood. The tracts in your neighborhood’s city have been classified according to this measurement strategy, now we just need to load the layers into the AGO and style them with the appropriate symbology.</p>
+</div>
+<div id="gentrification-map" class="section level2">
+<h2><span class="header-section-number">7.2</span> Gentrification Map</h2>
+<p>Open up a new map and style the base map as you would like. The minimalist basemaps will probably serve you best for this assignment because we are going to create a series of categorical thematic maps. Then, navigate to the <strong>Add Layers</strong> tab on the toolbar and select <strong>Search for Layers.</strong> Within <strong>My Groups,</strong> search for the census tracts layers with the gentrification measures from 1990 to 2000. There is a separate layer for each decade period. The layer naming structure for each decade is as follows: <strong>“City_Name_tracts_gent_1990_2000”.</strong></p>
+<p>Once you have added the layer, go into the <strong>Change Style</strong> option on the layer. First, choose <strong>GENTRIFY</strong> as the attribute that you want to show. Then, select <strong>Options</strong> on the <strong>Types (Unique Symbols)</strong> drawing style.</p>
+<p><img src="images/gentrification_style.png" width="338" height="33.3%" style="display: block; margin: auto;" /></p>
+<p>You can now set up a color scheme for the three categories. It is up to you to choose whether you would like to use a predefined color palette generated by ESRI or manually set the colors for each category. The image below indicates which icons to click on for these two options.</p>
+<div class="figure">
+<img src="images/edit_gentrification_colors.png" alt="" />
+<p class="caption">Set the categorical drawing style for the gentrification layer</p>
+</div>
+<p>To reorder the categories listed on the legend, just click on the <strong>three vertical dots</strong> next to any one of the categories and drag it up or down to adjust its placement in the legend. When you are happy with the color scheme, click <strong>Ok</strong> and return to the contents pane and map viewer. Go ahead and also <strong>add your neighborhood boundaries</strong> and <strong>style the layer the same way we have before with the transparent fill and an outline.</strong> Make note of the gentrification status of your neighborhood and the areas around your neighborhood.</p>
+<p>Repeat this process again for the other two decades. In the layers search panel, you just need to change the years in the suffix to find the measures for the next two decades. When you are bringing in the layers for the two other decades, be sure to style them in the same way that you styled the 1990 to 2000 layer. The consistency makes it easier to see what is changing or not between the decades. When you are done, you should have four layers in your contents pane - the neighborhood boundaries (on top), the 2010 to 2020 gentrification layer, the 2000 to 2010 gentrification layer, and the 1990 to 2000 gentrification layer.</p>
+<p>When you feel good about your layers, navigate to the <strong>Save</strong> tab on the toolbar and use the <strong>Save As</strong> option to save your map. Give it an informative title, description, and tags. Be sure to share it with our class’s group using the <strong>Share</strong> tab in the toolbar. You can also grab the weblink to share in your write-up.</p>
+<p>After you have done your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in gentrification. For a refresher on geocoding, view the <a href="geocoding.html#preparing-data-for-geocoding">tutorial on geocoding</a>.</p>
 </div>
 <div id="historical-google-street-view" class="section level2">
-<h2><span class="header-section-number">7.2</span> Historical Google Street View</h2>
+<h2><span class="header-section-number">7.3</span> Historical Google Street View</h2>
+<p>Have the addresses of the locations that you recorded from your neighborhood observations handy because we are going to locate them in Google Maps and view the location in Google Street View.</p>
 </div>
 <div id="customizing-pop-ups-optional" class="section level2">
-<h2><span class="header-section-number">7.3</span> Customizing Pop-ups (Optional)</h2>
+<h2><span class="header-section-number">7.4</span> Customizing Pop-ups (Optional)</h2>
 
 </div>
 </div>

@@ -46,9 +46,12 @@ mapping-gentrification
 measuring-gentrification
 gentrification-map
 configuring-pop-ups-optional
-descriptions
+main-pop-up-configurations-options
+configure-list-of-field-attributes
 show-images
+descriptions
 charts-graphs
+attribute-expressions
 historical-google-street-view
 globalization-migration-flow-maps
 esri-story-maps

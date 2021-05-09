@@ -63,7 +63,7 @@ After you have done your neighborhood observations, either in person or via Goog
 
 In addition to using different types of symbology on your map layers to convey information about an area of interest, you can also use pop-ups to display descriptive information about features on your map. Pop-ups can show attachments, images, and charts, and can link to external web pages.
 
-Up to this point, when you have clicked on features in your map layer, the pop-ups have been a plain list of attributes and values. This is the default appearance for pop-ups, but AGO does allow you to reconfigure the pop-ups to define the list of visible and hidden fields, and how the information is presented. The main decisions map authors make about pop-ups are what information they want to show and what is the best way to present that information. For example, if you want to show people what is located at the place you just geocoded, you might configure pop-ups to show the address, a description of the place and the role it has played in neighborhood change, and an image. For the layers with the gentrification measures, you could configure pop-ups to show for each decade, the median household income, the percent of residents with college degrees, the percent of owned housing units, and/or the median home and rent values, or the percent change in these variables over time. Depending on what you are trying to show in pop-ups for your feature layer, you can choose from a variety of configuration options. 
+Up to this point, when you have clicked on features in your map layer, the pop-ups have been a plain list of attributes and values. This is the default appearance for pop-ups, but AGO does allow you to reconfigure the pop-ups to define the list of visible and hidden fields, and how the information is presented. The main decisions map authors make about pop-ups are what information they want to show and what is the best way to present that information. For example, if you want to show people what is located at the place you just geocoded, you might configure pop-ups to show the address, a description of the place and the role it has played in neighborhood change, and an image. For the layers with the gentrification measures, you could configure pop-ups to show the median household income, the percent of residents with college degrees, the percent of owned housing units, and/or the median home and rent values for each decade, or the percent change in these variables over time. Depending on what you are trying to show in pop-ups for your feature layer, you can choose from a variety of configuration options. 
 
 The following provides a brief description of some of the main pop-up configuration options:
 
@@ -78,6 +78,25 @@ You do not need to configure pop-ups on the map you turn in for Assignment #7, h
 
 ### Configure List of Field Attributes
 
+When you have geocoded the locations rendered in AGO as a layer point features, the pop-ups display all the attributes you entered in the spreadsheet - Name, Street Address, City, State, and Zipcode - in list format. To change this configuration and display only certain attributes, click on the **More Options** tab (the three horizontal dots icon) on the layer in the content pane. In the drop-down menu, find and click on **Configure Pop-up**.
+
+Then, navigate to the **Configure Attributes** link below the list of attributes under Pop-up Contents. This is circled in red next to the number 1 in the image below. The image below shows the configure attributes options that will appear for you. You have multiple options in this window. 
+
+* Select the attributes that you want to display by checking the fields in the first column. 
+* If you need to edit the display format of the field, check the field in the second column and change the text-box type. 
+* Leave the Field Names in the third column as they are. These do not show up on your pop-up.
+* If you want to change the Field Alias, which is the label displayed on the pop-up, click on the current field alias and type in a new label. 
+
+
+![Configure the attributes you want to show in a list on the pop-up](images\configure_attribute_list.png)  
+
+The GIF below shows how you could configure a pop-up to only show the street address for the geocoded locations. 
+
+![Display only the street address on a pop-up](images\configure_attribute_list.gif) 
+
+![The feature's pop-up will only display the street address along with the name, which is used as the title](images\configure_address_only.png)  
+
+We can add a some more detailed and richer information to our pop-ups though. The next subsection will cover how to add a picture and caption.  
 
 
 ### Show Images
@@ -88,23 +107,32 @@ In order to have these images render in the pop-up, you will need to add them to
 
 ![Add the URL for the images in a new column of your addresses CSV file](images\configure_images_in_CSV.png) 
 
-When you have geocoded the locations rendered in AGO as a layer point features, the pop-ups display all the attributes you entered in the spreadsheet - Name, Street Address, City, State, Zip, and the URL - in list format. To change this configuration and display the image in the pop-up, click on the **More Options** tab (the three horizontal dots icon) on the layer in the content pane. In the drop-down menu, find and click on **Configure Pop-up**.
+When you have geocoded the locations rendered in AGO as a layer point features, navigate to **Configure Pop-ups** in the **More Options** tab on your layer. Scroll down to the bottom of the configuration options pane to **Pop-up Media.**
+
+1. Click the **Add** button and the **Image** option from the drop-down menu.
+2. Give the image a title or leave the field blank. You can decide what you would work best for your pop-ups. 
+3. You can add an image caption or leave it blank. You can use the **Plus-sign** to the right of the field to add a field name in the caption. By using a field name in the caption, AGO will populate the text from the field name into the caption, so that it is customized appropriately for each feature in your layer. See the example in the GIF below.
+4. In the URL field, add the field name in your CSV file that corresponds with where you stored the links to the images. 
+5. Leave the link field blank, unless you want to send the viewer to the webpage with the image. Click Ok and return to the map viewer to see how your pop-up renders the image.    
+
+The GIF below is an example of how to configure the pop-up to show an image. 
+
+![Configure an image in the pop-ups](images\configure_image_popup.gif)    
 
 
-**UPDATE with media settings**
 
-You may find this pop-up configuration useful for other maps with geocoded point layers that you created before, like the locations of eyes on the street/broken windows/collective efficacy (Assignment #2) or the key non-profit organizations (Assignment #3). If you choose to use either of these maps in your Story Map, you can return to the CSV file that you recorded the addresses in and add a new column with the URLs for your images. 
+You may find this pop-up configuration useful for other maps with geocoded point layers that you created before like the locations of eyes on the street/broken windows/collective efficacy (Assignment #2) or the key non-profit organizations (Assignment #3). If you choose to use either of these maps in your Story Map, you can return to the CSV file that you recorded the addresses in and add a new column with the URLs for your images. 
 
 
 ### Descriptions
 
-Configuring a few sentences or a paragraph of text as a description of the place in the pop-up is very similar to configuring an image. If you want to include a description of the place on the pop-up, the easiest way to do this for all features in your address CSV file is to create a new column in your CSV and type a the description in the cell. An example is shown in the image below. 
+Configuring a few sentences or a paragraph of text as a description of the place in the pop-up is very similar to configuring an image. If you want to include a description of the place on the pop-up, the easiest way to do this for all features in your address CSV file is to create a new column in your CSV and type a the description in the cell. An example of how to format the spreadsheet is shown in the image below. 
 
 ![Add a description of the place in a new column of your addresses CSV file](images\configure_descriptions_in_CSV.png) 
 
-Geocode the layer in AGO as you have done before. Then, click on the **More Options** tab (the three horizontal dots icon) on the layer in the content pane and find and click on **Configure Pop-up**. This time, if you just want to show the description and no other attributes, select the **Description** attribute in the list of attributes. 
+Geocode the layer in AGO as you have done before. Then, navigate to **Configure Pop-up** in the **More Options** tab. This time you just want to show the description and not the list of attributes, so select the display option: **A description from one field**. Set the Attribute as the field name you gave to the description in your spreadsheet. Then, click **Ok** and view the pop-ups on your map. The GIF below shows an example of how to configure the descriptions. 
 
-**UPDATE**
+![Configure a description of the place in the pop-up](images\configure_description_popup.gif)  
 
 
 

@@ -129,11 +129,11 @@
 <li class="chapter" data-level="7.1" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#measuring-gentrification"><i class="fa fa-check"></i><b>7.1</b> Measuring Gentrification</a></li>
 <li class="chapter" data-level="7.2" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#gentrification-map"><i class="fa fa-check"></i><b>7.2</b> Gentrification Map</a></li>
 <li class="chapter" data-level="7.3" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#configuring-pop-ups-optional"><i class="fa fa-check"></i><b>7.3</b> Configuring Pop-ups (Optional)</a><ul>
-<li class="chapter" data-level="7.3.1" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#configure-list-of-field-attributes"><i class="fa fa-check"></i><b>7.3.1</b> Configure List of Field Attributes</a></li>
+<li class="chapter" data-level="7.3.1" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#list-of-attributes"><i class="fa fa-check"></i><b>7.3.1</b> List of Attributes</a></li>
 <li class="chapter" data-level="7.3.2" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#show-images"><i class="fa fa-check"></i><b>7.3.2</b> Show Images</a></li>
 <li class="chapter" data-level="7.3.3" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#descriptions"><i class="fa fa-check"></i><b>7.3.3</b> Descriptions</a></li>
 <li class="chapter" data-level="7.3.4" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#charts-graphs"><i class="fa fa-check"></i><b>7.3.4</b> Charts &amp; Graphs</a></li>
-<li class="chapter" data-level="7.3.5" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#attribute-expressions"><i class="fa fa-check"></i><b>7.3.5</b> Attribute Expressions</a></li>
+<li class="chapter" data-level="7.3.5" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#customized-rich-text"><i class="fa fa-check"></i><b>7.3.5</b> Customized Rich-Text</a></li>
 </ul></li>
 <li class="chapter" data-level="7.4" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#historical-google-street-view"><i class="fa fa-check"></i><b>7.4</b> Historical Google Street View</a></li>
 </ul></li>
@@ -212,7 +212,7 @@
 <div id="configuring-pop-ups-optional" class="section level2">
 <h2><span class="header-section-number">7.3</span> Configuring Pop-ups (Optional)</h2>
 <p>In addition to using different types of symbology on your map layers to convey information about an area of interest, you can also use pop-ups to display descriptive information about features on your map. Pop-ups can show attachments, images, and charts, and can link to external web pages.</p>
-<p>Up to this point, when you have clicked on features in your map layer, the pop-ups have been a plain list of attributes and values. This is the default appearance for pop-ups, but AGO does allow you to reconfigure the pop-ups to define the list of visible and hidden fields, and how the information is presented. The main decisions map authors make about pop-ups are what information they want to show and what is the best way to present that information. For example, if you want to show people what is located at the place you just geocoded, you might configure pop-ups to show the address, a description of the place and the role it has played in neighborhood change, and an image. For the layers with the gentrification measures, you could configure pop-ups to show for each decade, the median household income, the percent of residents with college degrees, the percent of owned housing units, and/or the median home and rent values, or the percent change in these variables over time. Depending on what you are trying to show in pop-ups for your feature layer, you can choose from a variety of configuration options.</p>
+<p>Up to this point, when you have clicked on features in your map layer, the pop-ups have been a plain list of attributes and values. This is the default appearance for pop-ups, but AGO does allow you to reconfigure the pop-ups to define the list of visible and hidden fields, and how the information is presented. The main decisions map authors make about pop-ups are what information they want to show and what is the best way to present that information. For example, if you want to show people what is located at the place you just geocoded, you might configure pop-ups to show the address, a description of the place and the role it has played in neighborhood change, and an image. For the layers with the gentrification measures, you could configure pop-ups to show the median household income, the percent of residents with college degrees, the percent of owned housing units, and/or the median home and rent values for each decade, or the percent change in these variables over time. Depending on what you are trying to show in pop-ups for your feature layer, you can choose from a variety of configuration options.</p>
 <p>The following provides a brief description of some of the main pop-up configuration options:</p>
 <ul>
 <li><strong>List of field attributes</strong>: A list of field attributes shows the variable names and values for the selected feature. Authors can modify the visibility, order, number formatting, and date formatting so the information appears in a logical and understandable format.</li>
@@ -220,9 +220,10 @@
 <li><strong>Custom attribute display</strong>: This option allows authors to define, format, and lay out the information to display. Authors can embed attributes and control them via a rich text experience. This is a good option when you want to manually enter the attribute information and format it with rich-text editing tools for controlling font color, size, style, and so on.</li>
 <li><strong>No attribute information</strong>: A pop-up does not need to contain attribute information. Sometimes a title or an image is all that’s needed to convey information such as points of interest.</li>
 </ul>
-<p>You do not need to configure pop-ups on the map you turn in for Assignment #7, however, you may find it a useful way to pick out information about tracts in and around your neighborhood to reference in your write-up, e.g., the percent change in the median household income or residents with a college degree. This section is also included because some of you may find that configuring pop-ups will work well for the Story Map template or style that you choose in a few weeks. You are encouraged to come back to this section when you are refining your existing maps to prepare them for the Story Map. The sections below will walk you through some of the configuration options that would be most relevant for this assignment. <strong>If you want to configure pop-ups for the address locations, read through subsections 1 through 3 <em>before</em> geocoding and configuring the pop-ups</strong>, so that you can set-up your CSV file in the manner that is most compatible to the pop-up configuration options.</p>
-<div id="configure-list-of-field-attributes" class="section level3">
-<h3><span class="header-section-number">7.3.1</span> Configure List of Field Attributes</h3>
+<p>You do not need to configure pop-ups on the map you turn in for Assignment #7, however, you may find it a useful way to pick out information about tracts in and around your neighborhood to reference in your write-up, e.g., the percent change in the median household income or residents with a college degree. This section is also included because some of you may find that configuring pop-ups will work well for the Story Map template or style that you choose in a few weeks. You are encouraged to come back to this section when you are refining your existing maps to prepare them for the Story Map.</p>
+<p>The subsections below will walk you through some of the configuration options that would be most relevant for this assignment. <strong>If you want to configure pop-ups for the address locations that you are geocoding, read through subsections 1 through 3 <em>before</em> geocoding and configuring the pop-ups</strong>. This ensures that you can set-up your CSV file in the manner that is most compatible to the pop-up configuration option you choose to use.</p>
+<div id="list-of-attributes" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> List of Attributes</h3>
 <p>When you have geocoded the locations rendered in AGO as a layer point features, the pop-ups display all the attributes you entered in the spreadsheet - Name, Street Address, City, State, and Zipcode - in list format. To change this configuration and display only certain attributes, click on the <strong>More Options</strong> tab (the three horizontal dots icon) on the layer in the content pane. In the drop-down menu, find and click on <strong>Configure Pop-up</strong>.</p>
 <p>Then, navigate to the <strong>Configure Attributes</strong> link below the list of attributes under Pop-up Contents. This is circled in red next to the number 1 in the image below. The image below shows the configure attributes options that will appear for you. You have multiple options in this window.</p>
 <ul>
@@ -267,7 +268,7 @@
 <img src="images/configure_image_popup.gif" alt="" />
 <p class="caption">Configure an image in the pop-ups</p>
 </div>
-<p>You may find this pop-up configuration useful for other maps with geocoded point layers that you created before like the locations of eyes on the street/broken windows/collective efficacy (Assignment #2) or the key non-profit organizations (Assignment #3). If you choose to use either of these maps in your Story Map, you can return to the CSV file that you recorded the addresses in and add a new column with the URLs for your images.</p>
+<p>You may find this pop-up configuration useful for other maps with geocoded point layers that you created before like the locations of eyes on the street/broken windows/collective efficacy (Assignment #3) or the key non-profit organizations (Assignment #4). If you choose to use either of these maps in your Story Map, you can return to the CSV file that you recorded the addresses in and add a new column with the URLs for your images.</p>
 </div>
 <div id="descriptions" class="section level3">
 <h3><span class="header-section-number">7.3.3</span> Descriptions</h3>
@@ -281,14 +282,15 @@
 <img src="images/configure_description_popup.gif" alt="" />
 <p class="caption">Configure a description of the place in the pop-up</p>
 </div>
+<p>Again, you may find this pop-up configuration useful for the layers you geocoded in Assignments #3 and #4. You can return to those later in the quarter. At this point, go ahead a edit your CSV file with the locations of neighborhood change based on the pop-up information you want to include. Then, proceed to geocode and configure your pop-ups appropriately.</p>
 </div>
 <div id="charts-graphs" class="section level3">
 <h3><span class="header-section-number">7.3.4</span> Charts &amp; Graphs</h3>
 <p>Map layers with numeric attribute information like household income and percentages of owned housing units can be displayed visually in pie charts, bar charts, column charts, and line charts within your pop-up. The steps below demonstrate how to do this with one of your gentrification layers.</p>
 <p><strong>UPDATE</strong></p>
 </div>
-<div id="attribute-expressions" class="section level3">
-<h3><span class="header-section-number">7.3.5</span> Attribute Expressions</h3>
+<div id="customized-rich-text" class="section level3">
+<h3><span class="header-section-number">7.3.5</span> Customized Rich-Text</h3>
 <p>It is possible to display any type of attribute - numeric, text, or date-time - on a map layer with some customized rich-text. To do this, we need to use the attribute expressions tool.</p>
 <p><strong>UPDATE WITH EXAMPLE</strong></p>
 </div>

@@ -45,8 +45,11 @@ segregation-maps
 mapping-gentrification
 measuring-gentrification
 gentrification-map
+configuring-pop-ups-optional
+descriptions
+show-images
+charts-graphs
 historical-google-street-view
-customizing-pop-ups-optional
 globalization-migration-flow-maps
 esri-story-maps
 creating-story-maps

@@ -11,7 +11,7 @@ Our measure of gentrification is calculated at the census tract level for three 
 * Percent of college-educated residents 
 * Median home value (in 2020 Dollars)
 * Median gross rent (in 2020 Dollars)  
-
+  
 
 The first step in computing the gentrification measure is determining whether or not a tract is **eligible to gentrify (i.e., Gentrifiable).** Generally, researchers consider tracts eligible to gentrify if they are relatively low-income neighborhoods such that they could undergo the revitalization that characterizes gentrification. We will operationalize eligibility to gentrify in a binary fashion using the median household income.
 
@@ -55,15 +55,23 @@ Repeat this process again for the other two decades. In the layers search panel,
 When you feel good about your layers, navigate to the **Save** tab on the toolbar and use the **Save As** option to save your map. Give it an informative title, description, and tags. Be sure to share it with our class's group using the **Share** tab in the toolbar. You can also grab the weblink to share in your write-up. 
 
 
-After you have done your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in gentrification. For a refresher on geocoding, view the [tutorial on geocoding][Preparing Data for Geocoding].
+After you have done your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in neighborhood change. For a refresher on geocoding, view the [tutorial on geocoding][Preparing Data for Geocoding]. If you would like to configure the pop-up boxes that appear on your geocoded locations to have images or a description of the site, view the optional [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] *before* you load your CSV file with the addresses into AGO. Otherwise, you can upload the spreadsheet with addresses as usual and skip over to the section on viewing [historical Google Street View images][Historical Google Street View].  
+
+
+
+## Configuring Pop-ups (Optional)
+
+### Descriptions
+
+### Show Images
+
+### Charts & Graphs
 
 
 ## Historical Google Street View
 
-Have the addresses of the locations that you recorded from your neighborhood observations handy because we are going to locate them in Google Maps and view the location in Google Street View. 
+Have the addresses of the locations that you recorded from your neighborhood observations handy because we are going to locate them in Google Maps and view images of the location taken at multiple points in time in Google Street View. Once you have typed an address into the Google Maps Search Bar and the location has been pinpointed on the map, **click and drag peg-man, the yellow stick figure in the bottom-right corner of your map (just below the zoom in and out buttons)**, over to the street nearest the pinpointed location on the map. The street view image of the area directly across from the address you typed in will appear on your screen. If you pan around 180 degrees, you should see the building/physical items you observed and recorded the address for.  
 
 
-## Customizing Pop-ups (Optional)
-
-
+The image that you are viewing is Google Street View's most recent image of the area. Navigate over to the top-left corner of your screen and **click on the clock icon with curved arrows** below the address to activate a small window with a series of all images recorded for this location. At the bottom of this window is a timeline that you can interact with. **Move the white circle along the timeline** to see the images and the year in which they were recorded. To view these older images on the full screen, click on any one of the previous images in the small window. You will see that image appear on the main viewing screen. From here, you can pan around and view what the surrounding area looked like at this period. An example is included in the GIF below. 
 

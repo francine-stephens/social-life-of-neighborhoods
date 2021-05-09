@@ -44,3 +44,4 @@ _bookdown_files/
 libs/
 **/*.bib
 **/*.html 
+/images/historical_GSV.gif

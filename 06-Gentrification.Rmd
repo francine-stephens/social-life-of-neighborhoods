@@ -52,20 +52,76 @@ To reorder the categories listed on the legend, just click on the **three vertic
 Repeat this process again for the other two decades. In the layers search panel, you just need to change the years in the suffix to find the measures for the next two decades. When you are bringing in the layers for the two other decades, be sure to style them in the same way that you styled the 1990 to 2000 layer. The consistency makes it easier to see what is changing or not between the decades. When you are done, you should have four layers in your contents pane - the neighborhood boundaries (on top), the 2010 to 2020 gentrification layer, the 2000 to 2010 gentrification layer, and the 1990 to 2000 gentrification layer.   
 
 
-When you feel good about your layers, navigate to the **Save** tab on the toolbar and use the **Save As** option to save your map. Give it an informative title, description, and tags. Be sure to share it with our class's group using the **Share** tab in the toolbar. You can also grab the weblink to share in your write-up. 
+When you are happy with the look of your map, navigate to the **Save** tab on the toolbar and use the **Save As** option to save your map. Give it an informative title, description, and tags. Be sure to share it with our class's group using the **Share** tab in the toolbar. You can also grab the weblink to include in your write-up. 
 
 
-After you have done your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in neighborhood change. For a refresher on geocoding, view the [tutorial on geocoding][Preparing Data for Geocoding]. If you would like to configure the pop-up boxes that appear on your geocoded locations to have images or a description of the site, view the optional [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] *before* you load your CSV file with the addresses into AGO. Otherwise, you can upload the spreadsheet with addresses as usual and skip over to the section on viewing [historical Google Street View images][Historical Google Street View].  
+After you have done your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in neighborhood change. For a refresher on geocoding, view the [tutorial on geocoding][Preparing Data for Geocoding]. If you would like to configure the pop-ups that appear on your geocoded locations to have images or a description of the site, view the optional [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] *before* you load your CSV file with the addresses into AGO. The [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] also contains an example of configuring pop-ups on the gentrification layers, too, in case you want to embed graphs/charts and descriptions of the numeric data on the map-layer. Otherwise, you can upload the spreadsheet with addresses as usual and skip over to the section on viewing [historical Google Street View images][Historical Google Street View].  
 
 
 
 ## Configuring Pop-ups (Optional)
 
-### Descriptions
+In addition to using different types of symbology on your map layers to convey information about an area of interest, you can also use pop-ups to display descriptive information about features on your map. Pop-ups can show attachments, images, and charts, and can link to external web pages.
+
+Up to this point, when you have clicked on features in your map layer, the pop-ups have been a plain list of attributes and values. This is the default appearance for pop-ups, but AGO does allow you to reconfigure the pop-ups to define the list of visible and hidden fields, and how the information is presented. The main decisions map authors make about pop-ups are what information they want to show and what is the best way to present that information. For example, if you want to show people what is located at the place you just geocoded, you might configure pop-ups to show the address, a description of the place and the role it has played in neighborhood change, and an image. For the layers with the gentrification measures, you could configure pop-ups to show for each decade, the median household income, the percent of residents with college degrees, the percent of owned housing units, and/or the median home and rent values, or the percent change in these variables over time. Depending on what you are trying to show in pop-ups for your feature layer, you can choose from a variety of configuration options. 
+
+The following provides a brief description of some of the main pop-up configuration options:
+
+* **List of field attributes**: A list of field attributes shows the variable names and values for the selected feature. Authors can modify the visibility, order, number formatting, and date formatting so the information appears in a logical and understandable format.
+* **Description from one field**: When a pop-up contains a description from one field, all the contents of one field are displayed in the description. It is a useful option when the layer has attributes that contain a custom description.
+* **Custom attribute display**: This option allows authors to define, format, and lay out the information to display. Authors can embed attributes and control them via a rich text experience. This is a good option when you want to manually enter the attribute information and format it with rich-text editing tools for controlling font color, size, style, and so on. 
+* **No attribute information**: A pop-up does not need to contain attribute information. Sometimes a title or an image is all that's needed to convey information such as points of interest.
+
+You do not need to configure pop-ups on the map you turn in for Assignment #7, however, you may find it a useful way to pick out information about tracts in and around your neighborhood to reference in your write-up, e.g., the percent change in the median household income or residents with a college degree. This section is also included because some of you may find that configuring pop-ups will work well for the Story Map template or style that you choose in a few weeks. You are encouraged to come back to this section when you are refining your existing maps to prepare them for the Story Map. The sections below will walk you through some of the configuration options that would be most relevant for this assignment. **If you want to configure pop-ups for the address locations, read through subsections 1 through 3 *before* geocoding and configuring the pop-ups**, so that you can set-up your CSV file in the manner that is most compatible to the pop-up configuration options.   
+
+
+
+### Configure List of Field Attributes
+
+
 
 ### Show Images
 
+In your neighborhood observations, you either took pictures of the locations that were or are involved in neighborhood change or screen-grabbed the locations from Google images/Google Street View. You could include those images in the pop-ups, so that when someone clicks on one of the locations that you have geocoded, the pop-up shows them a picture of what is located in that place. 
+
+In order to have these images render in the pop-up, you will need to add them to the spreadsheet where you are recording your addresses. Create a new column to hold the URLs for the images in the spreadsheet. Copy the URLs into the cells for each respective location. An example is shown in the image below. If you are using images that you personally took, you need to host them on the Web. The easiest way to do this is to store them in your Google Drive and setting the share option for the link to public. 
+
+![Add the URL for the images in a new column of your addresses CSV file](images\configure_images_in_CSV.png) 
+
+When you have geocoded the locations rendered in AGO as a layer point features, the pop-ups display all the attributes you entered in the spreadsheet - Name, Street Address, City, State, Zip, and the URL - in list format. To change this configuration and display the image in the pop-up, click on the **More Options** tab (the three horizontal dots icon) on the layer in the content pane. In the drop-down menu, find and click on **Configure Pop-up**.
+
+
+**UPDATE with media settings**
+
+You may find this pop-up configuration useful for other maps with geocoded point layers that you created before, like the locations of eyes on the street/broken windows/collective efficacy (Assignment #2) or the key non-profit organizations (Assignment #3). If you choose to use either of these maps in your Story Map, you can return to the CSV file that you recorded the addresses in and add a new column with the URLs for your images. 
+
+
+### Descriptions
+
+Configuring a few sentences or a paragraph of text as a description of the place in the pop-up is very similar to configuring an image. If you want to include a description of the place on the pop-up, the easiest way to do this for all features in your address CSV file is to create a new column in your CSV and type a the description in the cell. An example is shown in the image below. 
+
+![Add a description of the place in a new column of your addresses CSV file](images\configure_descriptions_in_CSV.png) 
+
+Geocode the layer in AGO as you have done before. Then, click on the **More Options** tab (the three horizontal dots icon) on the layer in the content pane and find and click on **Configure Pop-up**. This time, if you just want to show the description and no other attributes, select the **Description** attribute in the list of attributes. 
+
+**UPDATE**
+
+
+
 ### Charts & Graphs
+
+Map layers with numeric attribute information like household income and percentages of owned housing units can be displayed visually in pie charts, bar charts, column charts, and line charts within your pop-up. The steps below demonstrate how to do this with one of your gentrification layers. 
+
+**UPDATE**
+
+
+
+### Attribute Expressions 
+
+It is possible to display any type of attribute - numeric, text, or date-time - on a map layer with some customized rich-text. To do this, we need to use the attribute expressions tool. 
+
+**UPDATE WITH EXAMPLE**  
+
 
 
 ## Historical Google Street View

@@ -46,7 +46,6 @@ mapping-gentrification
 measuring-gentrification
 gentrification-map
 configuring-pop-ups-optional
-main-pop-up-configurations-options
 configure-list-of-field-attributes
 show-images
 descriptions

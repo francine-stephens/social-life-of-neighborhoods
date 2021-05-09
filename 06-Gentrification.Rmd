@@ -72,11 +72,14 @@ The following provides a brief description of some of the main pop-up configurat
 * **Custom attribute display**: This option allows authors to define, format, and lay out the information to display. Authors can embed attributes and control them via a rich text experience. This is a good option when you want to manually enter the attribute information and format it with rich-text editing tools for controlling font color, size, style, and so on. 
 * **No attribute information**: A pop-up does not need to contain attribute information. Sometimes a title or an image is all that's needed to convey information such as points of interest.
 
-You do not need to configure pop-ups on the map you turn in for Assignment #7, however, you may find it a useful way to pick out information about tracts in and around your neighborhood to reference in your write-up, e.g., the percent change in the median household income or residents with a college degree. This section is also included because some of you may find that configuring pop-ups will work well for the Story Map template or style that you choose in a few weeks. You are encouraged to come back to this section when you are refining your existing maps to prepare them for the Story Map. The sections below will walk you through some of the configuration options that would be most relevant for this assignment. **If you want to configure pop-ups for the address locations, read through subsections 1 through 3 *before* geocoding and configuring the pop-ups**, so that you can set-up your CSV file in the manner that is most compatible to the pop-up configuration options.   
+You do not need to configure pop-ups on the map you turn in for Assignment #7, however, you may find it a useful way to pick out information about tracts in and around your neighborhood to reference in your write-up, e.g., the percent change in the median household income or residents with a college degree. This section is also included because some of you may find that configuring pop-ups will work well for the Story Map template or style that you choose in a few weeks. You are encouraged to come back to this section when you are refining your existing maps to prepare them for the Story Map. 
+
+
+The subsections below will walk you through some of the configuration options that would be most relevant for this assignment. **If you want to configure pop-ups for the address locations that you are geocoding, read through subsections 1 through 3 *before* geocoding and configuring the pop-ups**. This ensures that you can set-up your CSV file in the manner that is most compatible to the pop-up configuration option you choose to use.   
 
 
 
-### Configure List of Field Attributes
+### List of Attributes
 
 When you have geocoded the locations rendered in AGO as a layer point features, the pop-ups display all the attributes you entered in the spreadsheet - Name, Street Address, City, State, and Zipcode - in list format. To change this configuration and display only certain attributes, click on the **More Options** tab (the three horizontal dots icon) on the layer in the content pane. In the drop-down menu, find and click on **Configure Pop-up**.
 
@@ -121,7 +124,7 @@ The GIF below is an example of how to configure the pop-up to show an image.
 
 
 
-You may find this pop-up configuration useful for other maps with geocoded point layers that you created before like the locations of eyes on the street/broken windows/collective efficacy (Assignment #2) or the key non-profit organizations (Assignment #3). If you choose to use either of these maps in your Story Map, you can return to the CSV file that you recorded the addresses in and add a new column with the URLs for your images. 
+You may find this pop-up configuration useful for other maps with geocoded point layers that you created before like the locations of eyes on the street/broken windows/collective efficacy (Assignment #3) or the key non-profit organizations (Assignment #4). If you choose to use either of these maps in your Story Map, you can return to the CSV file that you recorded the addresses in and add a new column with the URLs for your images. 
 
 
 ### Descriptions
@@ -134,6 +137,8 @@ Geocode the layer in AGO as you have done before. Then, navigate to **Configure 
 
 ![Configure a description of the place in the pop-up](images\configure_description_popup.gif)  
 
+Again, you may find this pop-up configuration useful for the layers you geocoded in Assignments #3 and #4. You can return to those later in the quarter. At this point, go ahead a edit your CSV file with the locations of neighborhood change based on the pop-up information you want to include. Then, proceed to geocode and configure your pop-ups appropriately.   
+
 
 
 ### Charts & Graphs
@@ -144,7 +149,7 @@ Map layers with numeric attribute information like household income and percenta
 
 
 
-### Attribute Expressions 
+### Customized Rich-Text 
 
 It is possible to display any type of attribute - numeric, text, or date-time - on a map layer with some customized rich-text. To do this, we need to use the attribute expressions tool. 
 

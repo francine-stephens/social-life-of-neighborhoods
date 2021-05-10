@@ -1,3 +1,4 @@
+tab:unnamed-chunk-2
 about
 socialexplorer
 accessing-social-explorer-data
@@ -59,4 +60,3 @@ examples
 resources
 arcgis-online
 designvisualization
-tab:unnamed-chunk-2

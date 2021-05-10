@@ -55,8 +55,10 @@ Repeat this process again for the other two decades. In the layers search panel,
 When you are happy with the look of your map, navigate to the **Save** tab on the toolbar and use the **Save As** option to save your map. Give it an informative title, description, and tags. Be sure to share it with our class's group using the **Share** tab in the toolbar. You can also grab the weblink to include in your write-up. 
 
 
-After you have done your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in neighborhood change. For a refresher on geocoding, view the [tutorial on geocoding][Preparing Data for Geocoding]. If you would like to configure the pop-ups that appear on your geocoded locations to have images or a description of the site, view the optional [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] *before* you load your CSV file with the addresses into AGO. The [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] also contains an example of configuring pop-ups on the gentrification layers, too, in case you want to embed graphs/charts and descriptions of the numeric data on the map-layer. Otherwise, you can upload the spreadsheet with addresses as usual and skip over to the section on viewing [historical Google Street View images][Historical Google Street View].  
+After you have completed your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in neighborhood change. For a refresher on geocoding, view the [tutorial on geocoding][Preparing Data for Geocoding].   
 
+
+If you would like to configure the pop-ups that appear on your geocoded locations to have images or a description of the site, view the optional [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] *before* you load your CSV file with the addresses into AGO. This section also contains examples of configuring pop-ups on the gentrification layers, too, in case you want to embed graphs/charts and descriptions of the numeric data on the map-layer. Otherwise, you can upload the spreadsheet with addresses as you have in previous assignments and skip over to the section on viewing [historical Google Street View images][Historical Google Street View].  
 
 
 ## Configuring Pop-ups (Optional)
@@ -185,7 +187,7 @@ Once again, navigate to the **Configure Pop-up** in the **More Options** tab. Be
 When you open up the pop-up configuration options pane, scroll down to the **Pop-up Media** section and click on **Add**. Select the chart type you would like to use. The window that opens up will allow you to title your chart, add an informative caption, and select attributes for your display. The GIF shows one example that uses all of the percent change attributes. 
 
 
-![Example column chart for percent change variables.](images\configure_charts_gent_measures.gif)  
+![Example column chart for percent change variables.](images\configure_charts_gent_measures.gif)    
 
 
 

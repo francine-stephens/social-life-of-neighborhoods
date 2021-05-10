@@ -1,0 +1,17 @@
+Field Name,Meaning
+PERIOD,Decade period.
+GEOID,Full census tract identifier.
+TRACTCE10,Shortened census tract identifer. 
+CITY,City name
+PCOLL,"% of residents with a college degree. This variable has a year suffix: 90, 00, 10, 20."
+MDHINC,"Median household income. This variable has a year suffix: 90, 00, 10, 20."
+MDHVAL,"Median home value. This variable has a year suffix: 90, 00, 10, 20."
+MDRVAL,"Median gross rent value. This variable has a year suffix: 90, 00, 10, 20."
+PCCOLL,% change in residents with a college degree over the decade.
+PCMDHIN,% change in median household income over the decade.
+PCMDHVA,% change in median home value over the decade.
+PCMDRVA,% change in median gross rent over the decade.
+ELIG,Dummy variable indicating whether the census tract is eligible to gentrify: Gentrifiable or Not Gentrifiable. 
+HGHVAL,Dummy variable indicating whether the census tract experienced higher home/rent value growth than the city-wide median.
+HGHSES,Dummy variable indicating whether the census tract experienced higher SES growth than the city-wide median.
+GENTRIFY,"Three category gentrification status measure: Gentrifying, Not Gentrifying, Not Gentrifiable."

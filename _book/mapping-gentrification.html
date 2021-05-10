@@ -132,8 +132,8 @@
 <li class="chapter" data-level="7.3.1" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#list-of-attributes"><i class="fa fa-check"></i><b>7.3.1</b> List of Attributes</a></li>
 <li class="chapter" data-level="7.3.2" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#show-images"><i class="fa fa-check"></i><b>7.3.2</b> Show Images</a></li>
 <li class="chapter" data-level="7.3.3" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#descriptions"><i class="fa fa-check"></i><b>7.3.3</b> Descriptions</a></li>
-<li class="chapter" data-level="7.3.4" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#charts-graphs"><i class="fa fa-check"></i><b>7.3.4</b> Charts &amp; Graphs</a></li>
-<li class="chapter" data-level="7.3.5" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#customized-rich-text"><i class="fa fa-check"></i><b>7.3.5</b> Customized Rich-Text</a></li>
+<li class="chapter" data-level="7.3.4" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#customized-rich-text"><i class="fa fa-check"></i><b>7.3.4</b> Customized Rich-Text</a></li>
+<li class="chapter" data-level="7.3.5" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#charts-graphs"><i class="fa fa-check"></i><b>7.3.5</b> Charts &amp; Graphs</a></li>
 </ul></li>
 <li class="chapter" data-level="7.4" data-path="mapping-gentrification.html"><a href="mapping-gentrification.html#historical-google-street-view"><i class="fa fa-check"></i><b>7.4</b> Historical Google Street View</a></li>
 </ul></li>
@@ -284,15 +284,119 @@
 </div>
 <p>Again, you may find this pop-up configuration useful for the layers you geocoded in Assignments #3 and #4. You can return to those later in the quarter. At this point, go ahead a edit your CSV file with the locations of neighborhood change based on the pop-up information you want to include. Then, proceed to geocode and configure your pop-ups appropriately.</p>
 </div>
-<div id="charts-graphs" class="section level3">
-<h3><span class="header-section-number">7.3.4</span> Charts &amp; Graphs</h3>
-<p>Map layers with numeric attribute information like household income and percentages of owned housing units can be displayed visually in pie charts, bar charts, column charts, and line charts within your pop-up. The steps below demonstrate how to do this with one of your gentrification layers.</p>
-<p><strong>UPDATE</strong></p>
-</div>
 <div id="customized-rich-text" class="section level3">
-<h3><span class="header-section-number">7.3.5</span> Customized Rich-Text</h3>
-<p>It is possible to display any type of attribute - numeric, text, or date-time - on a map layer with some customized rich-text. To do this, we need to use the attribute expressions tool.</p>
-<p><strong>UPDATE WITH EXAMPLE</strong></p>
+<h3><span class="header-section-number">7.3.4</span> Customized Rich-Text</h3>
+<p>It is possible to display any type of attribute - numeric, text, or date-time - on a map layer with some customized rich-text. Let’s try this with the map layer of census tract polygons and create a pop-up with information about how the socioeconomic status of residents and the home values changed in census tracts.</p>
+<p>Before we can do this, you need to be familiar with what the variable names in the attribute layer mean. AGO truncates variable names, so I have defined the variable names in the table below. Notice that some of the variable names have year suffixes. Be mindful of that if you are going to create field aliases and use these variables in the customized pop-up or the charts.</p>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Table 7.1: </span>Gentrification Layers Codebook</caption>
+<colgroup>
+<col width="8%" />
+<col width="91%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Field Name</th>
+<th align="left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">PERIOD</td>
+<td align="left">Decade period.</td>
+</tr>
+<tr class="even">
+<td align="left">GEOID</td>
+<td align="left">Full census tract identifier.</td>
+</tr>
+<tr class="odd">
+<td align="left">TRACTCE10</td>
+<td align="left">Shortened census tract identifer.</td>
+</tr>
+<tr class="even">
+<td align="left">CITY</td>
+<td align="left">City name</td>
+</tr>
+<tr class="odd">
+<td align="left">PCOLL</td>
+<td align="left">% of residents with a college degree. This variable has a year suffix: 90, 00, 10, 20.</td>
+</tr>
+<tr class="even">
+<td align="left">MDHINC</td>
+<td align="left">Median household income. This variable has a year suffix: 90, 00, 10, 20.</td>
+</tr>
+<tr class="odd">
+<td align="left">MDHVAL</td>
+<td align="left">Median home value. This variable has a year suffix: 90, 00, 10, 20.</td>
+</tr>
+<tr class="even">
+<td align="left">MDRVAL</td>
+<td align="left">Median gross rent value. This variable has a year suffix: 90, 00, 10, 20.</td>
+</tr>
+<tr class="odd">
+<td align="left">PCCOLL</td>
+<td align="left">% change in residents with a college degree over the decade.</td>
+</tr>
+<tr class="even">
+<td align="left">PCMDHIN</td>
+<td align="left">% change in median household income over the decade.</td>
+</tr>
+<tr class="odd">
+<td align="left">PCMDHVA</td>
+<td align="left">% change in median home value over the decade.</td>
+</tr>
+<tr class="even">
+<td align="left">PCMDRVA</td>
+<td align="left">% change in median gross rent over the decade.</td>
+</tr>
+<tr class="odd">
+<td align="left">ELIG</td>
+<td align="left">Dummy variable indicating whether the census tract is eligible to gentrify: Gentrifiable or Not Gentrifiable.</td>
+</tr>
+<tr class="even">
+<td align="left">HGHVAL</td>
+<td align="left">Dummy variable indicating whether the census tract experienced higher home/rent value growth than the city-wide median.</td>
+</tr>
+<tr class="odd">
+<td align="left">HGHSES</td>
+<td align="left">Dummy variable indicating whether the census tract experienced higher SES growth than the city-wide median.</td>
+</tr>
+<tr class="even">
+<td align="left">GENTRIFY</td>
+<td align="left">Three category gentrification status measure: Gentrifying, Not Gentrifying, Not Gentrifiable.</td>
+</tr>
+</tbody>
+</table>
+<p>Before customizing the pop-up with the rich text editor or creating a chart/graph, it will also be helpful to clean up the field aliases, which are currently the same as the variable names shown in the codebook above. Navigate over to the <strong>Configure Pop-up</strong> in the <strong>More Options</strong> tab. Click on <strong>Configure Attributes</strong> and change the field aliases. You can also remove some of the geographic identifier variables from displaying (e.g., GEOID, TRACTCE, CITY). The GIF below provides an example of how to change the attributes in the list.</p>
+<div class="figure">
+<img src="images/configure_list_attributes_gent_measures.gif" alt="" />
+<p class="caption">Give the field-aliases understandable names.</p>
+</div>
+<p>Then, switch the <strong>Pop-up Contents Display</strong> to a <strong>Custom Attribute Display</strong>. Click on <strong>Configure</strong> to bring up the rich-text editor. The GIF below shows an example of how to use the rich-text editor. Some general tips include:</p>
+<ul>
+<li>Go in with a template of the text that you want to include in the pop-up.</li>
+<li>Use the <strong>plus sign</strong> to add a variable from the attribute table to your description.</li>
+<li>The font faces, sizes, and colors can all be changed within the text editor.</li>
+</ul>
+<div class="figure">
+<img src="images/configure_custom_attribute_display_gent_measures.gif" alt="" />
+<p class="caption">Example of a custom attribute display with rich text.</p>
+</div>
+<p>The pop-up winds up looking like what you see in the image below.</p>
+<div class="figure">
+<img src="images/custom_attribute_display_w_rich_text_gent_ex.png" alt="" />
+<p class="caption">Example of a pop-up created using the rich text editor.</p>
+</div>
+<p>You can use different attributes than the ones used in this example, such as the percentage change attributes or the yearly values for 2010 and 2020. Feel free to experiment with other attributes and text styles.</p>
+</div>
+<div id="charts-graphs" class="section level3">
+<h3><span class="header-section-number">7.3.5</span> Charts &amp; Graphs</h3>
+<p>Map layers with numeric attribute information like household income and percentages of owned housing units can be displayed visually in pie charts, bar charts, column charts, and line charts within your pop-up. The steps below demonstrate how to do this with one of your gentrification layers.</p>
+<p>Once again, navigate to the <strong>Configure Pop-up</strong> in the <strong>More Options</strong> tab. Be sure that your field aliases have been changed to understandable labels. If you are following along from the previous section on configuring custom pop-ups with the rich text editor, then your field aliases are good to go. If not, return to the <a href="mapping-gentrification.html#customized-rich-text">Customized Rich-Text editor section</a> and change the field aliases.</p>
+<p>When you open up the pop-up configuration options pane, scroll down to the <strong>Pop-up Media</strong> section and click on <strong>Add</strong>. Select the chart type you would like to use. The window that opens up will allow you to title your chart, add an informative caption, and select attributes for your display. The GIF shows on example that uses all of the percent change attributes.</p>
+<p>[Example column chart for percent change variables.](images<br />
+</p>
+<p>Notice the importance of including a caption AND changing the field aliases to understandable names. Because AGO does not allow you to change the colors of the columns in the chart, we have to rely on configuring the attribute labels and using a caption to indicate the meaning of the columns in the graph.</p>
 </div>
 </div>
 <div id="historical-google-street-view" class="section level2">

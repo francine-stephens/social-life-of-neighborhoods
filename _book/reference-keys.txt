@@ -49,8 +49,8 @@ configuring-pop-ups-optional
 list-of-attributes
 show-images
 descriptions
-charts-graphs
 customized-rich-text
+charts-graphs
 historical-google-street-view
 globalization-migration-flow-maps
 esri-story-maps
@@ -59,3 +59,4 @@ examples
 resources
 arcgis-online
 designvisualization
+tab:unnamed-chunk-2

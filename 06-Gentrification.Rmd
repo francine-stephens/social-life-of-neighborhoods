@@ -140,20 +140,58 @@ Geocode the layer in AGO as you have done before. Then, navigate to **Configure 
 Again, you may find this pop-up configuration useful for the layers you geocoded in Assignments #3 and #4. You can return to those later in the quarter. At this point, go ahead a edit your CSV file with the locations of neighborhood change based on the pop-up information you want to include. Then, proceed to geocode and configure your pop-ups appropriately.   
 
 
+### Customized Rich-Text 
+
+It is possible to display any type of attribute - numeric, text, or date-time - on a map layer with some customized rich-text. Let's try this with the map layer of census tract polygons and create a pop-up with information about how the socioeconomic status of residents and the home values changed in census tracts. 
+
+Before we can do this, you need to be familiar with what the variable names in the attribute layer mean. AGO truncates variable names, so I have defined the variable names in the table below. Notice that some of the variable names have year suffixes. Be mindful of that if you are going to create field aliases and use these variables in the customized pop-up or the charts. 
+
+
+```{r, echo = FALSE, warning=FALSE, message = FALSE}
+library("readr")
+codebook <- read_csv("gentrification_measures_codebook.csv")
+
+knitr::kable(codebook, booktabs = TRUE, caption = 'Gentrification Layers Codebook')
+
+```
+
+
+Before customizing the pop-up with the rich text editor or creating a chart/graph, it will also be helpful to clean up the field aliases, which are currently the same as the variable names shown in the codebook above. Navigate over to the **Configure Pop-up** in the **More Options** tab.  Click on **Configure Attributes** and change the field aliases. You can also remove some of the geographic identifier variables from displaying (e.g., GEOID, TRACTCE, CITY). The GIF below provides an example of how to change the attributes in the list. 
+
+![Give the field-aliases understandable names.](images\configure_list_attributes_gent_measures.gif)  
+
+Then, switch the **Pop-up Contents Display** to a **Custom Attribute Display**. Click on **Configure** to bring up the rich-text editor. The GIF below shows an example of how to use the rich-text editor. Some general tips include:
+
+* Go in with a template of the text that you want to include in the pop-up. 
+* Use the **plus sign** to add a variable from the attribute table to your description. 
+* The font faces, sizes, and colors can all be changed within the text editor. 
+
+![Example of a custom attribute display with rich text.](images\configure_custom_attribute_display_gent_measures.gif)  
+
+The pop-up winds up looking like what you see in the image below.
+
+![Example of a pop-up created using the rich text editor.](images\custom_attribute_display_w_rich_text_gent_ex.png)  
+
+You can use different attributes than the ones used in this example, such as the percentage change attributes or the yearly values for 2010 and 2020. Feel free to experiment with other attributes and text styles.   
+
+
 
 ### Charts & Graphs
 
 Map layers with numeric attribute information like household income and percentages of owned housing units can be displayed visually in pie charts, bar charts, column charts, and line charts within your pop-up. The steps below demonstrate how to do this with one of your gentrification layers. 
 
-**UPDATE**
+Once again, navigate to the **Configure Pop-up** in the **More Options** tab. Be sure that your field aliases have been changed to understandable labels. If you are following along from the previous section on configuring custom pop-ups with the rich text editor, then your field aliases are good to go. If not, return to the [Customized Rich-Text editor section][Customized Rich-Text] and change the field aliases.  
+
+When you open up the pop-up configuration options pane, scroll down to the **Pop-up Media** section and click on **Add**. Select the chart type you would like to use. The window that opens up will allow you to title your chart, add an informative caption, and select attributes for your display. The GIF shows one example that uses all of the percent change attributes. 
+
+
+![Example column chart for percent change variables.](images\configure_charts_gent_measures.gif)  
 
 
 
-### Customized Rich-Text 
+Notice the importance of including a caption AND changing the field aliases to understandable names. Because AGO does not allow you to change the colors of the columns in the chart, we have to rely on configuring the attribute labels and using a caption to indicate the meaning of the columns in the graph.
 
-It is possible to display any type of attribute - numeric, text, or date-time - on a map layer with some customized rich-text. To do this, we need to use the attribute expressions tool. 
-
-**UPDATE WITH EXAMPLE**  
+You can use different attributes than the ones used in this example, such as the yearly values for the median household income, percent of college graduates, or the median home values. It is also possible to make multiple charts and have viewers scroll through them in the pop-up. Feel free to experiment with other attributes and chart styles.    
 
 
 

@@ -99,13 +99,14 @@ div(class = "city_pctchg_decade",
   )
 )
 ```
-  
-
+     
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 **Next Steps**
 
-After you have completed your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in neighborhood change. For a refresher on geocoding, view the [tutorial on geocoding][Preparing Data for Geocoding].     
+After you have completed your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in neighborhood change. For a refresher on geocoding, review the [tutorial][Preparing Data for Geocoding].     
 
 
 If you would like to configure the pop-ups that appear on your geocoded locations to have images or a description of the site, view the optional [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] *before* you load your CSV file with the addresses into AGO. This section also contains examples of configuring pop-ups on the gentrification layers, too, in case you want to embed graphs/charts and descriptions of the numeric data on the map-layer. Otherwise, you can upload the spreadsheet with addresses as you have in previous assignments and skip over to the section on viewing [historical Google Street View images][Historical Google Street View].  

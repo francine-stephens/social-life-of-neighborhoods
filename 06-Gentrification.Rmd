@@ -49,13 +49,63 @@ You can now set up a color scheme for the three categories. It is up to you to c
 To reorder the categories listed on the legend, just click on the **three vertical dots** next to any one of the categories and drag it up or down to adjust its placement in the legend. When you are happy with the color scheme, click **Ok** and return to the contents pane and map viewer. Go ahead and also **add your neighborhood boundaries** and **style the layer the same way we have before with the transparent fill and an outline.** Make note of the gentrification status of your neighborhood and the areas around your neighborhood.    
 
 
-Repeat this process again for the other two decades. In the layers search panel, you just need to change the years in the suffix to find the measures for the next two decades. When you are bringing in the layers for the two other decades, be sure to style them in the same way that you styled the 1990 to 2000 layer. The consistency makes it easier to see what is changing or not between the decades. When you are done, you should have four layers in your contents pane - the neighborhood boundaries (on top), the 2010 to 2020 gentrification layer, the 2000 to 2010 gentrification layer, and the 1990 to 2000 gentrification layer.   
+Repeat this process again for the other two decades. In the layers search panel, you just need to change the years in the suffix to find the measures for the next two decades. When you are bringing in the layers for the two other decades, be sure to style them in the same way that you styled the 1990 to 2000 layer. The consistency makes it easier to see what is changing or not between the decades. When you are done, you should have **four layers in your contents pane** - the neighborhood boundaries (on top), the 2010 to 2020 gentrification layer, the 2000 to 2010 gentrification layer, and the 1990 to 2000 gentrification layer. At this point, you can navigate to the **Save** tab on the toolbar and use the **Save As** option to save your map. Give it an informative title, description, and tags. Be sure to share it with our class's group using the **Share** tab in the toolbar. You can also grab the weblink to include in your write-up.    
 
 
-When you are happy with the look of your map, navigate to the **Save** tab on the toolbar and use the **Save As** option to save your map. Give it an informative title, description, and tags. Be sure to share it with our class's group using the **Share** tab in the toolbar. You can also grab the weblink to include in your write-up. 
+**City Level Reference Data** 
+
+As you explore the attribute data of the census tracts in and around your neighborhood, you may be curious about the levels for the city-wide data used to construct the gentrification measures. If you want to see the data for your city to compare with selected census tracts on your map, view the two tables below. Table 1 shows the values of the percent of residents with college degrees, median household income, median home value, and median gross rent by year for each city. Table 2 shows the change over each decade for the same set of variables. Use the search bar to filter to the rows containing information about your selected city.  
 
 
-After you have completed your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in neighborhood change. For a refresher on geocoding, view the [tutorial on geocoding][Preparing Data for Geocoding].   
+  
+```{r, message = FALSE, echo = FALSE, warning = FALSE}
+library("readr")
+library(reactable)
+library(htmltools)
+
+city_year_gent <- read_csv("city_year_gent_indicators.csv")
+
+city_year <- reactable(city_year_gent,
+                       searchable = TRUE,
+                       striped = TRUE,
+                       highlight = TRUE,
+                       minRows = 10)
+
+div(class = "city_year",
+  div(class = "city_year-header",
+      h3(class = "city_year-title", "Table 1: Key Gentrification Indicators by Year"),
+     city_year
+  )
+)
+```
+
+
+
+
+
+```{r, message=FALSE, echo=FALSE, warning=FALSE}
+city_decade_chg_gent <- read_csv("city_decade_pchg_gent_indicators.csv")
+
+city_pctchg_decade <- reactable(city_decade_chg_gent,
+                                searchable = TRUE, 
+                                striped = TRUE,
+                                highlight = TRUE,
+                                minRows = 10)
+
+div(class = "city_pctchg_decade",
+  div(class = "city_pctchg_decade-header", 
+      h3(class = "city_pctchg_decade-title", "Table 2: Percent Change in Key Gentrification Indicators"),
+     city_year
+  )
+)
+```
+  
+
+
+
+**Next Steps**
+
+After you have completed your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in neighborhood change. For a refresher on geocoding, view the [tutorial on geocoding][Preparing Data for Geocoding].     
 
 
 If you would like to configure the pop-ups that appear on your geocoded locations to have images or a description of the site, view the optional [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] *before* you load your CSV file with the addresses into AGO. This section also contains examples of configuring pop-ups on the gentrification layers, too, in case you want to embed graphs/charts and descriptions of the numeric data on the map-layer. Otherwise, you can upload the spreadsheet with addresses as you have in previous assignments and skip over to the section on viewing [historical Google Street View images][Historical Google Street View].  
@@ -150,7 +200,6 @@ Before we can do this, you need to be familiar with what the variable names in t
 
 
 ```{r, echo = FALSE, warning=FALSE, message = FALSE}
-library("readr")
 codebook <- read_csv("gentrification_measures_codebook.csv")
 
 knitr::kable(codebook, booktabs = TRUE, caption = 'Gentrification Layers Codebook')

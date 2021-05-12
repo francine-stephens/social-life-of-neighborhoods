@@ -1,8 +1,29 @@
 # ESRI Story Maps
 
-Tutorial will be published at the start of week 8. 
+Tutorial will be *fully* published at the start of week 8. 
+
+Now, it is time to put together a digital visual story of your neighborhood using some of the content you have created throughout the course assignments. We will be making a *story map* to introduce people to the social life of your neighborhood. This tutorial provides a little bit of background on ESRI's Story Map platform and points you to the Story Map templates and resources that you will use to compile your maps, text, and other types of media into a digital narrative. 
 
 ## Creating Story Maps
+
+**What is a story map?** 
+
+ESRI Story Maps are web applications that let you, the author, combine web-maps with narrative text, images, and multimedia, including video and audio. The applications are designed to be attractive and usable by anyone, which makes them great for education and outreach to the general public or to a particular audience. Story maps can be made for many different topics. Basically, anything that you can show on a map can be the topic of a story map!  
+
+
+There are two versions of Story Maps available online - the classic and new version. We are going to use the **Classic** version. The classic version's biggest asset is that it has a set of templates that are made-to-fill-in. The templates make it easier on you as an author to figure out how to add content to your story. Unfortunately, Stanford's AGO landing page does not directly link to the Classic version of ESRI Story Maps. Instead, you can navigate to the Classic Story Maps splash page from [here](https://storymaps-classic.arcgis.com/en/). Feel free to add this link to your bookmarks. Before navigating to the Classic Story Maps splash page, be sure that you are logged into your AGO account. Classic Story Maps still verifies that you are part of Stanford's institutional AGO account.  
+
+
+
+### Before you Begin Building a Story
+
+<span style="color: blue;">**Start by taking a look at existing story maps.**</span> Visit the [Story Maps Gallery](https://storymaps-classic.arcgis.com/en/gallery/#s=0) to see some wonderful examples of story maps. Filter and search the gallery using the options on the left-hand side-bar to see how authors like you have created stories that may well be similar to the one you want to tell. Filter based on app type and topic. Explore. Get a sense of what the viewing experience looks like and what makes a good story. Feel free to borrow approaches that you think work well, or come up with your own!
+
+
+### Building your Story
+
+
+### Preview & Publish your Story
 
 
 

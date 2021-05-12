@@ -56,10 +56,8 @@ historical-google-street-view
 globalization-migration-flow-maps
 esri-story-maps
 creating-story-maps
-before-you-begin-building-a-story
+before-you-begin-building-your-story-map
 building-your-story
 preview-publish-your-story
 examples
-resources
-arcgis-online
-designvisualization
+additional-resources

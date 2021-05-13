@@ -57,7 +57,7 @@ globalization-migration-flow-maps
 esri-story-maps
 creating-story-maps
 before-you-begin-building-your-story-map
-building-your-story
-preview-publish-your-story
+building-your-story-map
+publish-share-your-story-map
 examples
 additional-resources

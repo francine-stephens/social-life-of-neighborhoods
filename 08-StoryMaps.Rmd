@@ -30,21 +30,21 @@ ESRI's Story Maps application offers six different templates. Each template lets
 * [Swipe & Spyglass](https://storymaps-classic.arcgis.com/en/app-list/swipe-spyglass/) - **Compare two maps** by swiping back and forth, or by peering through one map to see another.  
 
 
-It is possible to use multiple story map templates in your story. For example, you may find that the swipe/spyglass would be good for one capturing one key issue in your neighborhood and the tour template would be ideal for another key course theme that is salient in your neighborhood. There are a few different ways of combining and embedding multiple ESRI story map templates. Selecting the best method to combine or embed is going to depend on the templates you are using and the viewing experience you intend to create for the audience. You are not required to use multiple templates, but if you feel like your story would benefit from the features of multiple templates, meet with Francine during her office hours or [book an appointment](https://go.oncehub.com/FrancineStephens) with her, so that the two of you can brainstorm the best method and walk through the steps for combining or embedding. 
+It is possible to use multiple story map templates in your story. For example, you may find that the swipe/spyglass would be good for one capturing one key issue in your neighborhood and the journal template would be ideal for other key course themes that are salient in your neighborhood. There are a few different ways of combining and embedding multiple ESRI story map templates. Selecting the best method to combine or embed is going to depend on the templates you are using and the viewing experience you intend to create for the audience. You are not required to use multiple templates, but if you feel that the features of multiple templates are essential for telling your story, meet with Francine during her office hours or [book an appointment](https://go.oncehub.com/FrancineStephens) with her, so that the two of you can brainstorm the best method and discuss the steps you will need to take to combine or embed. 
 
 
 ### Before you Begin Building your Story Map
 
-<span style="color: blue;">**View existing story maps to get ideas.**</span> Visit the [Story Maps Gallery](https://storymaps-classic.arcgis.com/en/gallery/#s=0) to see some wonderful examples of story maps. Filter and search the gallery using the options on the left-hand side-bar to see how authors like you have created stories that may well be similar to the one you want to tell. Filter based on app type or topic or both. Explore. Get a sense of what the viewing experience looks like in the different templates and what makes a good story. Feel free to borrow approaches that you think work well, or come up with your own!  
+<span style="color:#4b0082;">**View existing story maps to get ideas.**</span> Visit the [Story Maps Gallery](https://storymaps-classic.arcgis.com/en/gallery/#s=0) to see some wonderful examples of story maps. Filter and search the gallery using the options on the left-hand side-bar to see how authors like you have created stories that may well be similar to the one you want to tell. Filter based on app type or topic or both. Explore. Get a sense of what the viewing experience looks like in the different templates and what makes a good story. Feel free to borrow approaches that you think work well, or come up with your own!  
 
 
-<span style="color: blue;">**Select a template that works well for the story that you want to tell.**</span> From exploring the Story Maps Gallery, you may already have a good idea of which app template will work best for you. Using the links for the templates listed above, spend some time comparing the templates, the layout options they offer, and the different components they let you incorporate in your story. If you feel uncertain about selecting a template, there is a wizard on the [Apps page](https://storymaps-classic.arcgis.com/en/app-list/) with an **"Ask the Pros"** feature in the Create Story function that can guide you to the best app template for your story. 
+<span style="color:#4b0082;">**Select a template that works well for the story that you want to tell.**</span> From exploring the Story Maps Gallery, you may already have a good idea of which app template will work best for you. Using the links for the templates listed above, spend some time comparing the templates, the layout options they offer, and the different components they let you incorporate in your story. If you feel uncertain about selecting a template, there is a wizard on the [Apps page](https://storymaps-classic.arcgis.com/en/app-list/) with an **"Ask the Pros"** feature in the Create Story function that can guide you to the best app template for your story. 
 
 ![If you are unsure about the template to use, Ask the Pros](images\ask_pros_storymaps.png)  
  
 
 
-<span style="color: blue;">**Plan and organize your story.**</span> Before you start putting your story map together online, you should first sketch it out *offline*. Outline what each story map “slide” will present. Figure out which visuals make the most sense. Sketch out which features of your template work best with your story’s narrative and flow. Below is a list of resources that you can use to plan your story map. 
+<span style="color:#4b0082;">**Plan and organize your story.**</span> Before you start putting your story map together online, you should first sketch it out *offline*. Outline what each story map “slide” will present. Figure out which visuals make the most sense. Sketch out which features of your template work best with your story’s narrative and flow. Below is a list of resources that you can use to plan your story map. 
 
 * [Create a storyboard & content inventory](https://drive.google.com/file/d/1ihe1agEV5e4CkoKvjKSptvXMSG11bXXA/view?usp=sharing) - Use the linked template or sketch an outline on your own. 
 * [Review ESRI's planning document](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/sharing-collaboration/planning-and-outlining-your-story-map-how-to-set-yourself-up-for-success/) - The blog contains an illustrated guide for planning your story.
@@ -56,7 +56,7 @@ If you have any questions or just want to bounce ideas off of someone, please do
 
 ### Building your Story Map
 
-<span style="color:blue">**Prepare the content for your story map.**</span> If you used the storyboard/content inventory template above or sketched your own outline, you are aware of the existing content that you need refine and content that you need to create or obtain for your story. Make the refinements and assemble any additional content you need for your story before building your story. This way you will not have to jump back and forth between making content and sequencing your story map. Below is a list of potential tasks you might complete to prepare content for your story map. 
+<span style="color:#4b0082">**Prepare the content for your story map.**</span> If you used the storyboard/content inventory template above or sketched your own outline, you are aware of the existing content that you need refine and content that you need to create or obtain for your story. Make the refinements and assemble any additional content you need for your story before building your story. This way you will not have to jump back and forth between making content and sequencing your story map. Below is a list of potential tasks you might complete to prepare content for your story map. 
 
 * Make refinements to your existing maps.
   * Change basemaps.
@@ -74,7 +74,7 @@ If you have any questions or just want to bounce ideas off of someone, please do
 * Keep a running list of sources of your content, so that you can feed them into the credits at the end of your story map.
 
 
-<span style="color:blue">**Build your story map.**</span> With all of your content now on hand, it is time to dive into building the story map. On the [Apps page](https://storymaps-classic.arcgis.com/en/app-list/), click on the **Build button** for the template that you have chosen to launch an interactive story builder. The story builder will guide you through the each of the steps for building your story. The story builder will indicate when you can bring in a map, text, or other types of media. If you are having trouble with the story builder's instructions, remember that the links posted above for each of the template types contained a tutorial section that you can review.
+<span style="color:#4b0082">**Build your story map.**</span> With all of your content now on hand, it is time to dive into building the story map. On the [Apps page](https://storymaps-classic.arcgis.com/en/app-list/), click on the **Build button** for the template that you have chosen to launch an interactive story builder. The story builder will guide you through the each of the steps for building your story. The story builder will indicate when you can bring in a map, text, or other types of media. If you are having trouble with the story builder's instructions, remember that the links posted above for each of the template types contained a tutorial section that you can review.
 
 
 As you build your story map, be sure to save your work often. The **Save button** is in the upper-right corner of your screen. You should also experiment with the story map template **Settings**, which you can find in the tool-bar at the top of the page. The settings options allow you to manipulate the layout, map features, color scheme, and the header material. Preview your story at any point in the building process by navigating to the **View button** on the tool-bar. The view button will allow you to see what the viewing experience is like for your audience.
@@ -82,14 +82,14 @@ As you build your story map, be sure to save your work often. The **Save button*
 
 ### Publish & Share your Story Map
 
-<span style="color:blue">**Publish your story map.**</span> When you feel good about the look and feel of your story map, publish it. There is not a **publish button** on the Story Maps page. Instead, you will need to close your story map and return to the Classic Story Maps [splash page](https://storymaps-classic.arcgis.com/en/). Navigate to the My Stories for Classic Stories page by clicking on the **My Stories** button on the toolbar. Find your story map and **click on the title.** If you see a message beside the maps list that says, "No issues found." Go ahead and change the **Shared settings option** on your story map (i.e., the set of buttons below your story map's thumbnail) to either *Organization* or *Public*. Your story map is now published. You can still continue to edit your story map and the map contents in it even though it is published. Just be sure to save any changes you make so that they will show up when someone views the map.
+<span style="color:#4b0082">**Publish your story map.**</span> When you feel good about the look and feel of your story map, publish it. There is not a **publish button** on the Story Maps page. Instead, you will need to close your story map and return to the Classic Story Maps [splash page](https://storymaps-classic.arcgis.com/en/). Navigate to the My Stories for Classic Stories page by clicking on the **My Stories** button on the toolbar. Find your story map and **click on the title.** If you see a message beside the maps list that says, "No issues found." Go ahead and change the **Shared settings option** on your story map (i.e., the set of buttons below your story map's thumbnail) to either *Organization* or *Public*. Your story map is now published. You can still continue to edit your story map and the map contents in it even though it is published. Just be sure to save any changes you make so that they will show up when someone views the map.
 
 **[IMAGE ABOUT HERE]**
 
 If your maps had some issues, try to fix the issues. Usually, the problem is that a layer in your map was not shared with the organization or publicly. The share settings on your map layers need to be the same as your share settings on your story map. If you do not know how to resolve the issues, come to office hours so that we can trouble-shoot the problem.
 
 
-<span style="color:blue">**Share your story map.**</span> At last, it is time to share your map. Click on the **Link icon** next to the delete button, to get the web-link for the story map. This is the link that you should submit on Canvas for us to evaluate your story map. 
+<span style="color:#4b0082">**Share your story map.**</span> At last, it is time to share your map. Click on the **Link icon** next to the delete button, to get the web-link for the story map. This is the link that you should submit on Canvas for us to evaluate your story map. 
 
 **[IMAGE ABOUT HERE]**
 
@@ -98,24 +98,43 @@ You will also notice that there is an iframe embedding option in the share windo
 
 ## Examples
 
+### StoryBoard & Content Inventory
+**EXAMPLE Storyboard about here**
+
+
+
+### Story Maps
+
+* Cool examples of story maps from [Dr. Willow Lung-Amam](http://www.willowlungamam.com/story-mapping)
+* The [City of Los Angeles](https://lacontroller.org/data-stories-and-maps/) has some neat story maps, too. 
+* ESRI’s favorite StoryMaps in [2018](https://collections.storymaps.esri.com/community-stories-2018/)
+* ESRI’s favorite StoryMaps in [2019](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/constituent-engagement/our-favorite-story-maps-of-2019/)
+* ESRI’s favorite StoryMaps in [2020](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/mapping/our-favorite-stories-of-2020/)
+
+
+**EXAMPLE StoryMap about here**
+
 
 ## Additional Resources 
 
-**AGO web-maps**
+**AGO Web-map Design**
 
 * [Intro to ArcGIS Online from Stanford Geospatial Center StoryMap](https://storymaps.arcgis.com/stories/2c4c6834f57f4c89ba869067ad7a808d)
 * [Importing Custom Symbols][Importing Custom Symbols] - To use custom symbols instead of AGO's icons. 
 * [Configure Pop-ups][Configuring Pop-ups (Optional)]
-* MORE COMING SOON
+* [How Not to Use Web Maps](https://storymaps-umn.opendata.arcgis.com/app/3de403e07275427bb7425ad18f6b7936) - A story map lesson with examples of poorly designed web-maps from the StoryMaps Curriculum Team at the University of Minnesota. 
+
 
 **Story Maps**
 
 * [ESRI ArcGIS Online Learning Tutorial](https://learn.arcgis.com/en/projects/get-started-with-story-maps/) - Guided tutorial from ESRI for selected Story Map templates. 
 * [Story Maps FAQs](https://storymaps-classic.arcgis.com/en/faq/)
-* MORE COMING SOON
+* [The Myriad Uses of StoryMaps](https://storymaps.arcgis.com/stories/1b38cf02f39849478d3123dcd9465022)
 
 
-**Design & Visualization Tools**
+**Design & Visualization Tools & Tips**
 
 * [Canva](https://www.canva.com/templates/) - If you want to create your own graphics and bring them into your story map as images, consider using the free-level of Canva. You can make images and graphs/charts with this software. It is a good, user-friendly alternative to Adobe Photoshop and Illustrator.
-* MORE COMING SOON
+* [RawGraphs](https://app.rawgraphs.io/) - Great alternative to Excel's charts. An open source graph and chart generator. All you need to do is copy-paste or upload your tabular data, choose a chart type, select the variables you want to show, and customize the color and sizing. 
+* [Infogram](https://infogram.com/) - If you want to make interactive charts and graphics but are not familiar with a statistical packages like R or Python, use the free level of Infogram. There are over 37 chart types available and animation options.
+* [Storytelling with Maps on Paper and Screen](https://storymaps.arcgis.com/stories/8dc1ba3373fc434bbf17a46d1b23d88b) - A story map that explains key story telling considerations for paper-based maps and digital web-maps.

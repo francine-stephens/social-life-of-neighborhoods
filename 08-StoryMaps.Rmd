@@ -1,6 +1,7 @@
 # ESRI Story Maps
 
-Tutorial will be *fully* published at the start of week 8. 
+<span style="color:blue;">NOTE: Tutorial will be *fully* published at the start of week 8 on Sunday May 16th at 8 PM PST.</span>
+
 
 Now, it is time to put together a digital visual story of your neighborhood using some of the content you have created throughout the course assignments. We will be making a *story map* about the social life of your neighborhood. The assignment instructions posted on Canvas detail the expectations for the content in your story map. This tutorial provides a little bit of background on ESRI's Story Map platform and points you to the templates and resources that you will use to compile your maps, text, and other types of media into a digital narrative. 
 

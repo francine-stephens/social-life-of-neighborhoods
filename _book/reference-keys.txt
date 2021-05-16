@@ -53,7 +53,6 @@ descriptions
 customized-rich-text
 charts-graphs
 historical-google-street-view
-globalization-migration-flow-maps
 esri-story-maps
 creating-story-maps
 before-you-begin-building-your-story-map

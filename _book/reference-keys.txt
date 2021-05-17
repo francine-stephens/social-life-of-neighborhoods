@@ -53,13 +53,10 @@ descriptions
 customized-rich-text
 charts-graphs
 historical-google-street-view
-globalization-migration-flow-maps
 esri-story-maps
 creating-story-maps
 before-you-begin-building-your-story-map
 building-your-story-map
 publish-share-your-story-map
-examples
-storyboard-content-inventory
-story-maps
+examples-story-maps
 additional-resources

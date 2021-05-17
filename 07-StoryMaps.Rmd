@@ -1,7 +1,5 @@
 # ESRI Story Maps
 
-<span style="color:blue;">NOTE: Tutorial will be *fully* published at the start of week 8 on Sunday May 16th at 8 PM PST.</span>
-
 
 Now, it is time to put together a digital visual story of your neighborhood using some of the content you have created throughout the course assignments. We will be making a *story map* about the social life of your neighborhood. The assignment instructions posted on Canvas detail the expectations for the content in your story map. This tutorial provides a little bit of background on ESRI's Story Map platform and points you to the templates and resources that you will use to compile your maps, text, and other types of media into a digital narrative. 
 
@@ -31,7 +29,7 @@ ESRI's Story Maps application offers six different templates. Each template lets
 * [Swipe & Spyglass](https://storymaps-classic.arcgis.com/en/app-list/swipe-spyglass/) - **Compare two maps** by swiping back and forth, or by peering through one map to see another.  
 
 
-It is possible to use multiple story map templates in your story. For example, you may find that the swipe/spyglass would be good for one capturing one key issue in your neighborhood and the journal template would be ideal for other key course themes that are salient in your neighborhood. There are a few different ways of combining and embedding multiple ESRI story map templates. Selecting the best method to combine or embed is going to depend on the templates you are using and the viewing experience you intend to create for the audience. You are not required to use multiple templates, but if you feel that the features of multiple templates are essential for telling your story, meet with Francine during her office hours or [book an appointment](https://go.oncehub.com/FrancineStephens) with her, so that the two of you can brainstorm the best method and discuss the steps you will need to take to combine or embed. 
+It is possible to use multiple story map templates in your story. For example, you may find that the swipe/spyglass would be good for one capturing one key issue in your neighborhood and the journal template would be ideal for other key course themes that are salient in your neighborhood. There are a few different ways of combining multiple ESRI story map templates. Selecting the best method to combine or embed is going to depend on the templates you are using and the viewing experience you intend to create for the audience. You are not required to use multiple templates, but if you feel that the features of multiple templates are essential for telling your story, meet with Francine during her office hours or [book an appointment](https://go.oncehub.com/FrancineStephens) with her, so that the two of you can brainstorm the best method and discuss the steps you will need to take to combine. 
 
 
 ### Before you Begin Building your Story Map
@@ -48,11 +46,12 @@ It is possible to use multiple story map templates in your story. For example, y
 <span style="color:#4b0082;">**Plan and organize your story.**</span> Before you start putting your story map together online, you should first sketch it out *offline*. Outline what each story map “slide” will present. Figure out which visuals make the most sense. Sketch out which features of your template work best with your story’s narrative and flow. Below is a list of resources that you can use to plan your story map. 
 
 * [Create a storyboard & content inventory](https://drive.google.com/file/d/1ihe1agEV5e4CkoKvjKSptvXMSG11bXXA/view?usp=sharing) - Use the linked template or sketch an outline on your own. 
+* [Francine's storyboard](https://drive.google.com/file/d/1bR55QKpp4EzFfOAb-D1MhPxTyon5aa5W/view?usp=sharing) - View an example of a completed storyboard template.
 * [Review ESRI's planning document](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/sharing-collaboration/planning-and-outlining-your-story-map-how-to-set-yourself-up-for-success/) - The blog contains an illustrated guide for planning your story.
 * [Review the nine tips for effective digital storytelling](https://storymaps.arcgis.com/stories/429bc4eed5f145109e603c9711a33407) - The tips are displayed in an ESRI Story Map.
 
 
-If you have any questions or just want to bounce ideas off of someone, please do not hesitate to drop by Professor Stuart's or Francine's office hours. We are both happy to help you brainstorm and lay out some plans for your story map.
+If you have any questions or just want to bounce ideas off of someone, please do not hesitate to drop by Professor Stuart's or Francine's office hours. We are both happy to help you brainstorm and lay out some plans for your story map.  
 
 
 ### Building your Story Map
@@ -75,6 +74,9 @@ If you have any questions or just want to bounce ideas off of someone, please do
 * Keep a running list of sources of your content, so that you can feed them into the credits at the end of your story map.
 
 
+If you decide that you want to make additional maps, but are not sure about where to find the data or how to import the data into AGO, email or meet with Francine to figure out the appropriate steps to take.  
+
+
 <span style="color:#4b0082">**Build your story map.**</span> With all of your content now on hand, it is time to dive into building the story map. On the [Apps page](https://storymaps-classic.arcgis.com/en/app-list/), click on the **Build button** for the template that you have chosen to launch an interactive story builder. The story builder will guide you through the each of the steps for building your story. The story builder will indicate when you can bring in a map, text, or other types of media. If you are having trouble with the story builder's instructions, remember that the links posted above for each of the template types contained a tutorial section that you can review.
 
 
@@ -83,37 +85,32 @@ As you build your story map, be sure to save your work often. The **Save button*
 
 ### Publish & Share your Story Map
 
-<span style="color:#4b0082">**Publish your story map.**</span> When you feel good about the look and feel of your story map, publish it. There is not a **publish button** on the Story Maps page. Instead, you will need to close your story map and return to the Classic Story Maps [splash page](https://storymaps-classic.arcgis.com/en/). Navigate to the My Stories for Classic Stories page by clicking on the **My Stories** button on the toolbar. Find your story map and **click on the title.** If you see a message beside the maps list that says, "No issues found." Go ahead and change the **Shared settings option** on your story map (i.e., the set of buttons below your story map's thumbnail) to either *Organization* or *Public*. Your story map is now published. You can still continue to edit your story map and the map contents in it even though it is published. Just be sure to save any changes you make so that they will show up when someone views the map.
+<span style="color:#4b0082">**Publish your story map.**</span> When you feel good about the look and feel of your story map, publish it. There is not a publish button on the Story Maps page. Instead, you will need to close your story map and return to the Classic Story Maps [splash page](https://storymaps-classic.arcgis.com/en/). 
 
-**[IMAGE ABOUT HERE]**
+1. Navigate to the My Stories page by clicking on the **My Stories** button on the toolbar. 
+2. Find your story map and **click on the title.** 
+3. If you see a message beside the maps list that says, "No issues found." Go ahead and change the **Shared settings option** on your story map (i.e., the set of buttons below your story map's thumbnail) to either *Organization* or *Public*. 
+    i. If your maps had some issues, try to troubleshoot a bit. Usually, the problem is that a layer in your map was not shared with the organization or publicly. The share settings on your map layers need to be the same as your share settings on your story map. 
+    ii. If you are unsure about how to resolve the issues, come to office hours so that we can trouble-shoot the problem.
 
-If your maps had some issues, try to fix the issues. Usually, the problem is that a layer in your map was not shared with the organization or publicly. The share settings on your map layers need to be the same as your share settings on your story map. If you do not know how to resolve the issues, come to office hours so that we can trouble-shoot the problem.
+
+Your story map is now published. You can still continue to edit your story map and the map contents in it even though it is published. Just be sure to save any changes you make so that they will show up when someone views the map.
 
 
 <span style="color:#4b0082">**Share your story map.**</span> At last, it is time to share your map. Click on the **Link icon** next to the delete button, to get the web-link for the story map. This is the link that you should submit on Canvas for us to evaluate your story map. 
 
-**[IMAGE ABOUT HERE]**
 
 You will also notice that there is an iframe embedding option in the share window. If you have a website, you can embed your story map in your website using the iframe code chunk. 
 
 
-## Examples
+## Examples Story Maps
 
-### StoryBoard & Content Inventory
-**EXAMPLE Storyboard about here**
-
-
-
-### Story Maps
-
-* Cool examples of story maps from [Dr. Willow Lung-Amam](http://www.willowlungamam.com/story-mapping)
+* Cool examples of story maps from [Dr. Willow Lung-Amam's class](http://www.willowlungamam.com/story-mapping)
 * The [City of Los Angeles](https://lacontroller.org/data-stories-and-maps/) has some neat story maps, too. 
 * ESRI’s favorite StoryMaps in [2018](https://collections.storymaps.esri.com/community-stories-2018/)
 * ESRI’s favorite StoryMaps in [2019](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/constituent-engagement/our-favorite-story-maps-of-2019/)
 * ESRI’s favorite StoryMaps in [2020](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/mapping/our-favorite-stories-of-2020/)
-
-
-**EXAMPLE StoryMap about here**
+* Francine's example story map for this class. This is a work-in-progress and refinements are still being made. 
 
 
 ## Additional Resources 

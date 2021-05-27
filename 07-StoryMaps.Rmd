@@ -63,7 +63,7 @@ If you have any questions or just want to bounce ideas off of someone, please do
   * Change color schemes/icon styles.
   * Resize elements/Change viewing extent. 
   * Add locations to your geocoded points.
-  * Disaggregate some layers.
+  * Disaggregate some layers, e.g., decades in the racial composition maps.
   * Configure pop-ups.
 * Find new data or webmaps.
 * Extract & revise text from your neighborhood assignments to use as text in your story map. 
@@ -87,6 +87,8 @@ As you build your story map, be sure to save your work often. The **Save button*
 
 <span style="color:#4b0082">**Publish your story map.**</span> When you feel good about the look and feel of your story map, publish it. There is not a publish button on the Story Maps page. Instead, you will need to close your story map and return to the Classic Story Maps [splash page](https://storymaps-classic.arcgis.com/en/). 
 
+![Publish and share your story map!](images\publish_share_storymap.png)
+
 1. Navigate to the My Stories page by clicking on the **My Stories** button on the toolbar. 
 2. Find your story map and **click on the title.** 
 3. If you see a message beside the maps list that says, "No issues found." Go ahead and change the **Shared settings option** on your story map (i.e., the set of buttons below your story map's thumbnail) to either *Organization* or *Public*. 
@@ -103,31 +105,49 @@ Your story map is now published. You can still continue to edit your story map a
 You will also notice that there is an iframe embedding option in the share window. If you have a website, you can embed your story map in your website using the iframe code chunk. 
 
 
-## Examples Story Maps
+## Examples of Story Maps
 
 * Cool examples of story maps from [Dr. Willow Lung-Amam's class](http://www.willowlungamam.com/story-mapping)
 * The [City of Los Angeles](https://lacontroller.org/data-stories-and-maps/) has some neat story maps, too. 
 * ESRI’s favorite StoryMaps in [2018](https://collections.storymaps.esri.com/community-stories-2018/)
 * ESRI’s favorite StoryMaps in [2019](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/constituent-engagement/our-favorite-story-maps-of-2019/)
 * ESRI’s favorite StoryMaps in [2020](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/mapping/our-favorite-stories-of-2020/)
-* Francine's example story map for this class. This is a work-in-progress and refinements are still being made. 
+* [Francine's](https://arcg.is/1Xj0v4) example story map for San Francisco's Excelsior neighborhood. This is a work-in-progress (i.e., There are some slides with place-holders for visuals). 
+
+
+
+## Using Time-Series Maps in StoryMaps
+
+Time can be displayed You may want to use one of the time series maps that you created for the racial composition or segregation in your story map. When you created those maps, we used the time animator to sequentially show each decade as a layer on the map. Unfortunately, you cannot just load those web-maps with the time animator directly into the story map template. Instead, you need to make a choice about whether you want to display time in an animated fashion or if you would rather have your reader scroll or click through each time period in your story map. 
+
+If you want the **time animator** in your story map, you will need to use either a journal or map series template. Go into your web-map with the time animator and **create a time-aware app** using the map. You can find instructions about how to create the time aware app [here](https://www.esri.com/arcgis-blog/products/arcgis-online/uncategorized/how-to-make-a-time-aware-story-map/?rmedium=redirect&rsource=blogs.esri.com/esri/arcgis/2015/08/03/how-to-make-a-time-aware-story-map). If you are having trouble with this, email/meet with Francine. 
+
+*One caveat to this is that the time-aware app is that it does not work on maps created with the New Map Viewer (e.g., dot density).* For these maps, you will need to use the second option of having separate layers for each decade that viewers scroll or click through.
+
+The other option for displaying time-series data requires you to disable time on your map and **use the filter option to create separate layers** for each decade that you want to display to your audience. You can load these separate layers into any story map template and have your viewer scroll or click through them. *If you are working with the racial composition dot-density map (created in the new map viewer), share these layers as separate web-apps from the New Map Viewer page.* You can embed the links on your apps as webpages in your story map.  
 
 
 ## Additional Resources 
-
-**AGO Web-map Design**
-
-* [Intro to ArcGIS Online from Stanford Geospatial Center StoryMap](https://storymaps.arcgis.com/stories/2c4c6834f57f4c89ba869067ad7a808d)
-* [Importing Custom Symbols][Importing Custom Symbols] - To use custom symbols instead of AGO's icons. 
-* [Configure Pop-ups][Configuring Pop-ups (Optional)]
-* [How Not to Use Web Maps](https://storymaps-umn.opendata.arcgis.com/app/3de403e07275427bb7425ad18f6b7936) - A story map lesson with examples of poorly designed web-maps from the StoryMaps Curriculum Team at the University of Minnesota. 
-
 
 **Story Maps**
 
 * [ESRI ArcGIS Online Learning Tutorial](https://learn.arcgis.com/en/projects/get-started-with-story-maps/) - Guided tutorial from ESRI for selected Story Map templates. 
 * [Story Maps FAQs](https://storymaps-classic.arcgis.com/en/faq/)
 * [The Myriad Uses of StoryMaps](https://storymaps.arcgis.com/stories/1b38cf02f39849478d3123dcd9465022)
+* [Working with time in storymaps](https://www.esri.com/arcgis-blog/products/arcgis-online/uncategorized/how-to-make-a-time-aware-story-map/?rmedium=redirect&rsource=blogs.esri.com/esri/arcgis/2015/08/03/how-to-make-a-time-aware-story-map)
+* [Styling buttons and links using HTML & CSS in a StoryMap Journal](https://www.arcgis.com/apps/MapJournal/index.html?appid=8349ab77b17147deb22f58c9a9133766#) 
+* [Style/Move the Back button in a StoryMap Journal](https://medium.com/story-maps-developers-corner/move-or-style-the-story-action-back-button-in-map-journal-277d31e59e73)
+
+
+
+**AGO Web-map Design**
+
+* [Intro to ArcGIS Online from Stanford Geospatial Center StoryMap](https://storymaps.arcgis.com/stories/2c4c6834f57f4c89ba869067ad7a808d)
+* [Importing Custom Symbols][Importing Custom Symbols] - To use custom symbols instead of AGO's icons. 
+* [Configure Pop-ups][Configuring Pop-ups (Optional)]
+* [Add color to pop-up text](https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/bring-colors-from-your-map-into-your-pop-up-using-arcade/)
+* [How Not to Use Web Maps](https://storymaps-umn.opendata.arcgis.com/app/3de403e07275427bb7425ad18f6b7936) - A story map lesson with examples of poorly designed web-maps from the StoryMaps Curriculum Team at the University of Minnesota. 
+
 
 
 **Design & Visualization Tools & Tips**

@@ -58,5 +58,6 @@ creating-story-maps
 before-you-begin-building-your-story-map
 building-your-story-map
 publish-share-your-story-map
-examples-story-maps
+examples-of-story-maps
+using-time-series-maps-in-storymaps
 additional-resources

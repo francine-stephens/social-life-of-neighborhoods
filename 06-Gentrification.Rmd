@@ -159,7 +159,18 @@ We can add a some more detailed and richer information to our pop-ups though. Th
 
 In your neighborhood observations, you either took pictures of the locations that were or are involved in neighborhood change or screen-grabbed the locations from Google images/Google Street View. You could include those images in the pop-ups, so that when someone clicks on one of the locations that you have geocoded, the pop-up shows them a picture of what is located in that place. 
 
-In order to have these images render in the pop-up, you will need to add them to the spreadsheet where you are recording your addresses. Create a new column to hold the URLs for the images in the spreadsheet. Copy the URLs into the cells for each respective location. An example is shown in the image below. If you are using images that you personally took, you need to host them on the Web. The easiest way to do this is to store them in your Google Drive and setting the share option for the link to public. 
+In order to have these images render in the pop-up, you will need to add them to the spreadsheet where you are recording your addresses. Create a new column to hold the URLs for the images in the spreadsheet. Copy the URLs into the cells for each respective location. An example of the spreadsheet is shown below. 
+
+If you are using images that *you* captured, you need to host them on the Web. The easiest way to do this is to upload them into AGO and set the share option for the image to **Public**. To do this, navigate to the content page on AGO, and follow the steps below: 
+
+1. Click on the **Add Item** Button.
+2. In the drop-down menu, select the **From your computer** import option. 
+3. Find the image that is saved locally on your computer. Give it a title/tags.
+4. Change the share settings to **Public**. The public option is the only one that will give you a URL that you can include in your spreadsheet. 
+5. Scroll down to the bottom of the content page for your image, and copy-paste the URL for the image into the appropriate cell on your spreadsheet. 
+
+![Upload your images (PNG, JPEG, or GIF) to AGO on your content page.](images\save_image_to_AGO.png)  
+
 
 ![Add the URL for the images in a new column of your addresses CSV file](images\configure_images_in_CSV.png) 
 

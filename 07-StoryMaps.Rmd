@@ -118,13 +118,68 @@ You will also notice that there is an iframe embedding option in the share windo
 
 ## Using Time-Series Maps in StoryMaps
 
-Time can be displayed You may want to use one of the time series maps that you created for the racial composition or segregation in your story map. When you created those maps, we used the time animator to sequentially show each decade as a layer on the map. Unfortunately, you cannot just load those web-maps with the time animator directly into the story map template. Instead, you need to make a choice about whether you want to display time in an animated fashion or if you would rather have your reader scroll or click through each time period in your story map. 
+You may want to use one of the time series maps that you created for racial composition or segregation in your story map. When you created those maps, we used the time animator to sequentially show each decade as a layer on the map. Unfortunately, you cannot just load these web-maps directly into the story map template. Instead, you need to make a choice about whether you want to display time in an **animated** fashion or in **manual scroll/clicking actions** initiated by your reader. 
 
-If you want the **time animator** in your story map, you will need to use either a journal or map series template. Go into your web-map with the time animator and **create a time-aware app** using the map. You can find instructions about how to create the time aware app [here](https://www.esri.com/arcgis-blog/products/arcgis-online/uncategorized/how-to-make-a-time-aware-story-map/?rmedium=redirect&rsource=blogs.esri.com/esri/arcgis/2015/08/03/how-to-make-a-time-aware-story-map). If you are having trouble with this, email/meet with Francine. 
+### Time animator for Predominance & Segregation Maps
 
-*One caveat to this is that the time-aware app is that it does not work on maps created with the New Map Viewer (e.g., dot density maps like the racial composition maps you made).* For these maps, you will need to use the second option of having separate layers for each decade that viewers scroll or click through.
+If you want the **time animator** in your story map, you will need to convert your time-series map into a web-app. Use the web-app builder function in the **share settings.** The steps are listed below. GIFs and images for selected steps are included below the list of steps. 
 
-The other option for displaying time-series data requires you to disable time on your map and **use the filter option to create separate layers** for each decade that you want to display to your audience. You can load these separate layers into any story map template and have your viewer scroll or click through them. *If you are working with the racial composition dot-density map (created in the new map viewer), share these layers as separate web-apps from the New Map Viewer page.* You can embed the links on your apps as webpages in your story map.  
+1. Title and add tags to the web-app. (Recommendation: Include "App" in the title so that you know it is different from the web-map you created and can find it later if you need to trouble-shoot issues.) 
+2. Navigate to the widgets tab in your web-abb builder. 
+3. Click on one of the empty widgets at the bottom of the widgets pane. This should open up a search bar and list of all widgets. Search for the time slider and select it. 
+4. Once you have selected the time slider, a window will open with configuration options for the time slider. Change the time interval step to 10 (years). You can decide how you would like to set the other configuration preferences. 
+5. A time slider widget should appear in the upper-left side of the screen. If you click on it the time slider will render. 6. When you are happy with the look of your app, **save** the app. 
+7. Then, navigate your AGO content page, from your list of contents, select the web-app that you just created.
+8. Change the share settings to either organization/public (based on your story map share settings).
+9. Copy the link at the bottom of the app page and paste it into the web-page media content in your story map. 
+
+![Find the time-slider widget in the app-builder](images\set_time_slider_classic_map_viewer.gif)
+
+
+
+![Share the web-app and copy the link to paste into your story map.](images\share_app_grab_link.gif)      
+
+
+
+If you are having trouble with this, email/[book an appointment with Francine](https://go.oncehub.com/FrancineStephens). 
+
+
+### Separate Time Layers for Predominance & Segregation Maps
+
+If you are using these maps and would rather have the reader click/scroll through certain decades, filter by the year attribute on the layer using the filter tab. Earlier in the quarter, we applied filters to disaggregate the crime data by attributes like time and type of crime. You would [repeat the exact same steps][Filter Crime Data by Attributes], but use the **year** attribute and choose the expression that enable you to filter down to the decade that you are interested in. 
+
+If you are having trouble with this, email/[book an appointment with Francine](https://go.oncehub.com/FrancineStephens). 
+
+
+### Steps for Dot-Density Maps
+
+For the dot density maps, it is *not possible* to create apps with a time-slider. Therefore, you will need to create separate layers for each decade that viewers scroll or click through. Apply filters based on the year attribute of the race layer to create separate layers. Make sure that the race layer loaded and selected (i.e., click on the layer in the layers pane) in the new map-viewer and follow the steps below. An example of a filter applied for 1970 is also included below.
+
+1. Navigate to the filter button on the right-hand side panel of the interface. 
+2. Select **year** as the attribute. 
+3. Set the expression appropriately based on the decade you are trying to select. 
+3. Then, in the histogram at the bottom of the filter panel, drag the slider to reflect the decade that you are trying to isolate. 
+4. Click **Save** to apply the filter. 
+
+
+![Filter a dot density map layer by year.](images\filter_dot_density_by_decade.png)
+
+
+
+When you are happy with the look of your map, be sure to **Save** and **Share** it publicly or with the organization. Now, you are ready to create the app. Follow the steps below. A GIF of where to find the web-apps function is included below the steps. 
+
+1. Scroll down to the bottom of the left-hand tool bar to the *Create app** and select the **Instant App** option. 
+2. Pick an app template. The Minimalist app option works well.
+3. Give your app a title. (Recommendation: Include "App" in the title so that you know it is different from the web-map you created and can find it later if you need to trouble-shoot issues.) 
+4. Then, click on configure. A new window will launch to set the configurations. 
+5. A new window will launch to set the configurations with a set of steps. Follow the steps in this configuration window.
+6. When you publish the app (the final step), copy the link for your app. This is the link that you will paste into your story map as a web-page. 
+
+![Create a web-app of the map.](images\create_app_dot_density.gif)  
+
+
+
+For each decade you will need to repeat the steps for filtering and building the app. If you are having trouble with this, email/[book an appointment with Francine](https://go.oncehub.com/FrancineStephens). 
 
 
 ## Additional Resources 
@@ -134,7 +189,6 @@ The other option for displaying time-series data requires you to disable time on
 * [ESRI ArcGIS Online Learning Tutorial](https://learn.arcgis.com/en/projects/get-started-with-story-maps/) - Guided tutorial from ESRI for selected Story Map templates. 
 * [Story Maps FAQs](https://storymaps-classic.arcgis.com/en/faq/)
 * [The Myriad Uses of StoryMaps](https://storymaps.arcgis.com/stories/1b38cf02f39849478d3123dcd9465022)
-* [Working with time in storymaps](https://www.esri.com/arcgis-blog/products/arcgis-online/uncategorized/how-to-make-a-time-aware-story-map/?rmedium=redirect&rsource=blogs.esri.com/esri/arcgis/2015/08/03/how-to-make-a-time-aware-story-map)
 * [Styling buttons and links using HTML & CSS in a StoryMap Journal](https://www.arcgis.com/apps/MapJournal/index.html?appid=8349ab77b17147deb22f58c9a9133766#) 
 * [Style/Move the Back button in a StoryMap Journal](https://medium.com/story-maps-developers-corner/move-or-style-the-story-action-back-button-in-map-journal-277d31e59e73)
 
@@ -146,6 +200,7 @@ The other option for displaying time-series data requires you to disable time on
 * [Importing Custom Symbols][Importing Custom Symbols] - To use custom symbols instead of AGO's icons. 
 * [Configure Pop-ups][Configuring Pop-ups (Optional)]
 * [Add color to pop-up text](https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/bring-colors-from-your-map-into-your-pop-up-using-arcade/)
+* [How to georeference historical maps online](https://storymaps.arcgis.com/stories/8851fafab37a4674b7a75b5bbf000280)
 * [How Not to Use Web Maps](https://storymaps-umn.opendata.arcgis.com/app/3de403e07275427bb7425ad18f6b7936) - A story map lesson with examples of poorly designed web-maps from the StoryMaps Curriculum Team at the University of Minnesota. 
 
 

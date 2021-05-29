@@ -60,4 +60,7 @@ building-your-story-map
 publish-share-your-story-map
 examples-of-story-maps
 using-time-series-maps-in-storymaps
+time-animator-for-predominance-segregation-maps
+separate-time-layers-for-predominance-segregation-maps
+steps-for-dot-density-maps
 additional-resources

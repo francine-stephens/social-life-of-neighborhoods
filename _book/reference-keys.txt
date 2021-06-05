@@ -63,4 +63,5 @@ using-time-series-maps-in-storymaps
 time-animator-for-predominance-segregation-maps
 separate-time-layers-for-predominance-segregation-maps
 steps-for-dot-density-maps
+coloring-in-line-text
 additional-resources

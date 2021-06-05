@@ -182,6 +182,33 @@ When you are happy with the look of your map, be sure to **Save** and **Share** 
 For each decade you will need to repeat the steps for filtering and building the app. If you are having trouble with this, email/[book an appointment with Francine](https://go.oncehub.com/FrancineStephens). 
 
 
+## Coloring In-Line Text
+
+There might be some instances where you want to customize the color of some of your text to look like the colors used in your maps. Coloring your text to match attributes in your map is one way to get around using legends for your thematic maps. The process for coloring in-line text to match your maps is really simple. It involves (1) obtaining the hex-code(s) for the color(s) in your map and (2) copying the hex code into the font-color editor in the story map. Follow the steps and graphics below.
+
+
+**Find the hex-code associated with features in your map**
+
+1. Open up the style tab and click on the icons for the colors of interest. In the color tab, you will find the hex code listed. The hex code starts with a hashtag/pound sign and is followed by a series of alphanumeric characters. Examples are pictured below: 
+2. Copy the hex-code. 
+
+![Find the hex-codes in the New Map Viewer.](images\find_hex_code_of_symbology.png)    
+
+
+![Find the hex-codes in the Classic Map Viewer.](images\find_hex_code_classic_map_viewer.png)     
+
+
+**Apply the hex-code to text in your story map**
+
+1. Highlight the text that you want to color in your story map. 
+2. Navigate to the font-color option in the text editor bar. 
+3. In the font-color editor, navigate to the text-box and paste the hex-code in the empty box. Be sure to add the hash-tag/pound sign to the start of the hex code. When you click outside of the text-box, the color associated with the hex-code should appear. The GIF below shows these steps.
+4. Do not forget to Save your changes. 
+
+![Color text using the hex-code.](images\color_in_line_text_in_storymap.gif)
+
+
+
 ## Additional Resources 
 
 **Story Maps**

@@ -153,7 +153,27 @@ If you are having trouble with this, email/[book an appointment with Francine](h
 
 ### Steps for Dot-Density Maps
 
-For the dot density maps, it is *not possible* to create apps with a time-slider. Therefore, you will need to create separate layers for each decade that viewers scroll or click through. Apply filters based on the year attribute of the race layer to create separate layers. Make sure that the race layer loaded and selected (i.e., click on the layer in the layers pane) in the new map-viewer and follow the steps below. An example of a filter applied for 1970 is also included below.
+For the dot density maps, it is *not possible* to create apps with a time-slider. You have two options for importing these dot density maps into your story map. (1) If you are using all or most of the time points in the dot density map, then you should consider "printing" each decade layer separately and stringing them together into a .mpeg or .gif. (2) If you are using one or two of these maps, you could create an app for the selected layers. The steps for each of these two options are listed below. 
+
+**Create your own animated video** 
+
+You will need to print each decade layer separately to create your own animated video. This is the equivalent of exporting the map as a static image file. This means that your reader will not be able to interact with these maps. 
+
+1. Navigate to the **Print** button in the left-hand toolbar. 
+2. Select your print option - **layout** or **map only**.
+    i. Layout gives you the legend and the scale distance bar like the PDF maps you created at the beginning of the quarter. 
+    ii. Map Only lets you just export the map in your map viewer screen, not other features.
+3. Specify the type of image file you want (e.g., JPEG, PNG) and any other image features that are relevant (i.e., height and width settings). 
+4. Once you have exported all of your images, you need to bring them into a software that allows you to string them together into a video. Francine did this really quickly with Microsoft Photos in her story map, but you could use other software too, like Apple iMovie. 
+
+
+![Print Dot Density Map.](images\print_dot_density_map.png)   
+
+
+
+**Create Separate Layers in a web-app**
+
+If you want to keep the interactive-feature of the web-map, then you will need to create separate layers for each decade that viewers scroll or click through. Apply filters based on the year attribute of the race layer to create separate layers. Make sure that the race layer loaded and selected (i.e., click on the layer in the layers pane) in the new map-viewer and follow the steps below. An example of a filter applied for 1970 is also included below.
 
 1. Navigate to the filter button on the right-hand side panel of the interface. 
 2. Select **year** as the attribute. 

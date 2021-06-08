@@ -112,7 +112,9 @@ You will also notice that there is an iframe embedding option in the share windo
 * ESRI’s favorite StoryMaps in [2018](https://collections.storymaps.esri.com/community-stories-2018/)
 * ESRI’s favorite StoryMaps in [2019](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/constituent-engagement/our-favorite-story-maps-of-2019/)
 * ESRI’s favorite StoryMaps in [2020](https://www.esri.com/arcgis-blog/products/arcgis-storymaps/mapping/our-favorite-stories-of-2020/)
-* [Francine's](https://arcg.is/1Xj0v4) example story map for San Francisco's Excelsior neighborhood. This is a work-in-progress (i.e., There are some slides with place-holders for visuals). 
+* [Francine's](https://arcg.is/1Xj0v4) example story map for San Francisco's Excelsior neighborhood. Click on the expand option in the bottom right hand corner of the iframe below to view the story in full-screen mode. 
+
+<iframe width="800px" height="600px" src="https://stanford.maps.arcgis.com/apps/MapJournal/index.html?appid=64c1e53d0ad3424f899049f619658869"></iframe>
 
 
 

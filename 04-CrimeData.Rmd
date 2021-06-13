@@ -9,7 +9,7 @@ The guidelines for Assignment #4 ask you to record locations from your observati
 
 You can [style the symbols][Changing the Symbology] of the point locations as we did for the organizations in Assignment #3. If you want to be a little fancy and use symbols that better represent the elements that you observed in your neighborhood, then follow the instructions/GIF below for *importing custom symbols*. Otherwise, go ahead and proceed to the [Import Crime Data & Spatially Reduce] section. 
 
-### Importing Custom Symbols
+### Importing Custom Symbols (Optional)
 
 Before opening up the change style option, go ahead and find or create an image that you would like to use as an icon for your geocoded locations. The image needs to meet two criteria: 
 
@@ -45,7 +45,7 @@ Click on the **Analysis Tab** on the toolbar to open up the analysis operations 
 1. Set the **Target layer** to be the **crime incident points.** The target layer is the layer that we are trying to reduce. 
 2. Next, set the **Join layer** to be the neighborhood boundaries layer. This is the extent of our area of interest for our crime incidents.
 3. Specify the **Join Type** as **Choose a spatial relationship** and select **Completely Within** from the drop-down box. This tells AGO that we want to select only the crime incidents that lie completely within the neighborhood boundaries. 
-4. Specify the **Join Operation** as **One to One**. This defines the spatial join in binary times: crime incidents are assigned to the neighborhood if they fall within its boundaries or they are assigned to outside the boundary if they fall outside of it. Leave the other fields in #4 as they are. 
+4. Specify the **Join Operation** as **One to One**. This defines the spatial join in binary terms: Crime incidents are either assigned to the neighborhood if they fall within its boundaries or they are assigned to outside the boundary if they fall outside of it. Leave the other fields in #4 as they are. 
 5. Give the new layer that you are about to create an informative name. Keep the radio box for **Use Current Map Extent** checked.
 6. Run the analysis. 
 
@@ -120,7 +120,7 @@ The visual is no longer a set of points, but a smoothed raster with colors rangi
 Before you move on to creating additional layers, be sure to **Save** all of these new layers to your map. Now, we can move from aggregation to mapping some disaggregated characteristics of crime incidents in your neighborhood.
 
 
-### Hot Spots [Optional]
+### Hot Spots (Optional)
 
 If you want to know whether the concentration of crime incidents in certain parts of the neighborhood is distributed in a non-random fashion, then we need to use a spatial statistics tool. Performing spatial statistics is not required for this assignment. IThis is included just in case it is of interest. If you have fewer than 60 crime incidents in your neighborhood or are not interested in including spatial statistics at this time, jump down to the [disaggregating the crime data by attribute section][Filter Crime Data by Attributes].
 

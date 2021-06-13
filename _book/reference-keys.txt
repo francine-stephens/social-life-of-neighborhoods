@@ -24,7 +24,7 @@ plotting-neighborhood-boundaries
 exporting-your-map-as-a-pdf
 mapping-crime-data
 map-observations-of-public-order-theory
-importing-custom-symbols
+importing-custom-symbols-optional
 import-crime-data-spatially-reduce
 visualizing-crime-distribution-concentration
 clustered-point-map

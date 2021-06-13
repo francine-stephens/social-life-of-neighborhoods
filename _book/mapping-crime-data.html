@@ -107,13 +107,13 @@
 </ul></li>
 <li class="chapter" data-level="5" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html"><i class="fa fa-check"></i><b>5</b> Mapping Crime Data</a><ul>
 <li class="chapter" data-level="5.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#map-observations-of-public-order-theory"><i class="fa fa-check"></i><b>5.1</b> Map observations of public order theory</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#importing-custom-symbols"><i class="fa fa-check"></i><b>5.1.1</b> Importing Custom Symbols</a></li>
+<li class="chapter" data-level="5.1.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#importing-custom-symbols-optional"><i class="fa fa-check"></i><b>5.1.1</b> Importing Custom Symbols (Optional)</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#import-crime-data-spatially-reduce"><i class="fa fa-check"></i><b>5.2</b> Import Crime Data &amp; Spatially Reduce</a></li>
 <li class="chapter" data-level="5.3" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#visualizing-crime-distribution-concentration"><i class="fa fa-check"></i><b>5.3</b> Visualizing Crime Distribution &amp; Concentration</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#clustered-point-map"><i class="fa fa-check"></i><b>5.3.1</b> Clustered Point Map</a></li>
 <li class="chapter" data-level="5.3.2" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#heat-map"><i class="fa fa-check"></i><b>5.3.2</b> Heat Map</a></li>
-<li class="chapter" data-level="5.3.3" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#hot-spots-optional"><i class="fa fa-check"></i><b>5.3.3</b> Hot Spots [Optional]</a></li>
+<li class="chapter" data-level="5.3.3" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#hot-spots-optional"><i class="fa fa-check"></i><b>5.3.3</b> Hot Spots (Optional)</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#filter-crime-data-by-attributes"><i class="fa fa-check"></i><b>5.4</b> Filter Crime Data by Attributes</a><ul>
 <li class="chapter" data-level="5.4.1" data-path="mapping-crime-data.html"><a href="mapping-crime-data.html#by-day-of-the-week"><i class="fa fa-check"></i><b>5.4.1</b> By Day of the Week</a></li>
@@ -189,8 +189,8 @@
 <h2><span class="header-section-number">5.1</span> Map observations of public order theory</h2>
 <p>The guidelines for Assignment #4 ask you to record locations from your observations that exemplify one of the theories of public order that you read about in the weekly readings. Record those locations in a spreadsheet and geocode them following the steps for <a href="geocoding.html#geocoding">geocoding</a>.</p>
 <p>You can <a href="geocoding.html#changing-the-symbology">style the symbols</a> of the point locations as we did for the organizations in Assignment #3. If you want to be a little fancy and use symbols that better represent the elements that you observed in your neighborhood, then follow the instructions/GIF below for <em>importing custom symbols</em>. Otherwise, go ahead and proceed to the <a href="mapping-crime-data.html#import-crime-data-spatially-reduce">Import Crime Data &amp; Spatially Reduce</a> section.</p>
-<div id="importing-custom-symbols" class="section level3">
-<h3><span class="header-section-number">5.1.1</span> Importing Custom Symbols</h3>
+<div id="importing-custom-symbols-optional" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Importing Custom Symbols (Optional)</h3>
 <p>Before opening up the change style option, go ahead and find or create an image that you would like to use as an icon for your geocoded locations. The image needs to meet two criteria:</p>
 <ol style="list-style-type: decimal">
 <li>Be in png format (AGO says that it will read jpg, but I have not had any luck successfully reading in a JPG).</li>
@@ -228,7 +228,7 @@
 <li>Set the <strong>Target layer</strong> to be the <strong>crime incident points.</strong> The target layer is the layer that we are trying to reduce.</li>
 <li>Next, set the <strong>Join layer</strong> to be the neighborhood boundaries layer. This is the extent of our area of interest for our crime incidents.</li>
 <li>Specify the <strong>Join Type</strong> as <strong>Choose a spatial relationship</strong> and select <strong>Completely Within</strong> from the drop-down box. This tells AGO that we want to select only the crime incidents that lie completely within the neighborhood boundaries.</li>
-<li>Specify the <strong>Join Operation</strong> as <strong>One to One</strong>. This defines the spatial join in binary times: crime incidents are assigned to the neighborhood if they fall within its boundaries or they are assigned to outside the boundary if they fall outside of it. Leave the other fields in #4 as they are.</li>
+<li>Specify the <strong>Join Operation</strong> as <strong>One to One</strong>. This defines the spatial join in binary terms: Crime incidents are either assigned to the neighborhood if they fall within its boundaries or they are assigned to outside the boundary if they fall outside of it. Leave the other fields in #4 as they are.</li>
 <li>Give the new layer that you are about to create an informative name. Keep the radio box for <strong>Use Current Map Extent</strong> checked.</li>
 <li>Run the analysis.</li>
 </ol>
@@ -299,7 +299,7 @@
 <p>Before you move on to creating additional layers, be sure to <strong>Save</strong> all of these new layers to your map. Now, we can move from aggregation to mapping some disaggregated characteristics of crime incidents in your neighborhood.</p>
 </div>
 <div id="hot-spots-optional" class="section level3">
-<h3><span class="header-section-number">5.3.3</span> Hot Spots [Optional]</h3>
+<h3><span class="header-section-number">5.3.3</span> Hot Spots (Optional)</h3>
 <p>If you want to know whether the concentration of crime incidents in certain parts of the neighborhood is distributed in a non-random fashion, then we need to use a spatial statistics tool. Performing spatial statistics is not required for this assignment. IThis is included just in case it is of interest. If you have fewer than 60 crime incidents in your neighborhood or are not interested in including spatial statistics at this time, jump down to the <a href="mapping-crime-data.html#filter-crime-data-by-attributes">disaggregating the crime data by attribute section</a>.</p>
 <p><strong>What makes a hot spot map different from a heat map?</strong> The short answer is statistics! A heat map maps how concentrated points are across the space in your viewing frame, but a hot spot map compares how concentrated points are in sub-regions of the area of interest (e.g., neighborhood) to how concentrated points would be if the points were distributed in a completely random manner across the area of interest. From the map, you can see which regions have more or less incidents than we would expect if the “crime generating process” was completely random. The hot spots indicate regions where the frequency of crimes is higher than we would expect if crime was randomly distributed across the neighborhood. Cold spots would represent regions with frequencies that are lower than expected if crime was randomly distributed across the neighborhood. The darker the shading indicates higher levels of statistical confidence in the hot spot estimates.</p>
 <p>As you might guess, the tool we need is the <strong>Hot Spot Analysis</strong>. This tool will aggregate to a series of small polygons that cover the area of our neighborhood. Aggregating to small polygons makes sense given that the points were blurred by the police department and represent the approximate locations of crimes. Thus, the polygons can represent the potential area where the incidents may have occurred. The hot spot analysis will output a map of hot spots and cold spots, if there are any in your dataset.</p>

@@ -5,7 +5,14 @@ account: fis
 server: bookdown.org
 hostUrl: https://bookdown.org/__api__
 appId: 7266
+<<<<<<< Updated upstream
 bundleId: 43766
 url: https://bookdown.org/fis/social-life-of-neighborhoods/
 when: 1623166079.70945
 lastSyncTime: 1623166079.70945
+=======
+bundleId: 44597
+url: https://bookdown.org/fis/social-life-of-neighborhoods/
+when: 1623560241.65456
+lastSyncTime: 1623560241.65456
+>>>>>>> Stashed changes

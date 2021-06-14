@@ -16,9 +16,8 @@ This repository contains the code used to create each tutorial for the course as
 | 8           | ESRI Story Maps        | 
 
 
-View the website with all of the tutorials [here](https://bookdown.org/fis/social-life-of-neighborhoods/). 
-
-In the tutorials, the steps are written out and visually demonstrated with images and GIFs. The visual content in the tutorials can be found in the *images* sub-directory. There are also tables featured in the tutorials to guide students to particular geographies or key data to use in their write-up. The information in these tables can be found in the csv files that are included in the main directory. 
+In the tutorials, the steps are written out and visually demonstrated with images and GIFs. The visual content in the tutorials can be found in the images sub-directory. There are also tables featured in the tutorials to guide students to particular geographies or key data to use in their write-up. The information in these tables can be found in the csv files that are included in the main directory. 
 
 
+View the website and all of the tutorial content [here](https://bookdown.org/fis/social-life-of-neighborhoods/). 
 

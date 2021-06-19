@@ -10,7 +10,7 @@ Now, it is time to put together a digital visual story of your neighborhood usin
 ESRI Story Maps are web applications that let you, the author, combine web-maps with narrative text, images, and multimedia, including video and audio. The applications are designed to be attractive and usable by anyone, which makes them great for education and outreach to the general public or to a particular audience. Story maps can be made for many different topics. Basically, anything that you can show on a map can be the topic of a story map!  
 
 
-There are two versions of Story Maps available online - the classic and new version. We are going to use the **Classic** version. The classic version's biggest asset is that it has a set of templates that are made-to-fill-in. The templates make it easier on you as an author to figure out how to add content to your story. Unfortunately, Stanford's AGO landing page does not directly link to the Classic version of ESRI Story Maps. Instead, you can navigate to the Classic Story Maps splash page from [here](https://storymaps-classic.arcgis.com/en/). Feel free to add this link to your bookmarks. **Before navigating to the Classic Story Maps splash page, be sure that you are logged into your AGO account.** Classic Story Maps still verifies that you are part of Stanford's institutional AGO account. 
+There are two versions of Story Maps available online - the classic and new version. We are going to use the **Classic** version. The classic version's biggest asset is that it has a set of templates that are made-to-fill-in. The templates make it easier on you as an author to figure out how to add content to your story. Unfortunately, Stanford's AGOL landing page does not directly link to the Classic version of ESRI Story Maps. Instead, you can navigate to the Classic Story Maps splash page from [here](https://storymaps-classic.arcgis.com/en/). Feel free to add this link to your bookmarks. **Before navigating to the Classic Story Maps splash page, be sure that you are logged into your AGOL account.** Classic Story Maps still verifies that you are part of Stanford's institutional AGOL account. 
 
 
 ![The splash page for Classic Story Maps.](images\classic_storymaps_splash_page.png)
@@ -74,7 +74,7 @@ If you have any questions or just want to bounce ideas off of someone, please do
 * Keep a running list of sources of your content, so that you can feed them into the credits at the end of your story map.
 
 
-If you decide that you want to make additional maps, but are not sure about where to find the data or how to import the data into AGO, email or meet with Francine to figure out the appropriate steps to take.  
+If you decide that you want to make additional maps, but are not sure about where to find the data or how to import the data into AGOL, email or meet with Francine to figure out the appropriate steps to take.  
 
 
 <span style="color:#4b0082">**Build your story map.**</span> With all of your content now on hand, it is time to dive into building the story map. On the [Apps page](https://storymaps-classic.arcgis.com/en/app-list/), click on the **Build button** for the template that you have chosen to launch an interactive story builder. The story builder will guide you through the each of the steps for building your story. The story builder will indicate when you can bring in a map, text, or other types of media. If you are having trouble with the story builder's instructions, remember that the links posted above for each of the template types contained a tutorial section that you can review.
@@ -131,7 +131,7 @@ If you want the **time animator** in your story map, you will need to convert yo
 3. Click on one of the empty widgets at the bottom of the widgets pane. This should open up a search bar and list of all widgets. Search for the time slider and select it. 
 4. Once you have selected the time slider, a window will open with configuration options for the time slider. Change the time interval step to 10 (years). You can decide how you would like to set the other configuration preferences. 
 5. A time slider widget should appear in the upper-left side of the screen. If you click on it the time slider will render. 6. When you are happy with the look of your app, **save** the app. 
-7. Then, navigate your AGO content page, from your list of contents, select the web-app that you just created.
+7. Then, navigate your AGOL content page, from your list of contents, select the web-app that you just created.
 8. Change the share settings to either organization/public (based on your story map share settings).
 9. Copy the link at the bottom of the app page and paste it into the web-page media content in your story map. 
 
@@ -243,10 +243,10 @@ There might be some instances where you want to customize the color of some of y
 
 
 
-**AGO Web-map Design**
+**AGOL Web-map Design**
 
 * [Intro to ArcGIS Online from Stanford Geospatial Center StoryMap](https://storymaps.arcgis.com/stories/2c4c6834f57f4c89ba869067ad7a808d)
-* [Importing Custom Symbols][Importing Custom Symbols] - To use custom symbols instead of AGO's icons. 
+* [Importing Custom Symbols][Importing Custom Symbols (Optional)] - To use custom symbols instead of AGOL's icons. 
 * [Configure Pop-ups][Configuring Pop-ups (Optional)]
 * [Add color to pop-up text](https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/bring-colors-from-your-map-into-your-pop-up-using-arcade/)
 * [How to georeference historical maps online](https://storymaps.arcgis.com/stories/8851fafab37a4674b7a75b5bbf000280)

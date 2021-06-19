@@ -102,7 +102,7 @@
 <li class="chapter" data-level="4" data-path="geocoding.html"><a href="geocoding.html"><i class="fa fa-check"></i><b>4</b> Geocoding</a><ul>
 <li class="chapter" data-level="4.1" data-path="geocoding.html"><a href="geocoding.html#what-is-geocoding"><i class="fa fa-check"></i><b>4.1</b> What is Geocoding</a></li>
 <li class="chapter" data-level="4.2" data-path="geocoding.html"><a href="geocoding.html#preparing-data-for-geocoding"><i class="fa fa-check"></i><b>4.2</b> Preparing Data for Geocoding</a></li>
-<li class="chapter" data-level="4.3" data-path="geocoding.html"><a href="geocoding.html#geocoding-in-ago"><i class="fa fa-check"></i><b>4.3</b> Geocoding in AGO</a></li>
+<li class="chapter" data-level="4.3" data-path="geocoding.html"><a href="geocoding.html#geocoding-in-agol"><i class="fa fa-check"></i><b>4.3</b> Geocoding in AGOL</a></li>
 <li class="chapter" data-level="4.4" data-path="geocoding.html"><a href="geocoding.html#changing-the-symbology"><i class="fa fa-check"></i><b>4.4</b> Changing the Symbology</a></li>
 <li class="chapter" data-level="4.5" data-path="geocoding.html"><a href="geocoding.html#plotting-neighborhood-boundaries"><i class="fa fa-check"></i><b>4.5</b> Plotting Neighborhood Boundaries</a></li>
 <li class="chapter" data-level="4.6" data-path="geocoding.html"><a href="geocoding.html#exporting-your-map-as-a-pdf"><i class="fa fa-check"></i><b>4.6</b> Exporting your map as a PDF</a></li>
@@ -186,14 +186,14 @@
             <section class="normal" id="section-">
 <div id="geocoding" class="section level1">
 <h1><span class="header-section-number">4</span> Geocoding</h1>
-<p>At this point, you should be familiar with the ArcGIS Online Mapping interface. You are now ready to start adding data layers of your own to a basemap. Neighborhood Assignment #3 asks you to create a map of the most important/influential/powerful/interesting non-profit organizations in or near your neighborhood. To do this, we will need to two sources of data - the locations of the non-profits and the neighborhood boundaries. The non-profit locations and neighborhood boundaries will be two separate data layers on your map. We will need to create the non-profit locations data through a process called geocoding. The census tract boundaries of your neighborhood have been provided to you as a layer in our class AGO group. In the sections below, we will walk through geocoding the non-profit locations and accessing the neighborhood boundaries through our group’s shared content.</p>
+<p>At this point, you should be familiar with the ArcGIS Online Mapping interface. You are now ready to start adding data layers of your own to a basemap. Neighborhood Assignment #3 asks you to create a map of the most important/influential/powerful/interesting non-profit organizations in or near your neighborhood. To do this, we will need to two sources of data - the locations of the non-profits and the neighborhood boundaries. The non-profit locations and neighborhood boundaries will be two separate data layers on your map. We will need to create the non-profit locations data through a process called geocoding. The census tract boundaries of your neighborhood have been provided to you as a layer in our class AGOL group. In the sections below, we will walk through geocoding the non-profit locations and accessing the neighborhood boundaries through our group’s shared content.</p>
 <div id="what-is-geocoding" class="section level2">
 <h2><span class="header-section-number">4.1</span> What is Geocoding</h2>
 <p>Geocoding is the process of transforming a street address to a location on the Earth’s surface, so that it can be displayed as a point on a map. You can import one street address at a time to geocode or provide multiple addresses at once in a table. Under the GIS hood, the “database side” of GIS looks up the street address in a street segments data layer and finds the pair of latitude and longitude coordinates that correspond with that street address. Those coordinates are attached as attributes to the street address you provided and plotted as geographic features on the map. The resulting layer of geocoded points can be stylized on a map and analyzed with geoprocessing tools.</p>
 </div>
 <div id="preparing-data-for-geocoding" class="section level2">
 <h2><span class="header-section-number">4.2</span> Preparing Data for Geocoding</h2>
-<p>Assignment #3 requires that you have at least 10 non-profits on your map, so we will go ahead and batch geocode all 10 locations at once by recording the addresses in a table. Be sure to follow the GuideStar non-profit look-up tutorial on Canvas to identify your 10 important non-profits. Once you have identified the 10 important non-profits be sure that they have physical street address and <strong>not PO box addresses.</strong> The geocoder will not recognize PO box mailing addresses.</p>
+<p>Assignment #3 requires that you have at least 10 non-profits on your map, so we will go ahead and batch geocode all 10 locations at once by recording the addresses in a table. Be sure to follow the GuideStar non-profit look-up tutorial on Canvas to identify your 10 important non-profits. Once you have identified the 10 important non-profits be sure that they have physical street address.<strong>Do NOT use PO box addresses;</strong> the geocoder will not recognize them and give you an error.</p>
 <p>The screenshot below demonstrates an appropriate way of formatting your non-profit data for the geocoder.</p>
 <div class="figure">
 <img src="images/addresses.png" alt="" />
@@ -203,8 +203,8 @@
 <li>Open up a spreadsheet software of your choice.</li>
 <li>Then, create a header row at the top of your spreadsheet that has cells for the name of the organization, the Address, City, State, Zipcode, and type of service the organization provides.
 <ol style="list-style-type: lower-roman">
-<li><strong>You do not need to bold the text.</strong> I did that just to illustrate that this is a header row that AGO will interpret as the attributes of your data.</li>
-<li>If you use the same header names for the address components that I have, the AGO geocoder will auto-detect the fields correctly. This will eliminate a couple of mouse-clicks from your workflow.<br />
+<li><strong>You do not need to bold the text.</strong> I did that just to illustrate that this is a header row that AGOL will interpret as the attributes of your data.</li>
+<li>If you use the same header names for the address components that I have, the AGOL geocoder will auto-detect the fields correctly. This will eliminate a couple of mouse-clicks from your workflow.<br />
 </li>
 </ol></li>
 <li>Each row will represent a non-profit that you have selected. Enter the name of the organization. Then, parse out the components of the address, starting with the street address, then the city name, the state abbreviation, and the five digit zipcode. The last column holds a description of the type of service the organization provides.
@@ -214,10 +214,10 @@
 </ol></li>
 <li>Once you have entered the address information for your non-profits, save the spreadsheet as a <strong>CSV.</strong></li>
 </ol>
-<p>You are now ready to bring the table of addresses into AGO for geocoding.</p>
+<p>You are now ready to bring the table of addresses into AGOL for geocoding.</p>
 </div>
-<div id="geocoding-in-ago" class="section level2">
-<h2><span class="header-section-number">4.3</span> Geocoding in AGO</h2>
+<div id="geocoding-in-agol" class="section level2">
+<h2><span class="header-section-number">4.3</span> Geocoding in AGOL</h2>
 <p>Open up Mapviewer and start with just the basemap. Feel free to change the basemap if you would like. You can also zoom into your neighborhood using any of the Zoom/Pan options or use the Search Bar, which is what I did. When you are ready to upload the non-profit locations, navigate to the <strong>Add Button</strong> on the Toolbar and follow the steps in the GIF below.</p>
 <div class="figure">
 <img src="images/Geocoding.gif" alt="" />
@@ -270,17 +270,17 @@
 <li>When you are happy with the style, select <strong>Okay</strong> and then <strong>Done</strong>, to get back to the map and contents pane.</li>
 <li>Lastly, clean up the name of the layer in the Contents pane. On the layer, click the <strong>three horizontal dots button</strong> on the layer, which prompts a drop-down list of options. Select <strong>rename</strong> and change the name.</li>
 </ol>
-<p><strong>NOTE:</strong> The neighborhood boundary files have been named based on this syntax: “nhood_name_cityname”. If you listed multiple names for your neighborhood, the first name may only be listed in the filename for brevity. The city name may be abbreviated in some instances. If you have trouble finding your neighborhood based with this naming system, open up a new tab in your browser and go to the <strong>group page content.</strong> The content has been organized, so you can filter to the files that have been <em>categorized as neighborhood boundaries.</em> Scroll through the neighborhood boundaries. You should be able to see the outlines and find the one that looks like your neighborhood.</p>
+<p><strong>NOTE:</strong> The neighborhood boundary files have been named based on this syntax: “nhood_name_cityname”. If you listed multiple names for your neighborhood, the first name may only be listed in the file name for brevity. The city name may be abbreviated in some instances. If you have trouble finding your neighborhood based with this naming system, open up a new tab in your browser and go to the <strong>group page content.</strong> The content has been organized, so you can filter to the files that have been <em>categorized as neighborhood boundaries.</em> Scroll through the neighborhood boundaries. You should be able to see the outlines and find the one that looks like your neighborhood.</p>
 </div>
 <div id="exporting-your-map-as-a-pdf" class="section level2">
 <h2><span class="header-section-number">4.6</span> Exporting your map as a PDF</h2>
-<p><strong>Update: The assignment instructions have been changed since they were first published. Because exporting the map to a PDF is a little cumbersome, you now have the option of submitting your map as a webmap via a link. The instructions below will guide you through both options.</strong></p>
+<p><strong>Update: The assignment instructions have been changed since they were first published. Because exporting the map to a PDF is a little cumbersome, you now have the option of submitting your map as a web map via a link. The instructions below will guide you through both options.</strong></p>
 <p>If you click on the <strong>Legend button</strong> in the Content pane, you will see both layers and the detailed symbology. When you are happy with the look of your map, save the map by going to <strong>Save button</strong> (the disk) on the Toolbar. You will need to select the <strong>Save As</strong> option because it is the first time you are saving the map. Give the Map an informative title and a few tags when you are saving it.</p>
 <div class="figure">
 <img src="images/save_map.png" alt="" />
 <p class="caption">Saving your map</p>
 </div>
-<p>The map is saved to your Content page in AGO. For this assignment, you will also want to export the map as a PDF. This is also a multi-step process that converts your webmap to a web-app and then to a PDF file (I know that seems like a lot of work). The GIF below will walk you through it along with the steps that are written out below.</p>
+<p>The map is saved to your Content page in AGOL. For this assignment, you will also want to export the map as a PDF. This is also a multi-step process that converts your webmap to a web-app and then to a PDF file (This seems like a lot of work). The GIF below will walk you through it along with the steps that are written out below.</p>
 <div class="figure">
 <img src="images/webapp_widgets.gif" alt="" />
 <p class="caption">Transform webmap to a web-app</p>

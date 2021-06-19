@@ -18,7 +18,7 @@ find-our-class-group
 geocoding
 what-is-geocoding
 preparing-data-for-geocoding
-geocoding-in-ago
+geocoding-in-agol
 changing-the-symbology
 plotting-neighborhood-boundaries
 exporting-your-map-as-a-pdf

@@ -8,7 +8,7 @@ The assignment asks you to think about the prevalence and consistency of segrega
 2. Geographic units - Neighborhood, City/Place, Region
 3. Time - Each decade from 1970 to 2020. Some of you may find that the first decade in your data is 1980. This is because data were not collected for your city at the census tract level. 
 
-That may seem like a lot of dimensions to consider, but you will find that there are visual techniques in GIS, especially web-based GIS, that make expressing all of these dimensions in a map straightforward and digestible. In the following sections, we will walk through three mapping styles that are useful for understanding segregation: dot density, predominance, and choropleth mapping. The data you need to make your maps is provided on our AGO class group page. Each section will direct you to the appropriate data layers. 
+That may seem like a lot of dimensions to consider, but you will find that there are visual techniques in GIS, especially web-based GIS, that make expressing all of these dimensions in a map straightforward and digestible. In the following sections, we will walk through three mapping styles that are useful for understanding segregation: dot density, predominance, and choropleth mapping. The data you need to make your maps is provided on our AGOL class group page. Each section will direct you to the appropriate data layers. 
 
 
 ## Racial Composition
@@ -108,7 +108,7 @@ If you have multiple tracts in your neighborhood, it might be worth filtering do
 
 **Before you close your map be sure to save your map with a new name.** 
 
-For your assignment, you do not need to present both the predominance map and the dot-density map. Pick the visual that helps to convey your message. If presenting all groups or the denseness/sparseness of the population is important, then the dot density map would be ideal. If you are more focused on closely tracking one or two groups in the neighborhood/city, then the predominance map would probably be effective. You cannot save a time series map as a PDF, so you will need to Share the link to the web-map with us. **If you create the dot density map, set the share settings to the AGO class group. We will access the map from the group when grading.** 
+For your assignment, you do not need to present both the predominance map and the dot-density map. Pick the visual that helps to convey your message. If presenting all groups or the denseness/sparseness of the population is important, then the dot density map would be ideal. If you are more focused on closely tracking one or two groups in the neighborhood/city, then the predominance map would probably be effective. You cannot save a time series map as a PDF, so you will need to Share the link to the web-map with us. **If you create the dot density map, set the share settings to the AGOL class group. We will access the map from the group when grading.** 
 
 
 
@@ -121,7 +121,7 @@ Now, that we have mapped racial composition, we want to quantify the level of se
 
 The dissimilarity index is the most commonly used measure of segregation. It is the simplest to calculate and interpret. The dissimilarity index indicates how unevenly two racial groups are distributed across tracts within a city. The dissimilarity score can be interpreted as the percent of one racial group (in the pair being considered) that would need to move to other neighborhoods in order to have an even distribution of the two racial groups across the city. 
 
-Because the dissimilarity score applies to the whole city, it would not be informative to color the map for just our city. Instead, we can more effectively track the dissimilarity scores for a city over time by using a graph. A spreadsheet software like Excel or Google sheets will allow us to view and chart the dissimilarity index over time. If you know how to make graphs using a statistical software like R, Stata, SPSS, or Python, you are welcome to use one of those statistical tools. The dissimilarity measures are stored as CSV files on our AGO page. Navigate to the **Content page** for our class group and **filter by categories for the Segregation Data** to find your city's data. The screenshot below shows you where to look on the content page. 
+Because the dissimilarity score applies to the whole city, it would not be informative to color the map for just our city. Instead, we can more effectively track the dissimilarity scores for a city over time by using a graph. A spreadsheet software like Excel or Google sheets will allow us to view and chart the dissimilarity index over time. If you know how to make graphs using a statistical software like R, Stata, SPSS, or Python, you are welcome to use one of those statistical tools. The dissimilarity measures are stored as CSV files on our class group page. Navigate to the **Content page** for our class group and **filter by categories for the Segregation Data** to find your city's data. The screenshot below shows you where to look on the content page. 
 
 ![Find your city's dissimilarity scores](images\find_dissim_data.png)
 
@@ -237,7 +237,7 @@ Schafran also takes issue with using the Census Bureau's Metropolitan Statistica
 | Detroit     | Detroit-Warren-Livonia, MI |
 
 
-**N.b. Changes in places from 1970 to 1990:** There are some regions in this table that contained places and entire counties that were not assigned census tracts prior to 1990. You may see that your region grows in size around 1990. This is not an error in the data layer or an AGO rendering problem. This reflects a change in tracting practices by the Census Bureau. For the places that do not appear on your map until 1990, your ability to make temporal comparisons will be slightly constrained. 
+**N.b. Changes in places from 1970 to 1990:** There are some regions in this table that contained places and entire counties that were not assigned census tracts prior to 1990. You may see that your region grows in size around 1990. This is not an error in the data layer or an AGOL rendering problem. This reflects a change in tracting practices by the Census Bureau. For the places that do not appear on your map until 1990, your ability to make temporal comparisons will be slightly constrained. 
 
 
 

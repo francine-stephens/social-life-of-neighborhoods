@@ -25,7 +25,7 @@ The first step in computing the gentrification measure is determining whether or
 
 > **Not Gentrifying**: Gentrifiable census tracts that did NOT experience growth in the socioeconomic status of their residents *AND* their home values at a rate higher than the city-wide median values over the decade period.
 
-This measurement strategy results in a three-category gentrification measure - Not Gentrifiable, Gentrifying, and Not Gentrifying. With these three categories we can make a thematic map of census tracts in and around our neighborhood. The tracts in your neighborhood's city have been classified according to this measurement strategy, now we just need to load the layers into the AGO and style them with the appropriate symbology. 
+This measurement strategy results in a three-category gentrification measure - Not Gentrifiable, Gentrifying, and Not Gentrifying. With these three categories we can make a thematic map of census tracts in and around our neighborhood. The tracts in your neighborhood's city have been classified according to this measurement strategy, now we just need to load the layers into the AGOL and style them with the appropriate symbology. 
 
 
 ## Gentrification Map
@@ -109,14 +109,14 @@ div(class = "city_pctchg_decade",
 After you have completed your neighborhood observations, either in person or via Google Street View, you will return to this map to add an additional layer of geocoded locations that were or are involved in neighborhood change. For a refresher on geocoding, review the [tutorial][Preparing Data for Geocoding].     
 
 
-If you would like to configure the pop-ups that appear on your geocoded locations to have images or a description of the site, view the optional [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] *before* you load your CSV file with the addresses into AGO. This section also contains examples of configuring pop-ups on the gentrification layers, too, in case you want to embed graphs/charts and descriptions of the numeric data on the map-layer. Otherwise, you can upload the spreadsheet with addresses as you have in previous assignments and skip over to the section on viewing [historical Google Street View images][Historical Google Street View].  
+If you would like to configure the pop-ups that appear on your geocoded locations to have images or a description of the site, view the optional [Configuring Pop-ups section below][Configuring Pop-Ups (Optional)] *before* you load your CSV file with the addresses into AGOL. This section also contains examples of configuring pop-ups on the gentrification layers, too, in case you want to embed graphs/charts and descriptions of the numeric data on the map-layer. Otherwise, you can upload the spreadsheet with addresses as you have in previous assignments and skip over to the section on viewing [historical Google Street View images][Historical Google Street View].  
 
 
 ## Configuring Pop-ups (Optional)
 
 In addition to using different types of symbology on your map layers to convey information about an area of interest, you can also use pop-ups to display descriptive information about features on your map. Pop-ups can show attachments, images, and charts, and can link to external web pages.
 
-Up to this point, when you have clicked on features in your map layer, the pop-ups have been a plain list of attributes and values. This is the default appearance for pop-ups, but AGO does allow you to reconfigure the pop-ups to define the list of visible and hidden fields, and how the information is presented. The main decisions map authors make about pop-ups are what information they want to show and what is the best way to present that information. For example, if you want to show people what is located at the place you just geocoded, you might configure pop-ups to show the address, a description of the place and the role it has played in neighborhood change, and an image. For the layers with the gentrification measures, you could configure pop-ups to show the median household income, the percent of residents with college degrees, the percent of owned housing units, and/or the median home and rent values for each decade, or the percent change in these variables over time. Depending on what you are trying to show in pop-ups for your feature layer, you can choose from a variety of configuration options. 
+Up to this point, when you have clicked on features in your map layer, the pop-ups have been a plain list of attributes and values. This is the default appearance for pop-ups, but AGOL does allow you to reconfigure the pop-ups to define the list of visible and hidden fields, and how the information is presented. The main decisions map authors make about pop-ups are what information they want to show and what is the best way to present that information. For example, if you want to show people what is located at the place you just geocoded, you might configure pop-ups to show the address, a description of the place and the role it has played in neighborhood change, and an image. For the layers with the gentrification measures, you could configure pop-ups to show the median household income, the percent of residents with college degrees, the percent of owned housing units, and/or the median home and rent values for each decade, or the percent change in these variables over time. Depending on what you are trying to show in pop-ups for your feature layer, you can choose from a variety of configuration options. 
 
 The following provides a brief description of some of the main pop-up configuration options:
 
@@ -134,7 +134,7 @@ The subsections below will walk you through some of the configuration options th
 
 ### List of Attributes
 
-When you have geocoded the locations rendered in AGO as a layer point features, the pop-ups display all the attributes you entered in the spreadsheet - Name, Street Address, City, State, and Zipcode - in list format. To change this configuration and display only certain attributes, click on the **More Options** tab (the three horizontal dots icon) on the layer in the content pane. In the drop-down menu, find and click on **Configure Pop-up**.
+When you have geocoded the locations rendered in AGOL as a layer point features, the pop-ups display all the attributes you entered in the spreadsheet - Name, Street Address, City, State, and Zipcode - in list format. To change this configuration and display only certain attributes, click on the **More Options** tab (the three horizontal dots icon) on the layer in the content pane. In the drop-down menu, find and click on **Configure Pop-up**.
 
 Then, navigate to the **Configure Attributes** link below the list of attributes under Pop-up Contents. This is circled in red next to the number 1 in the image below. The image below shows the configure attributes options that will appear for you. You have multiple options in this window. 
 
@@ -161,7 +161,7 @@ In your neighborhood observations, you either took pictures of the locations tha
 
 In order to have these images render in the pop-up, you will need to add them to the spreadsheet where you are recording your addresses. Create a new column to hold the URLs for the images in the spreadsheet. Copy the URLs into the cells for each respective location. An example of the spreadsheet is shown below. 
 
-If you are using images that *you* captured, you need to host them on the Web. The easiest way to do this is to upload them into AGO and set the share option for the image to **Public**. To do this, navigate to the content page on AGO, and follow the steps below: 
+If you are using images that *you* captured, you need to host them on the Web. The easiest way to do this is to upload them into AGOL and set the share option for the image to **Public**. To do this, navigate to the content page on AGOL, and follow the steps below: 
 
 1. Click on the **Add Item** Button.
 2. In the drop-down menu, select the **From your computer** import option. 
@@ -169,16 +169,16 @@ If you are using images that *you* captured, you need to host them on the Web. T
 4. Change the share settings to **Public**. The public option is the only one that will give you a URL that you can include in your spreadsheet. 
 5. Scroll down to the bottom of the content page for your image, and copy-paste the URL for the image into the appropriate cell on your spreadsheet. 
 
-![Upload your images (PNG, JPEG, or GIF) to AGO on your content page.](images\save_image_to_AGO.png)  
+![Upload your images (PNG, JPEG, or GIF) to AGOL on your content page.](images\save_image_to_AGO.png)  
 
 
 ![Add the URL for the images in a new column of your addresses CSV file](images\configure_images_in_CSV.png) 
 
-When you have geocoded the locations rendered in AGO as a layer point features, navigate to **Configure Pop-ups** in the **More Options** tab on your layer. Scroll down to the bottom of the configuration options pane to **Pop-up Media.**
+When you have geocoded the locations rendered in AGOL as a layer point features, navigate to **Configure Pop-ups** in the **More Options** tab on your layer. Scroll down to the bottom of the configuration options pane to **Pop-up Media.**
 
 1. Click the **Add** button and the **Image** option from the drop-down menu.
 2. Give the image a title or leave the field blank. You can decide what you would work best for your pop-ups. 
-3. You can add an image caption or leave it blank. You can use the **Plus-sign** to the right of the field to add a field name in the caption. By using a field name in the caption, AGO will populate the text from the field name into the caption, so that it is customized appropriately for each feature in your layer. See the example in the GIF below.
+3. You can add an image caption or leave it blank. You can use the **Plus-sign** to the right of the field to add a field name in the caption. By using a field name in the caption, AGOL will populate the text from the field name into the caption, so that it is customized appropriately for each feature in your layer. See the example in the GIF below.
 4. In the URL field, add the field name in your CSV file that corresponds with where you stored the links to the images. 
 5. Leave the link field blank, unless you want to send the viewer to the webpage with the image. Click Ok and return to the map viewer to see how your pop-up renders the image.    
 
@@ -197,7 +197,7 @@ Configuring a few sentences or a paragraph of text as a description of the place
 
 ![Add a description of the place in a new column of your addresses CSV file](images\configure_descriptions_in_CSV.png) 
 
-Geocode the layer in AGO as you have done before. Then, navigate to **Configure Pop-up** in the **More Options** tab. This time you just want to show the description and not the list of attributes, so select the display option: **A description from one field**. Set the Attribute as the field name you gave to the description in your spreadsheet. Then, click **Ok** and view the pop-ups on your map. The GIF below shows an example of how to configure the descriptions. 
+Geocode the layer in AGOL as you have done before. Then, navigate to **Configure Pop-up** in the **More Options** tab. This time you just want to show the description and not the list of attributes, so select the display option: **A description from one field**. Set the Attribute as the field name you gave to the description in your spreadsheet. Then, click **Ok** and view the pop-ups on your map. The GIF below shows an example of how to configure the descriptions. 
 
 ![Configure a description of the place in the pop-up](images\configure_description_popup.gif)  
 
@@ -208,7 +208,7 @@ Again, you may find this pop-up configuration useful for the layers you geocoded
 
 It is possible to display any type of attribute - numeric, text, or date-time - on a map layer with some customized rich-text. Let's try this with the map layer of census tract polygons and create a pop-up with information about how the socioeconomic status of residents and the home values changed in census tracts. 
 
-Before we can do this, you need to be familiar with what the variable names in the attribute layer mean. AGO truncates variable names, so I have defined the variable names in the table below. Notice that some of the variable names have year suffixes. Be mindful of that if you are going to create field aliases and use these variables in the customized pop-up or the charts. 
+Before we can do this, you need to be familiar with what the variable names in the attribute layer mean. AGOL truncates variable names, so I have defined the variable names in the table below. Notice that some of the variable names have year suffixes. Be mindful of that if you are going to create field aliases and use these variables in the customized pop-up or the charts. 
 
 
 ```{r, echo = FALSE, warning=FALSE, message = FALSE}
@@ -252,7 +252,7 @@ When you open up the pop-up configuration options pane, scroll down to the **Pop
 
 
 
-Notice the importance of including a caption AND changing the field aliases to understandable names. Because AGO does not allow you to change the colors of the columns in the chart, we have to rely on configuring the attribute labels and using a caption to indicate the meaning of the columns in the graph.
+Notice the importance of including a caption AND changing the field aliases to understandable names. Because AGOL does not allow you to change the colors of the columns in the chart, we have to rely on configuring the attribute labels and using a caption to indicate the meaning of the columns in the graph.
 
 You can use different attributes than the ones used in this example, such as the yearly values for the median household income, percent of college graduates, or the median home values. It is also possible to make multiple charts and have viewers scroll through them in the pop-up. Feel free to experiment with other attributes and chart styles.    
 

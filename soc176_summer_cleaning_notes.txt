@@ -1,0 +1,33 @@
+## Forrest questions 
+
+1) Remove assignment numbers from the instructions? E.g., line 4 in Social Explorer; 
+
+2) Move optional sections to a separate chapter? E.g., Custom symbology, Configuring pop-ups, Printing a static map, Import a custom basemap
+ 
+3) Should I add objectives to the top of each page? 
+
+
+
+### 01 - Social Explorer-------------------
+Objectives:
+* Learn how to retrieve demographic data for census geographies using Social Explorer.
+
+1) Remove mentions of assignment #1 question 5? 
+2) Add a footnote on line 31 to explain why we are using ACS-5 year estimates? 
+
+### 02 - ArcGIS Online---------------------
+Objectives:
+* Understand what a web GIS is and does. 
+* Become familiar with the ArcGIS Online interface. 
+* Find and request access to the course group. 
+
+1) Go back into the section find our class group and change the request access option. State in guidebook to have David M. from Geospatial Center just add the student's names to the group. 
+
+
+### 03 - Geocoding---------------------------
+Objectives: 
+* Understand geocoding and how to prepare data for geocoding. 
+* Understand how to change the symbology to create a reference map. 
+
+1) Make a callout box to explain/define a reference map. 
+****Pick up at the neighborhood boundaries section.****

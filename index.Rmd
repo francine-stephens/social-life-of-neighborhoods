@@ -26,9 +26,9 @@ library("kableExtra")
 # About
 
 The following is a series of tutorials specifically designed for **The Social Life of Neighborhoods (SOC 176/SOC 276/AFRICAAM 76B/CSRE 176B/URBANST 179)** course. The course assignments and final story map require collecting and analyzing information about neighborhoods and
-other urban spaces. In the tutorials, you will be introduced to tools that will allow you to gather, process, and visualize data so that you can complete the assignments and create your own story map. No prior experience or familiarity with quantitative data or GIS/spatial software is assumed in the tutorials. If you have some prior experience, you will likely be able to skim over anything that looks familiar and focus on new techniques.
+other geographies. In the tutorials, you will be introduced to tools and techniques that will allow you to gather, process, and visualize data so that you can complete the assignments and create your own story map. No prior experience or familiarity with quantitative data or GIS/spatial software is assumed in the tutorials. If you have some prior experience, you will likely be able to skim over anything that looks familiar and focus on new techniques.
 
-These tutorials are a work in progress. Recommendations for improving the content are welcome. If you run across typos, grammatical errors, or confusing language, please send your comments, questions, and feedback to Francine Stephens at [fis@stanford.edu](mailto:fis@stanford.edu). 
+Recommendations for improving the content in these tutorials are welcome. If you run across typos, grammatical errors, or confusing language, please send your comments, questions, and feedback to Francine Stephens at [fis@stanford.edu](mailto:fis@stanford.edu). 
 
 Each tutorial is a chapter in this website. You can navigate through the chapters using the sidebar. At the top of this page, you will see settings options in the navigation bar. Hover over the icons in the top bar to hide the sidebar or change the font and color scheme to your preference. 
 
@@ -40,13 +40,13 @@ Each tutorial is a chapter in this website. You can navigate through the chapter
 toc_tbl <- data.frame(
   Chapter = c("2", "3", "4", "5", "6", "7", "8"),
   Description = c(
-    "Chapter 2 introduces Social Explorer and how to use it to collect demographic data from the U.S. Census.",
+    "Chapter 2 explains how to use Social Explorer to collect demographic data from the U.S. Census.",
     "Chapter 3 introduces the ArcGIS Online interface.", 
-    "Chapter 4 explains the steps for creating a reference map for Assignment #3. The chapter introduces geocoding, map symbology, and printing static PDF maps.",
-    "Chapter 5 outlines the steps for analyzing crime data in Assignment #4. The chapter introduces spatial joins, clustering, heat mapping, hot spots, and disaggregating data using filters.",
-    "Chapter 6 focuses on building maps of racial composition and segregation for Assignment #5. The chapter introduces animated time-series maps, choropleth maps, thematic categorical maps, and key segregation measures.",
-    "Chapter 7 explains how to map gentrification for Assignment #7. The chapter defines and operationalizes gentrification, reviews how to create a thematic categorical map, and how to access historical Google Street View images. There is an optional section on configuring pop-ups for different types of spatial layers.",
-    "Chapter 8 orients the reader to the classic story map templates and how to prepare a story map. Examples are featured in the chapter along with specific tips for presenting the time series maps and incorporating design features into the story map."
+    "Chapter 4 explains the steps for creating a reference map and introduces geocoding, map symbology, and printing static PDF maps.",
+    "Chapter 5 outlines the steps for analyzing crime data. The also chapter introduces spatial joins, clustering, heat mapping, hot spots, and disaggregating data using filters.",
+    "Chapter 6 demonstrates techniques for mapping racial composition and segregation. The chapter introduces animated time-series maps, choropleth maps, thematic categorical maps, and key segregation measures.",
+    "Chapter 7 explains how to map gentrification. The chapter defines and operationalizes gentrification, reviews how to create a thematic categorical map, and how to access historical Google Street View images. There is an optional section on configuring pop-ups for different types of spatial layers.",
+    "Chapter 8 introduces the reader to the classic story map templates and how to prepare a story map. Examples are featured in the chapter along with specific tips for presenting the time series maps and incorporating design features into the story map."
   )
 )
 

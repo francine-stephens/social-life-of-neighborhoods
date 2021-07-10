@@ -66,3 +66,5 @@ separate-time-layers-for-predominance-segregation-maps
 steps-for-dot-density-maps
 coloring-in-line-text
 additional-resources
+stanford-agol-home-page
+crimemaps
